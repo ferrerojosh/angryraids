@@ -1,12 +1,16 @@
 export default {
-  heroesByClass: state => () => {
+  heroesByClass: state => {
     return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
   },
-  heroesById: state => () => {
+  heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
-  selectedId: state => () => state.selectedHero.id,
-  stats: state => () => {
+  itemsByClass: state => (classId) => {
+    return state.items.filter(item => item.classes.includes(classId))
+  },
+  selectedId: state => state.selectedHero.id,
+  stats: state => {
+    // todo calculate equipment runes and etc
     return {
       basicStats: [
         { label: 'MAX HP', value: 0, base: state.selectedClass.stats.maxHp },

@@ -38,9 +38,6 @@
         ) / 1000
       }
     },
-    mounted() {
-      console.log(`Current Label ${this.label}`)
-    },
     computed: {
       percentage() {
         let maxK, x1, a1, b1, x2, a2, b2, minK, x3, a3, b3, x4, a4, b4

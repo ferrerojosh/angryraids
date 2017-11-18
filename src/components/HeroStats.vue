@@ -1,7 +1,7 @@
 <template>
   <section class="kr-hero-stats">
     <section class="kr-hero-basic">
-      <kr-hero-stat v-for="basicStat in basicStats"
+      <kr-hero-stat v-for="basicStat in stats.basicStats"
                     :key="basicStat.label"
                     :label="basicStat.label"
                     :value="basicStat.value"
@@ -9,7 +9,7 @@
       </kr-hero-stat>
     </section>
     <section class="kr-hero-options">
-      <kr-hero-stat v-for="additionalOption in additionalOptions"
+      <kr-hero-stat v-for="additionalOption in stats.additionalOptions"
                     :key="additionalOption.label"
                     :label="additionalOption.label"
                     :isOption="true"
@@ -22,17 +22,15 @@
 
 <script>
   import KrHeroStat from './HeroStat.vue'
+  import { mapGetters } from 'vuex'
 
   export default {
     components: { KrHeroStat },
     name: 'kr-hero-stats',
     computed: {
-      basicStats() {
-        return this.$store.getters.stats().basicStats
-      },
-      additionalOptions() {
-        return this.$store.getters.stats().additionalOptions
-      }
+      ...mapGetters([
+        'stats'
+      ]),
     }
   }
 </script>

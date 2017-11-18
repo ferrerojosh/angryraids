@@ -12,17 +12,16 @@
 <script>
   import KrHeroAvatar from './HeroAvatar.vue'
   import { actionTypes } from '../store/actions'
+  import { mapGetters } from 'vuex'
 
   export default {
     components: { KrHeroAvatar },
     name: 'kr-hero-list',
     computed: {
-      heroesByClass() {
-        return this.$store.getters.heroesByClass()
-      },
-      selectedId() {
-        return this.$store.getters.selectedId()
-      }
+      ...mapGetters([
+        'heroesByClass',
+        'selectedId',
+      ])
     },
     methods: {
       heroImage(name) {

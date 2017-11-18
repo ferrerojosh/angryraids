@@ -82,7 +82,10 @@
     name: 'kr-item',
     props: {
       label: String
-    }
+    },
+    data: () => ({
+      item: {}
+    })
   }
 </script>
 

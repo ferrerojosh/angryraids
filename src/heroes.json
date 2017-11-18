@@ -1,0 +1,278 @@
+[
+  {
+    "name": "Clause",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 1
+  },
+  {
+    "name": "Demia",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 2
+  },
+  {
+    "name": "Phillop",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 3
+  },
+  {
+    "name": "Morrah",
+    "damageType": "Magical",
+    "classId": 1,
+    "id": 4
+  },
+  {
+    "name": "Jane",
+    "damageType": "Magical",
+    "classId": 1,
+    "id": 5
+  },
+  {
+    "name": "Ricardo",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 6
+  },
+  {
+    "name": "Kasel",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 7
+  },
+  {
+    "name": "Gau",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 8
+  },
+  {
+    "name": "Naila",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 9
+  },
+  {
+    "name": "Priscilla",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 10
+  },
+  {
+    "name": "Viska",
+    "damageType": "Magical",
+    "classId": 2,
+    "id": 11
+  },
+  {
+    "name": "Roi",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 12
+  },
+  {
+    "name": "Reina",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 13
+  },
+  {
+    "name": "Fluss",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 14
+  },
+  {
+    "name": "Tanya",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 15
+  },
+  {
+    "name": "Epis",
+    "damageType": "Magical",
+    "classId": 3,
+    "id": 16
+  },
+  {
+    "name": "Selene",
+    "damageType": "Physical",
+    "classId": 4,
+    "id": 17
+  },
+  {
+    "name": "Yanne",
+    "damageType": "Physical",
+    "classId": 4,
+    "id": 18
+  },
+  {
+    "name": "Dimael",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 19
+  },
+  {
+    "name": "Luna",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 20
+  },
+  {
+    "name": "Arch",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 21
+  },
+  {
+    "name": "Cleo",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 22
+  },
+  {
+    "name": "Pavel",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 23
+  },
+  {
+    "name": "Maria",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 24
+  },
+  {
+    "name": "Lorraine",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 25
+  },
+  {
+    "name": "Aisha",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 26
+  },
+  {
+    "name": "Lewisia",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 27
+  },
+  {
+    "name": "Nyx",
+    "damageType": "Physical",
+    "classId": 5,
+    "id": 28
+  },
+  {
+    "name": "Rodina",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 29
+  },
+  {
+    "name": "Lakrak",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 30
+  },
+  {
+    "name": "Miruru",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 31
+  },
+  {
+    "name": "Annette",
+    "damageType": "Magical",
+    "classId": 6,
+    "id": 32
+  },
+  {
+    "name": "Mitra",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 33
+  },
+  {
+    "name": "Oddy",
+    "damageType": "Magical",
+    "classId": 6,
+    "id": 34
+  },
+  {
+    "name": "Frey",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 35
+  },
+  {
+    "name": "Kaulah",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 36
+  },
+  {
+    "name": "Rephy",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 37
+  },
+  {
+    "name": "Laias",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 38
+  },
+  {
+    "name": "Baudouin",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 39
+  },
+  {
+    "name": "Leo",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 40
+  },
+  {
+    "name": "May",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 41
+  },
+  {
+    "name": "Cassandra",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 42
+  },
+  {
+    "name": "Gladi",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 43
+  },
+  {
+    "name": "Theo",
+    "damageType": "Magical",
+    "classId": 2,
+    "id": 44
+  },
+  {
+    "name": "Mediana",
+    "damageType": "Physical",
+    "classId": 7,
+    "id": 45
+  },
+  {
+    "name": "Artemia",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 46
+  }
+]

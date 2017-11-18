@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "tier": 3,
+    "name": "Black Dragon Scale Armor",
+    "classes": [3, 4, 6],
+    "type:": "Armor",
+    "value": 1000
+  }
+]

@@ -85,7 +85,8 @@
             b4 = 0
             break
           case 'Penetration':
-          case 'Tough':
+          case 'P.Tough':
+          case 'M.Tough':
           case 'P.Block DEF':
           case 'M.Block DEF':
             maxK = 900

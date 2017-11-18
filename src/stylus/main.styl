@@ -1,0 +1,58 @@
+@import normalize
+@import flexbox-grid
+@import bootstrap
+
+html, body
+  height: 100%
+
+#app
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-self: center
+
+div
+  display: flex
+
+body
+  font-family: 'Roboto', sans-serif
+  background: #eee
+
+h1, h2
+  font-weight: normal
+
+main
+  margin-top: 3rem !important
+  border-radius: 1rem
+  background: #fff
+
+main, aside
+  display: flex
+  flex: 1
+
+aside
+  width: $breakpoints.xl * 0.12
+  min-width: $breakpoints.xl * 0.12
+  flex-direction: column
+  overflow-y: scroll
+  padding: 0 2em 2em 2em !important
+
+.container
+  width: 100%
+  max-width: $breakpoints.xl
+  max-height: 550px
+  min-height: 550px
+  margin: 0 auto
+
+.footer
+  display: flex
+  margin-top: 2rem
+  justify-content: center
+
+  a
+    text-decoration: none
+    color: #000
+
+  p
+    color: #666
+    display: block

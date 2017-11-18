@@ -89,6 +89,7 @@
           case 'M.Tough':
           case 'P.Block DEF':
           case 'M.Block DEF':
+          case 'CC Resist':
             maxK = 900
             x1 = 1000
             a1 = 2

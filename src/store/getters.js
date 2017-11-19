@@ -8,6 +8,7 @@ export default {
   itemsByClass: state => (classId) => {
     return state.items.filter(item => item.classes.includes(classId))
   },
+  selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
   stats: state => {
     // todo calculate equipment runes and etc

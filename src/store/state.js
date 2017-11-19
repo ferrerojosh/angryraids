@@ -8,6 +8,7 @@ export default {
   classes: classes,
   selectedHero: {
     name: "Demia",
+    title: "Fortress of Steel",
     damageType: "Physical",
     classId: 1,
     id: 2

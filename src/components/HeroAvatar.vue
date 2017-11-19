@@ -1,7 +1,9 @@
 <template>
-  <figure :class="classes">
-    <img :src="src">
-  </figure>
+  <li class="is-inline-block">
+    <figure :class="classes">
+      <img :src="src">
+    </figure>
+  </li>
 </template>
 
 <script>
@@ -22,17 +24,16 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
   .kr-hero-avatar
-    width: 129px
-    height: 129px
-    margin: 0 auto
-    margin-top: 2em
-    padding-left: 5px
-    padding-top: 5px
-    box-shadow: 0 0 0 5px #888 inset
-    border-radius 5px
+    width: 124px
+    height: 124px
+    margin: 1rem 1rem 1rem 0
+    padding: 5px
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.1) inset
+    border-radius: 5px
+    display: inline-block
 
   .kr-hero-selected
-    box-shadow: 0 0 0 8px #FFEF75 inset
+    box-shadow: 0 0 0 5px #FFEF75 inset
 </style>

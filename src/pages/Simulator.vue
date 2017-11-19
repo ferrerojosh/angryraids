@@ -1,12 +1,13 @@
 <template>
-  <div class="container">
-    <!-- Hero List View -->
-    <kr-hero-list class="col col-sm-2 col-no-gutters"></kr-hero-list>
-    <!-- Equipment View -->
-    <kr-equipment class="col col-sm-6 col-no-gutters"></kr-equipment>
-    <!-- Stats View -->
-    <kr-hero-stats class="col col-sm-4 col-no-gutters"></kr-hero-stats>
-  </div>
+  <section class="card kr-simulator-area">
+    <kr-hero-list></kr-hero-list>
+    <div class="columns is-gapless">
+      <!-- Stats View -->
+      <kr-hero-stats class="column is-one-third"></kr-hero-stats>
+      <!-- Equipment View -->
+      <kr-equipment class="column"></kr-equipment>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -22,3 +23,8 @@
     name: 'kr-simulator-page'
   }
 </script>
+
+<style lang="sass">
+  .kr-simulator-area
+    margin-top: 2rem
+</style>

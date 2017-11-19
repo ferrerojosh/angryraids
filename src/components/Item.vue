@@ -1,77 +1,86 @@
 <template>
-  <section class="kr-item row">
-    <div class="col col-sm-6 kr-item-col">
-      <div class="form-group">
-        <label>{{ label }}</label>
-        <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+  <section class="kr-item">
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label>{{ label }}</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Tier</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Stars</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Tier</label>
-        <select class="form-control" :id="label">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Stars</label>
-        <select class="form-control" :id="label">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
-    <div class="col col-sm-6 kr-item-col">
-      <div class="form-group">
-        <label>Enhancement Option 1</label>
-        <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Enhancement Option 2</label>
-        <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Enhancement Option 3</label>
-        <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Enhancement Option 4</label>
-        <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+      <div class="column">
+        <div class="field">
+          <label>Enhancement Option 1</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Enhancement Option 2</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Enhancement Option 3</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Enhancement Option 4</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -89,13 +98,9 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
   .kr-item
     padding: 1rem
-
-  .kr-item-col
-    flex-direction: column
-
-  .form-group
-    display: block
+    box-shadow: 0 1px 1px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+    margin-bottom: 1.5rem
 </style>

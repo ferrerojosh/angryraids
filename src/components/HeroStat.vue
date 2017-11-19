@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div class="col col-sm-4 kr-stat kr-stat-label">
+  <div class="columns">
+    <div class="column is-4 kr-stat kr-stat-label">
       {{ label }}
     </div>
-    <div class="col col-sm-6 kr-stat">
+    <div class="column is-6 kr-stat">
       <span>{{ base }}</span> + <span class="kr-stat-value">{{ value }}</span> (<span class="kr-stat-value">{{ base + value }}</span>)
     </div>
-    <div v-if="isOption" class="col col-sm-2 kr-stat kr-stat-percent">
+    <div v-if="isOption" class="column is-2 kr-stat kr-stat-percent">
       {{ percentage * 100 }}%
     </div>
   </div>
@@ -127,7 +127,7 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
   .kr-stat
     padding: 0.2rem !important
     display: inline

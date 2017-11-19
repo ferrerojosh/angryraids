@@ -1,11 +1,15 @@
 <template>
-  <section class="kr-equipment">
-    <kr-item label="Weapon"></kr-item>
-    <kr-item label="Armor"></kr-item>
-    <kr-item label="Secondary Armor"></kr-item>
-    <kr-item label="Accessory"></kr-item>
-    <kr-item label="Orb"></kr-item>
-    <kr-item label="Artifact"></kr-item>
+  <section class="columns">
+    <div class="column">
+      <kr-item label="Weapon"></kr-item>
+      <kr-item label="Armor"></kr-item>
+      <kr-item label="Secondary Armor"></kr-item>
+    </div>
+    <div class="column">
+      <kr-item label="Accessory"></kr-item>
+      <kr-item label="Orb"></kr-item>
+      <kr-item label="Artifact"></kr-item>
+    </div>
   </section>
 </template>
 
@@ -18,8 +22,6 @@
   }
 </script>
 
-<style lang="stylus">
-  .kr-equipment
-    overflow-y: scroll
-    overflow-x: hidden
+<style lang="sass">
+  @import "../sass/variables"
 </style>

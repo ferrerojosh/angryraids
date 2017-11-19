@@ -1,11 +1,13 @@
 <template>
   <aside>
-    <kr-hero-avatar @click.native="select(hero)"
-                    v-for="hero in heroesByClass"
-                    :key="hero.id"
-                    :src="heroImage(hero.name)"
-                    :selected="hero.id == selectedId">
-    </kr-hero-avatar>
+    <ul class="kr-heroes">
+      <kr-hero-avatar @click.native="select(hero)"
+                      v-for="hero in heroesByClass"
+                      :key="hero.id"
+                      :src="heroImage(hero.name)"
+                      :selected="hero.id == selectedId">
+      </kr-hero-avatar>
+    </ul>
   </aside>
 </template>
 
@@ -33,3 +35,17 @@
     }
   }
 </script>
+
+<style lang="sass">
+  @import "../sass/variables"
+
+  aside
+    overflow-x: scroll
+    padding-right: 1rem
+
+  .kr-heroes
+    margin: 0
+    padding-left: 1rem
+    padding-right: 1rem
+    white-space: nowrap
+</style>

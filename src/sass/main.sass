@@ -1,0 +1,29 @@
+@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/functions"
+
+$family-sans-serif: "Roboto", sans-serif
+
+html, body
+  background: whitesmoke !important
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar
+  width: 8px
+  background-color: rgba(0,0,0,0)
+
+::-webkit-scrollbar:horizontal
+  height: 8px
+
+::-webkit-scrollbar:hover
+  background-color: rgba(0, 0, 0, 0.09)
+
+::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal
+  background: rgba(0,0,0,0.5)
+
+::-webkit-scrollbar-thumb:vertical:active, ::-webkit-scrollbar-thumb:horizontal:active
+  background: rgba(0,0,0,0.61)
+
+
+
+@import "~bulma/sass/utilities/derived-variables"
+@import "~bulma/bulma"

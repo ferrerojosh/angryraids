@@ -1,12 +1,12 @@
 <template>
-  <div class="columns">
-    <div class="column is-4 kr-stat kr-stat-label">
+  <div class="columns is-mobile">
+    <div class="column kr-stat kr-stat-label">
       {{ label }}
     </div>
-    <div class="column is-6 kr-stat">
+    <div class="column has-text-right kr-stat">
       <span>{{ base }}</span> + <span class="kr-stat-value">{{ value }}</span> (<span class="kr-stat-value">{{ base + value }}</span>)
     </div>
-    <div v-if="isOption" class="column is-2 kr-stat kr-stat-percent">
+    <div v-if="isOption" class="column has-text-right kr-stat kr-stat-percent">
       {{ percentage * 100 }}%
     </div>
   </div>
@@ -86,6 +86,8 @@
           case 'M.Tough':
           case 'P.Block DEF':
           case 'M.Block DEF':
+          case 'P.Crit Resist':
+          case 'M.Crit Resist':
           case 'CC Resist':
             maxK = 900
             x1 = 1000

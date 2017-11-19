@@ -1,100 +1,46 @@
 <template>
   <section class="kr-item">
-    <div class="columns">
-      <div class="column">
-        <div class="field">
-          <label>{{ label }}</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>Tier</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>Stars</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="field">
-          <label>Enhancement Option 1</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>Enhancement Option 2</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>Enhancement Option 3</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>Enhancement Option 4</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
+    <div class="field">
+      <label>{{ type }}</label>
+      <div class="control">
+        <div class="select is-fullwidth">
+          <select v-model="selectedItem" disabled>
+            <option v-for="item in items" :key="item.id" :value="item">{{ item.name }}</option>
+          </select>
         </div>
       </div>
     </div>
+    <kr-item-details :item="selectedItem" :numOfOptions="4"></kr-item-details>
   </section>
 </template>
 
 <script>
+  import KrItemDetails from './ItemDetails.vue'
+
   export default {
+    components: { KrItemDetails },
     name: 'kr-item',
     props: {
-      label: String
+      type: String,
     },
     data: () => ({
-      item: {}
-    })
+      selectedItem: {}
+    }),
+    computed: {
+      items() {
+        let hero = this.$store.getters.selectedHero
+        let items = this.$store.getters.itemsByClass(hero.classId)
+        return items.filter(item => item.type === this.type)
+      }
+    },
+    mounted() {
+      this.selectedItem = this.items[0]
+    },
+    methods: {
+      itemChange() {
+        this.$emit('change', this.item)
+      }
+    }
   }
 </script>
 

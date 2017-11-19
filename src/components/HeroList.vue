@@ -37,8 +37,6 @@
 </script>
 
 <style lang="sass">
-  @import "../sass/variables"
-
   aside
     overflow-x: scroll
     padding-right: 1rem

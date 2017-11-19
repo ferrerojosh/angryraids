@@ -1,14 +1,13 @@
 <template>
   <section class="columns">
     <div class="column">
-      <kr-item label="Weapon"></kr-item>
-      <kr-item label="Armor"></kr-item>
-      <kr-item label="Secondary Armor"></kr-item>
+      <kr-item type="Weapon"></kr-item>
+      <kr-item type="Armor"></kr-item>
+      <kr-item type="Secondary Armor"></kr-item>
     </div>
     <div class="column">
-      <kr-item label="Accessory"></kr-item>
-      <kr-item label="Orb"></kr-item>
-      <kr-item label="Artifact"></kr-item>
+      <kr-item type="Accessory"></kr-item>
+      <kr-item type="Orb"></kr-item>
     </div>
   </section>
 </template>
@@ -21,7 +20,3 @@
     name: 'kr-equipment'
   }
 </script>
-
-<style lang="sass">
-  @import "../sass/variables"
-</style>

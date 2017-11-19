@@ -10,31 +10,34 @@ export default {
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
+  starScale: state => state.starScale,
   stats: state => {
     // todo calculate equipment runes and etc
     return {
       basicStats: [
-        { label: 'MAX HP', value: 0, base: state.selectedClass.stats.maxHp },
-        { label: 'ATK', value: 0, base: state.selectedClass.stats.atk },
-        { label: 'P.DEF', value: 0, base: state.selectedClass.stats.pDef },
-        { label: 'M.DEF', value: 0, base: state.selectedClass.stats.mDef }
+        { type: 'MAX HP', value: 0, base: state.selectedClass.stats.maxHp },
+        { type: 'ATK', value: 0, base: state.selectedClass.stats.atk },
+        { type: 'P.DEF', value: 0, base: state.selectedClass.stats.pDef },
+        { type: 'M.DEF', value: 0, base: state.selectedClass.stats.mDef }
       ],
       additionalOptions: [
-        { label: 'Crit', value: 0, base: state.selectedClass.stats.critChance },
-        { label: 'Crit DMG', value: 0, base: state.selectedClass.stats.critDamage },
-        { label: 'Penetration', value: 0, base: state.selectedClass.stats.penetration },
-        { label: 'ACC', value: 0, base: state.selectedClass.stats.accuracy },
-        { label: 'P.Dodge', value: 0, base: state.selectedClass.stats.pDodge },
-        { label: 'M.Dodge', value: 0, base: state.selectedClass.stats.mDodge },
-        { label: 'P.Block', value: 0, base: state.selectedClass.stats.pBlock },
-        { label: 'M.Block', value: 0, base: state.selectedClass.stats.mBlock },
-        { label: 'P.Block DEF', value: 0, base: state.selectedClass.stats.pBlockDef },
-        { label: 'M.Block DEF', value: 0, base: state.selectedClass.stats.mBlockDef },
-        { label: 'P.Tough', value: 0, base: state.selectedClass.stats.pTough },
-        { label: 'M.Tough', value: 0, base: state.selectedClass.stats.mTough },
-        { label: 'CC Resist', value: 0, base: state.selectedClass.stats.ccResist },
-        { label: 'Lifesteal', value: 0, base: state.selectedClass.stats.lifesteal },
-        { label: 'ATK Spd', value: 0, base: state.selectedClass.stats.atkSpd },
+        { type: 'Crit', value: 0, base: state.selectedClass.stats.critChance },
+        { type: 'Crit DMG', value: 0, base: state.selectedClass.stats.critDamage },
+        { type: 'Penetration', value: 0, base: state.selectedClass.stats.penetration },
+        { type: 'ACC', value: 0, base: state.selectedClass.stats.accuracy },
+        { type: 'P.Dodge', value: 0, base: state.selectedClass.stats.pDodge },
+        { type: 'M.Dodge', value: 0, base: state.selectedClass.stats.mDodge },
+        { type: 'P.Block', value: 0, base: state.selectedClass.stats.pBlock },
+        { type: 'M.Block', value: 0, base: state.selectedClass.stats.mBlock },
+        { type: 'P.Block DEF', value: 0, base: state.selectedClass.stats.pBlockDef },
+        { type: 'M.Block DEF', value: 0, base: state.selectedClass.stats.mBlockDef },
+        { type: 'P.Tough', value: 0, base: state.selectedClass.stats.pTough },
+        { type: 'M.Tough', value: 0, base: state.selectedClass.stats.mTough },
+        { type: 'P.Crit Resist', value: 0, base: state.selectedClass.stats.pCritResist },
+        { type: 'M.Crit Resist', value: 0, base: state.selectedClass.stats.mCritResist },
+        { type: 'CC Resist', value: 0, base: state.selectedClass.stats.ccResist },
+        { type: 'Lifesteal', value: 0, base: state.selectedClass.stats.lifesteal },
+        { type: 'ATK Spd', value: 0, base: state.selectedClass.stats.atkSpd },
       ]
     }
   }

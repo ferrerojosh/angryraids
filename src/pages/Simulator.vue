@@ -1,5 +1,5 @@
 <template>
-  <section class="card kr-simulator-area">
+  <section class="card">
     <kr-hero-list></kr-hero-list>
     <div class="columns is-gapless">
       <!-- Stats View -->
@@ -19,12 +19,8 @@
     components: {
       KrEquipment,
       KrHeroStats,
-      KrHeroList },
+      KrHeroList
+    },
     name: 'kr-simulator-page'
   }
 </script>
-
-<style lang="sass">
-  .kr-simulator-area
-    margin-top: 2rem
-</style>

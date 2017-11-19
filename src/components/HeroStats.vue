@@ -8,22 +8,32 @@
           Full Hero Information
         </a>
       </section>
+      <section class="kr-hero-stats">
+        Level 80
+      </section>
       <section class="kr-hero-basic section">
         <kr-hero-stat v-for="basicStat in stats.basicStats"
-                      :key="basicStat.label"
-                      :label="basicStat.label"
+                      :key="basicStat.type"
+                      :label="basicStat.type"
                       :value="basicStat.value"
                       :base="basicStat.base">
         </kr-hero-stat>
       </section>
       <section class="kr-hero-options section">
         <kr-hero-stat v-for="additionalOption in stats.additionalOptions"
-                      :key="additionalOption.label"
-                      :label="additionalOption.label"
+                      :key="additionalOption.type"
+                      :label="additionalOption.type"
                       :isOption="true"
                       :value="additionalOption.value"
                       :base="additionalOption.base">
         </kr-hero-stat>
+      </section>
+      <section class="kr-hero-stats">
+        <small>
+          Note: Crit DMG and P/M.Block DEF have hidden base values for all heroes,
+          those base values are not shown. For overview for each hero, please refer to
+          <a href="https://maskofgoblin.com/" target="_blank">Mask of Goblin</a>
+        </small>
       </section>
     </div>
   </section>
@@ -47,5 +57,5 @@
 
 <style lang="sass">
   .kr-hero-stats
-    padding: 1rem
+    padding-left: 1rem
 </style>

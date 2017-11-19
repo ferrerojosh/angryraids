@@ -1,0 +1,324 @@
+[
+  {
+    "name": "Clause",
+    "title": "Knight of Iron Defense",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 1
+  },
+  {
+    "name": "Demia",
+    "title": "Fortress of Steel",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 2
+  },
+  {
+    "name": "Phillop",
+    "title": "King of Dwarves",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 3
+  },
+  {
+    "name": "Morrah",
+    "title": "Devil's Flame",
+    "damageType": "Magical",
+    "classId": 1,
+    "id": 4
+  },
+  {
+    "name": "Jane",
+    "title": "Alabaster Corpse",
+    "damageType": "Magical",
+    "classId": 1,
+    "id": 5
+  },
+  {
+    "name": "Ricardo",
+    "title": "Lua's Judgement",
+    "damageType": "Physical",
+    "classId": 1,
+    "id": 6
+  },
+  {
+    "name": "Kasel",
+    "title": "Warrior of the Holy Sword",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 7
+  },
+  {
+    "name": "Gau",
+    "title": "Barbarian of Frozen Lands",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 8
+  },
+  {
+    "name": "Naila",
+    "title": "Wind's Fighter",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 9
+  },
+  {
+    "name": "Priscilla",
+    "title": "Maid of Steel",
+    "damageType": "Physical",
+    "classId": 2,
+    "id": 10
+  },
+  {
+    "name": "Viska",
+    "title": "Demon Eater",
+    "damageType": "Magical",
+    "classId": 2,
+    "id": 11
+  },
+  {
+    "name": "Roi",
+    "title": "Swift Assassin",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 12
+  },
+  {
+    "name": "Reina",
+    "title": "Lightning Flash",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 13
+  },
+  {
+    "name": "Fluss",
+    "title": "Fluttering Blade",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 14
+  },
+  {
+    "name": "Tanya",
+    "title": "The Silencing Blade",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 15
+  },
+  {
+    "name": "Epis",
+    "title": "Captivating Demon",
+    "damageType": "Magical",
+    "classId": 3,
+    "id": 16
+  },
+  {
+    "name": "Selene",
+    "title": "Wind-piercing arrow",
+    "damageType": "Physical",
+    "classId": 4,
+    "id": 17
+  },
+  {
+    "name": "Yanne",
+    "title": "Dragon Slayer",
+    "damageType": "Physical",
+    "classId": 4,
+    "id": 18
+  },
+  {
+    "name": "Dimael",
+    "title": "Shadow Edgy Hunter",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 19
+  },
+  {
+    "name": "Luna",
+    "title": "Child of Moonlight",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 20
+  },
+  {
+    "name": "Arch",
+    "title": "Arrow of Purity",
+    "damageType": "Magical",
+    "classId": 4,
+    "id": 21
+  },
+  {
+    "name": "Cleo",
+    "title": "Sorceress of Purgatory",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 22
+  },
+  {
+    "name": "Pavel",
+    "title": "Wizard of Ice Dragon",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 23
+  },
+  {
+    "name": "Maria",
+    "title": "Fallen Witch",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 24
+  },
+  {
+    "name": "Lorraine",
+    "title": "Grand Elidoran Scholar",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 25
+  },
+  {
+    "name": "Aisha",
+    "title": "The Violet Princess",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 26
+  },
+  {
+    "name": "Lewisia",
+    "title": "The Royal Vermilion Blood",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 27
+  },
+  {
+    "name": "Nyx",
+    "title": "Dimension Cleaver",
+    "damageType": "Physical",
+    "classId": 5,
+    "id": 28
+  },
+  {
+    "name": "Rodina",
+    "title": "Blizzard's Sniper",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 29
+  },
+  {
+    "name": "Lakrak",
+    "title": "Hunter of the Hand Cannon",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 30
+  },
+  {
+    "name": "Miruru",
+    "title": "Cursed Pirate Empress",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 31
+  },
+  {
+    "name": "Annette",
+    "title": "Royal Technomagi",
+    "damageType": "Magical",
+    "classId": 6,
+    "id": 32
+  },
+  {
+    "name": "Mitra",
+    "title": "The Silver Battle Wolf",
+    "damageType": "Physical",
+    "classId": 6,
+    "id": 33
+  },
+  {
+    "name": "Oddy",
+    "title": "Clocksmith of Eternal Life",
+    "damageType": "Magical",
+    "classId": 6,
+    "id": 34
+  },
+  {
+    "name": "Frey",
+    "title": "Priestess of Light",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 35
+  },
+  {
+    "name": "Kaulah",
+    "title": "Shaman of Lightning",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 36
+  },
+  {
+    "name": "Rephy",
+    "title": "Spiritual Guide",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 37
+  },
+  {
+    "name": "Laias",
+    "title": "Holy Priestess of Water",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 38
+  },
+  {
+    "name": "Baudouin",
+    "title": "Holy Ruffian",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 39
+  },
+  {
+    "name": "Leo",
+    "title": "Eternal Scribe",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 40
+  },
+  {
+    "name": "May",
+    "title": "The Girl Dreaming of Riches",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 41
+  },
+  {
+    "name": "Cassandra",
+    "title": "Tempting Winds  ",
+    "damageType": "Magical",
+    "classId": 7,
+    "id": 42
+  },
+  {
+    "name": "Gladi",
+    "title": "Beast of the Arena",
+    "damageType": "Physical",
+    "classId": 3,
+    "id": 43
+  },
+  {
+    "name": "Theo",
+    "title": "Knight of Loyalty",
+    "damageType": "Magical",
+    "classId": 2,
+    "id": 44
+  },
+  {
+    "name": "Mediana",
+    "title": "The Dangerous Doctor",
+    "damageType": "Physical",
+    "classId": 7,
+    "id": 45
+  },
+  {
+    "name": "Artemia",
+    "title": "Empress of Light",
+    "damageType": "Magical",
+    "classId": 5,
+    "id": 46
+  }
+]

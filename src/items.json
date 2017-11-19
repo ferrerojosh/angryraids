@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "tiers": {
+      "7": {
+        "levelScale": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      }
+    },
+    "setId": 4,
+    "name": "Swift Darkness Scale Armor",
+    "classes": [3, 4, 6],
+    "type": "Armor"
+  },
+  {
+    "id": 2,
+    "tiers": {
+      "7": {
+        "levelScale": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      }
+    },
+    "setId": 4,
+    "name": "Swift Darkness Plate Armor",
+    "classes": [1, 2],
+    "type": "Armor"
+  },
+  {
+    "id": 3,
+    "tiers": {
+      "7": {
+        "levelScale": [1421, 1577, 1733, 1889]
+      }
+    },
+    "setId": 4,
+    "name": "Swift Darkness Robe",
+    "classes": [5, 7],
+    "type": "Armor"
+  },
+  {
+    "id": 4,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 1,
+    "name": "Oppurtune Fire Scale Armor",
+    "classes": [3, 4, 6],
+    "type": "Armor"
+  },
+  {
+    "id": 5,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 1,
+    "name": "Oppurtune Fire Plate Armor",
+    "classes": [1, 2],
+    "type": "Armor"
+  },
+  {
+    "id": 6,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 1,
+    "name": "Oppurtune Fire Robe",
+    "classes": [5, 7],
+    "type": "Armor"
+  },
+  {
+    "id": 7,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 2,
+    "name": "Gritty Frost Scale Armor",
+    "classes": [3, 4, 6],
+    "type": "Armor"
+  },
+  {
+    "id": 8,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 2,
+    "name": "Gritty Frost Plate Armor",
+    "classes": [1, 2],
+    "type": "Armor"
+  },
+  {
+    "id": 9,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 2,
+    "name": "Gritty Frost Robe",
+    "classes": [5, 7],
+    "type": "Armor"
+  },
+  {
+    "id": 10,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Scale Armor",
+    "classes": [3, 4, 6],
+    "type": "Armor"
+  },
+  {
+    "id": 11,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Plate Armor",
+    "classes": [1, 2],
+    "type": "Armor"
+  },
+  {
+    "id": 12,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Robe",
+    "classes": [5, 7],
+    "type": "Armor"
+  },
+  {
+    "id": 13,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Orb",
+    "classes": [1, 2, 3, 4, 5, 6, 7],
+    "type": "Orb"
+  },
+  {
+    "id": 14,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Shield",
+    "classes": [1, 2],
+    "type": "Secondary Armor"
+  },
+  {
+    "id": 15,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Ring",
+    "classes": [1, 2, 3, 4, 5, 6, 7],
+    "type": "Accessory"
+  },
+  {
+    "id": 16,
+    "tiers": {
+      "7": {
+        "levelScale": []
+      }
+    },
+    "setId": 3,
+    "name": "Unrelenting Poison Lance",
+    "classes": [1, 2],
+    "type": "Weapon"
+  }
+
+]

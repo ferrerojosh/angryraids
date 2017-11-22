@@ -92,7 +92,7 @@
       // listen to hero change
       this.$store.subscribe(mutation => {
         if(mutation.type === types.CHANGE_HERO) {
-          this.onItemChange()
+          this.onTierChange()
         }
       })
     },

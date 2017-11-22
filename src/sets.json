@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "prefix": "Oppurtune Fire",
+    "bonus": {
+      "2": {
+        "manaAtk": 35
+      },
+      "4": {
+        "manaAtk": 50
+      }
+    }
+  },
+  {
+    "id": 2,
+    "prefix": "Gritty Frost",
+    "bonus": {
+      "2": {
+
+      },
+      "4": {
+
+      }
+    }
+  },
+  {
+    "id": 3,
+    "prefix": "Unrelenting Poison",
+    "bonus": {
+      "2": {
+
+      },
+      "4": {
+
+      }
+    }
+  },
+  {
+    "id": 4,
+    "prefix": "Swift Darkness",
+    "bonus": {
+      "2": {
+        "manaAtk": 35
+      },
+      "4": {
+        "manaAtk": 50
+      }
+    }
+  }
+]

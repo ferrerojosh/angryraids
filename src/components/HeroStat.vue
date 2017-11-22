@@ -1,10 +1,10 @@
 <template>
   <div class="columns is-mobile">
-    <div class="column kr-stat kr-stat-label">
+    <div class="column is-one-third kr-stat kr-stat-label">
       {{ label }}
     </div>
     <div class="column has-text-right kr-stat">
-      <span>{{ base }}</span> + <span class="kr-stat-value">{{ value }}</span> (<span class="kr-stat-value">{{ base + value }}</span>)
+      <span class="kr-stat-total">{{ base + value }}</span> ({{ base }} + <span class="kr-stat-value">{{ value }}</span>)
     </div>
     <div v-if="isOption" class="column has-text-right kr-stat kr-stat-percent">
       {{ percentage * 100 }}%
@@ -133,6 +133,10 @@
   .kr-stat
     padding: 0.2rem !important
     display: inline
+
+  .kr-stat-total
+    color: rgb(22, 163, 164)
+    font-weight: bold
 
   .kr-stat-value
     color: #00cc00

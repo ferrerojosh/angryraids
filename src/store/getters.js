@@ -7,6 +7,29 @@ let mergeStats = (stat1, stat2) => {
   return stat1
 }
 
+let applyStarsAndEnhancement = (item, uwEnhanceScale) => {
+  let atkHpScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
+  let uwScale = [1000, 1100, 1300, 1600, 2000, 2500]
+  let armorScale = [1, 1.1, 1.25, 1.45, 1.7, 2]
+  let starCoeff = 1
+
+  if(item.rarity === 'Legendary') {
+    for(let p in item.stats) {
+      if(p === 'atk' || p === 'maxHp')
+        starCoeff = atkHpScale[item.stars]
+      if(p === 'pDef' || p === 'mDef')
+        starCoeff = armorScale[item.stars]
+
+      let base = item.stats[p]
+      let coeff = 1 + (item.enhance * 0.11)
+      item.stats[p] = Math.floor(base * coeff * starCoeff)
+    }
+  } else if (item.rarity === 'Unique') {
+    item.stats.atk = Math.floor(Math.floor(uwScale[item.stars] * uwEnhanceScale[item.enhance] / 1000) * item.stats.atk / 1000)
+  }
+
+}
+
 export default {
   heroesByClass: state => {
     return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
@@ -40,10 +63,10 @@ export default {
       let secondaryHatTierBase = [0, 0, 0, 384, 736, 1377, 1906, 2841]
 
       let braceletTierBase = [0, 0, 0, 384, 736, 1377, 1993, 2841]
-      let earringTierBase = [0, 0, 0, 532, 1025, 1910, 2769, 2841]
+      let earringTierBase = [0, 0, 0, 532, 1025, 1910, 2769, 3943]
       let necklaceTierBase = [0, 0, 0, 384, 736, 1377, 1993, 2841]
       let ringTierBase = [0, 0, 0, 24404, 47039, 87848, 127282, 181282]
-      let orbTierBase = [0, 0, 0, 0, 0, 86454, 127282, 181282]
+      let orbTierBase = [0, 0, 0, 0, 0, 86454, 138285, 190116]
 
       for(let tier = 3; tier <= 7; tier++) {
         // weapon
@@ -126,7 +149,7 @@ export default {
           tier: tier,
           rarity: "Legendary",
           type: "Armor",
-          classes: [5, 7]
+          classes: [3, 4, 6]
         })
         // priest, wizard
         items.push({
@@ -162,7 +185,7 @@ export default {
           tier: tier,
           rarity: "Legendary",
           type: "Secondary Armor",
-          classes: [5, 7]
+          classes: [3, 4, 6]
         })
         // priest, wizard
         items.push({
@@ -293,32 +316,12 @@ export default {
     let selectedOrb =  JSON.parse(JSON.stringify(state.selectedOrb))
     let selectedWeapon =  JSON.parse(JSON.stringify(state.selectedWeapon))
 
-    let weaponScale = [1, 1.1, 1.3, 1.6, 2, 2.5]
-    let armorScale = [1, 1.1, 1.25, 1.45, 1.7, 2]
-    let accessoryScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
-
     // apply enhancement and star rating
-    for(let p in selectedArmor.stats) {
-      let coeff = 1 + (selectedArmor.enhance * 0.11)
-      selectedArmor.stats[p] = Math.floor(selectedArmor.stats[p] * coeff * armorScale[selectedArmor.stars])
-    }
-    for(let p in selectedSecondary.stats) {
-      let coeff = 1 + (selectedArmor.enhance * 0.11)
-      selectedSecondary.stats[p] = Math.floor(selectedSecondary.stats[p] * coeff * armorScale[selectedSecondary.stars])
-    }
-    for(let p in selectedAccessory.stats) {
-      let coeff = 1 + (selectedAccessory.enhance * 0.11)
-      selectedAccessory.stats[p] = Math.floor(selectedAccessory.stats[p] * coeff * accessoryScale[selectedArmor.stars])
-    }
-    for(let p in selectedOrb.stats) {
-      let coeff = 1 + (selectedOrb.enhance * 0.11)
-      selectedOrb.stats[p] = Math.floor(selectedOrb.stats[p] * coeff * accessoryScale[selectedOrb.stars])
-    }
-    for(let p in selectedWeapon.stats) {
-      let coeff = 1 + (selectedWeapon.enhance * 0.11)
-      selectedWeapon.stats[p] = Math.floor(selectedWeapon.stats[p] * coeff * weaponScale[selectedWeapon.stars])
-    }
-
+    applyStarsAndEnhancement(selectedArmor, state.uwEnhanceScale)
+    applyStarsAndEnhancement(selectedSecondary, state.uwEnhanceScale)
+    applyStarsAndEnhancement(selectedAccessory, state.uwEnhanceScale)
+    applyStarsAndEnhancement(selectedOrb, state.uwEnhanceScale)
+    applyStarsAndEnhancement(selectedWeapon, state.uwEnhanceScale)
 
     statValues = mergeStats(statValues, selectedArmor.stats)
     statValues = mergeStats(statValues, selectedSecondary.stats)

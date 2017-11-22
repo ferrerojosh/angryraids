@@ -122,30 +122,27 @@
         this.$store.dispatch(actionTypes.selectItem, item)
       },
       statWithEnhancement(base) {
-        let weaponScale = [1, 1.1, 1.3, 1.6, 2, 2.5]
+        let atkHpScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
+        let uwScale = [1000, 1100, 1300, 1600, 2000, 2500]
         let armorScale = [1, 1.1, 1.25, 1.45, 1.7, 2]
-        let accessoryScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
 
         let starCoeff = 1
 
-        switch(this.item.type) {
-          case 'Armor':
-          case 'Secondary Armor':
-            starCoeff = armorScale[this.star]
-            break;
-          case 'Accessory':
-          case 'Orb':
-            starCoeff = accessoryScale[this.star]
-            break;
-          case 'Weapon':
-            starCoeff = weaponScale[this.star]
-            break;
-          default:
-            break;
-        }
+        if(this.item.rarity === 'Legendary') {
+          for(let p in this.item.stats) {
+            if(p === 'atk' || p === 'maxHp')
+              starCoeff = atkHpScale[this.star]
+            if(p === 'pDef' || p === 'mDef')
+              starCoeff = armorScale[this.star]
+          }
 
-        let coeff = 1 + (this.enhancement * 0.11)
-        return Math.floor(base * coeff * starCoeff)
+          let coeff = 1 + (this.enhancement * 0.11)
+          return Math.floor(base * coeff * starCoeff)
+        } else if (this.item.rarity === 'Unique') {
+          let uwEnhanceScale = this.$store.state.uwEnhanceScale
+
+          return Math.floor(Math.floor(uwScale[this.star] * uwEnhanceScale[this.enhancement] / 1000) * this.item.stats.atk / 1000)
+        }
       },
       statToLabel(stat) {
         switch(stat) {

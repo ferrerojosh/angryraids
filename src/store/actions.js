@@ -14,7 +14,7 @@ export default {
       context.commit(types.CHANGE_WEAPON, item)
     } else if (item.type === 'Armor') {
       context.commit(types.CHANGE_ARMOR, item)
-    } else if (item.type === 'Secondary') {
+    } else if (item.type === 'Secondary Armor') {
       context.commit(types.CHANGE_SECONDARY, item)
     } else if (item.type === 'Accessory') {
       context.commit(types.CHANGE_ACCESSORY, item)

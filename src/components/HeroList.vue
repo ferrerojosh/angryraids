@@ -25,6 +25,9 @@
         'selectedId',
       ])
     },
+    mounted() {
+      this.select(this.heroesByClass[0])
+    },
     methods: {
       heroImage(name) {
         return `/static/img/heroes/${name}.png`

@@ -1,21 +1,30 @@
 <template>
   <section class="kr-item">
-    <div class="field">
-      <label>{{ type }}</label>
-      <div class="control">
-        <div class="select is-fullwidth">
-          <select v-model="selectedItem" disabled>
-            <option v-for="item in items" :key="item.id" :value="item">{{ item.name }}</option>
+    <label class="label">{{ type }}</label>
+    <div class="field has-addons">
+      <div class="control is-expanded">
+        <span class="select is-fullwidth">
+          <select v-model="selectedItem" @change="onItemChange()">
+            <option v-for="item in items" :key="item.name" :value="item">{{ item.name }}</option>
           </select>
-        </div>
+        </span>
+      </div>
+      <div class="control">
+        <span class="select">
+          <select v-model="selectedTier" @change="onTierChange()">
+            <option v-for="tier in numOfTiers" :value="tier">Tier {{ tier }}</option>
+          </select>
+        </span>
       </div>
     </div>
-    <kr-item-details :item="selectedItem" :numOfOptions="4"></kr-item-details>
+    <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
   </section>
 </template>
 
 <script>
   import KrItemDetails from './ItemDetails.vue'
+  import { types } from '../store/mutations'
+  import { actionTypes } from '../store/actions'
 
   export default {
     components: { KrItemDetails },
@@ -24,21 +33,76 @@
       type: String,
     },
     data: () => ({
-      selectedItem: {}
+      selectedItem: {},
+      selectedTier: 7
     }),
     computed: {
+      itemsByTier() {
+        return this.itemsByClass.filter(item => item.tier === this.selectedTier)
+      },
+      itemsByClass() {
+        // generate unique weapon
+        let uniqueWeapon = {
+          name: this.selectedHero.uniqueWeapon,
+          stats: {
+            atk: 100
+          },
+          tier: 10,
+          enhance: 0,
+          stars: 0,
+          rarity: "Unique",
+          type: "Weapon",
+          classes: [this.selectedHero.classId]
+        }
+        let items = this.$store.getters.items.filter(item => item.classes.includes(this.selectedHero.classId))
+        items.push(uniqueWeapon)
+        return items
+      },
+      selectedHero() {
+        return this.$store.getters.selectedHero
+      },
       items() {
-        let hero = this.$store.getters.selectedHero
-        let items = this.$store.getters.itemsByClass(hero.classId)
-        return items.filter(item => item.type === this.type)
+        return this.itemsByTier.filter(item => item.type === this.type)
+      },
+      numOfOptions() {
+        switch(this.selectedItem.rarity) {
+          case 'Legendary':
+            return 4
+          case 'Ancient':
+          case 'Heroic':
+            return 3
+          case 'Rare':
+            return 2
+          case 'Unique':
+            return 0
+        }
+      },
+      numOfTiers() {
+        let tiers = new Set() // unique set
+
+        this.itemsByClass.filter(item => item.type === this.type).forEach(item => {
+          tiers.add(item.tier)
+        })
+
+        return Array.from(tiers)
       }
     },
     mounted() {
-      this.selectedItem = this.items[0]
+      this.onTierChange()
+      // listen to hero change
+      this.$store.subscribe(mutation => {
+        if(mutation.type === types.CHANGE_HERO) {
+          this.onItemChange()
+        }
+      })
     },
     methods: {
-      itemChange() {
-        this.$emit('change', this.item)
+      onTierChange() {
+        this.selectedItem = this.items[0]
+        this.onItemChange()
+      },
+      onItemChange() {
+        this.$store.dispatch(actionTypes.selectItem, this.selectedItem)
       }
     }
   }

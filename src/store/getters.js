@@ -1,35 +1,3 @@
-let mergeStats = (stat1, stat2) => {
-  if(stat2 === undefined) return stat1
-  for(let p in stat1) {
-    let v = stat2[p] !== undefined ? stat2[p] : 0
-    stat1[p] = stat1[p] + v
-  }
-  return stat1
-}
-
-let applyStarsAndEnhancement = (item, uwEnhanceScale) => {
-  let atkHpScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
-  let uwScale = [1000, 1100, 1300, 1600, 2000, 2500]
-  let armorScale = [1, 1.1, 1.25, 1.45, 1.7, 2]
-  let starCoeff = 1
-
-  if(item.rarity === 'Legendary') {
-    for(let p in item.stats) {
-      if(p === 'atk' || p === 'maxHp')
-        starCoeff = atkHpScale[item.stars]
-      if(p === 'pDef' || p === 'mDef')
-        starCoeff = armorScale[item.stars]
-
-      let base = item.stats[p]
-      let coeff = 1 + (item.enhance * 0.11)
-      item.stats[p] = Math.floor(base * coeff * starCoeff)
-    }
-  } else if (item.rarity === 'Unique') {
-    item.stats.atk = Math.floor(Math.floor(uwScale[item.stars] * uwEnhanceScale[item.enhance] / 1000) * item.stats.atk / 1000)
-  }
-
-}
-
 export default {
   heroesByClass: state => {
     return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
@@ -37,36 +5,40 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
+  applyStarAndEnhancement: (state, getters) => (stats, star, enhance, rarity = 'Legendary') => {
+    let starCoefficient = 1
+
+    if(rarity === 'Legendary') {
+      for(let stat in stats) {
+        if(stats.hasOwnProperty(stat)) {
+          if(stat === 'atk' || stat === 'maxHp')
+            starCoefficient = state.atkHpScale[star]
+          if(stat === 'pDef' || stat === 'mDef')
+            starCoefficient = state.defScale[star]
+
+          let base = stats[stat]
+          let coefficient = 1 + (enhance * 0.11)
+
+          stats[stat] = Math.floor(base * coefficient * starCoefficient)
+        }
+      }
+    } else if (rarity === 'Unique') {
+      let result = Math.floor(state.uwScale[star] * state.uwEnhanceScale[enhance])
+      stats.atk = Math.floor(result * stats.atk / 1000)
+    }
+
+    return stats
+  },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
+  options: state => {
+
+  },
   items: state => {
     let items = []
     // generate sets
     for(let set of state.sets) {
       // legendary sets for now, todo ancient sets
-
-      // weapons
-      let wepKnightTierBase = [0, 0, 0, 786, 1516, 2828, 3919, 5834]
-      let wepWarriorTierBase = [0, 0, 0, 851, 1637, 3058, 4235, 6309]
-      let wepAssassinTierBase = [0, 0, 0, 924, 1781, 3325, 4607, 6858]
-      let wepArcherTierBase = [0, 0, 0, 1211, 2334, 4355, 6037, 8987]
-      let wepMechanicTierBase = [0, 0, 0, 1105, 2128, 3973, 5506, 8200]
-      let wepStaffTierBase = [0, 0, 0, 1126, 2170, 4050, 5613, 8356]
-
-      // armors
-      let armorPlateTierBase = [0, 0, 0, 576, 1107, 2062, 2859, 4258]
-      let armorScaleTierBase = [0, 0, 0, 384, 736, 1377, 1906, 2841]
-      let armorRobeTierBase = [0, 0, 0, 192, 370, 690, 954, 1421]
-
-      let secondaryShieldTierBase = [0, 0, 0, 576, 1107, 2062, 2859, 4258]
-      let secondaryCapeTierBase = [0, 0, 0, 192, 370, 690, 954, 1421]
-      let secondaryHatTierBase = [0, 0, 0, 384, 736, 1377, 1906, 2841]
-
-      let braceletTierBase = [0, 0, 0, 384, 736, 1377, 1993, 2841]
-      let earringTierBase = [0, 0, 0, 532, 1025, 1910, 2769, 3943]
-      let necklaceTierBase = [0, 0, 0, 384, 736, 1377, 1993, 2841]
-      let ringTierBase = [0, 0, 0, 24404, 47039, 87848, 127282, 181282]
-      let orbTierBase = [0, 0, 0, 0, 0, 86454, 138285, 190116]
 
       for(let tier = 3; tier <= 7; tier++) {
         // weapon
@@ -75,7 +47,7 @@ export default {
         items.push({
           name: `${set.prefix} Lance`,
           stats: {
-            atk: wepKnightTierBase[tier]
+            atk: state.wepKnightTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -86,7 +58,7 @@ export default {
         items.push({
           name: `${set.prefix} Greatsword`,
           stats: {
-            atk: wepWarriorTierBase[tier]
+            atk: state.wepWarriorTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -97,7 +69,7 @@ export default {
         items.push({
           name: `${set.prefix} Dagger`,
           stats: {
-            atk: wepAssassinTierBase[tier]
+            atk: state.wepAssassinTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -108,7 +80,7 @@ export default {
         items.push({
           name: `${set.prefix} Bow`,
           stats: {
-            atk: wepArcherTierBase[tier]
+            atk: state.wepArcherTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -119,7 +91,7 @@ export default {
         items.push({
           name: `${set.prefix} Gun`,
           stats: {
-            atk: wepMechanicTierBase[tier]
+            atk: state.wepMechanicTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -130,7 +102,7 @@ export default {
         items.push({
           name: `${set.prefix} Staff`,
           stats: {
-            atk: wepStaffTierBase[tier]
+            atk: state.wepStaffTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -144,7 +116,7 @@ export default {
         items.push({
           name: `${set.prefix} Scale Armor`,
           stats: {
-            pDef: armorScaleTierBase[tier]
+            pDef: state.armorScaleTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -155,7 +127,7 @@ export default {
         items.push({
           name: `${set.prefix} Robe`,
           stats: {
-            pDef: armorRobeTierBase[tier]
+            pDef: state.armorRobeTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -166,7 +138,7 @@ export default {
         items.push({
           name: `${set.prefix} Plate Armor`,
           stats: {
-            pDef: armorPlateTierBase[tier]
+            pDef: state.armorPlateTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -180,7 +152,7 @@ export default {
         items.push({
           name: `${set.prefix} Leather Cape`,
           stats: {
-            mDef: secondaryCapeTierBase[tier]
+            mDef: state.secondaryCapeTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -191,7 +163,7 @@ export default {
         items.push({
           name: `${set.prefix} Hat`,
           stats: {
-            mDef: secondaryHatTierBase[tier]
+            mDef: state.secondaryHatTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -202,7 +174,7 @@ export default {
         items.push({
           name: `${set.prefix} Shield`,
           stats: {
-            mDef: secondaryShieldTierBase[tier]
+            mDef: state.secondaryShieldTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -216,7 +188,7 @@ export default {
         items.push({
           name: `${set.prefix} Bracelet`,
           stats: {
-            pDef: braceletTierBase[tier]
+            pDef: state.braceletTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -227,7 +199,7 @@ export default {
         items.push({
           name: `${set.prefix} Earring`,
           stats: {
-            atk: earringTierBase[tier]
+            atk: state.earringTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -238,7 +210,7 @@ export default {
         items.push({
           name: `${set.prefix} Necklace`,
           stats: {
-            mDef: necklaceTierBase[tier]
+            mDef: state.necklaceTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -249,7 +221,7 @@ export default {
         items.push({
           name: `${set.prefix} Ring`,
           stats: {
-            maxHp: ringTierBase[tier]
+            maxHp: state.ringTierBase[tier]
           },
           tier: tier,
           rarity: "Legendary",
@@ -261,7 +233,7 @@ export default {
           items.push({
             name: `${set.prefix} Orb`,
             stats: {
-              maxHp: orbTierBase[tier]
+              maxHp: state.orbTierBase[tier]
             },
             tier: tier,
             rarity: "Legendary",
@@ -279,37 +251,20 @@ export default {
 
     return items
   },
-  stats: state => {
+  stats: (state, getters) => {
     // todo calculate equipment runes and etc
-    let statValues = {
-      atk: 0,
-      pDef: 0,
-      mDef: 0,
-      maxHp: 0,
-      critChance: 0,
-      critDamage: 0,
-      penetration: 0,
-      accuracy: 0,
-      pDodge: 0,
-      mDodge: 0,
-      pBlock: 0,
-      mBlock: 0,
-      pBlockDef: 0,
-      mBlockDef: 0,
-      pWeak: 0,
-      mWeak: 0,
-      pCritResist: 0,
-      mCritResist: 0,
-      pTough: 0,
-      mTough: 0,
-      heal: 0,
-      recovery: 0,
-      ccResist: 0,
-      debuffResist: 0,
-      lifesteal: 0,
-      atkSpd: 0
+    let mergeStats = (stat1, stat2) => {
+      if(stat2 === undefined) return stat1
+      for(let p in stat1) {
+        if(stat1.hasOwnProperty(p) && stat2.hasOwnProperty(p)) {
+          stat1[p] = stat1[p] + stat2[p]
+        }
+      }
+      return stat1
     }
 
+    // the ugly cloning ughh if only Object.assign didn't copy reactive properties
+    let statValues = JSON.parse(JSON.stringify(state.statValues))
     let selectedArmor = JSON.parse(JSON.stringify(state.selectedArmor))
     let selectedSecondary = JSON.parse(JSON.stringify(state.selectedSecondary))
     let selectedAccessory = JSON.parse(JSON.stringify(state.selectedAccessory))
@@ -317,11 +272,16 @@ export default {
     let selectedWeapon =  JSON.parse(JSON.stringify(state.selectedWeapon))
 
     // apply enhancement and star rating
-    applyStarsAndEnhancement(selectedArmor, state.uwEnhanceScale)
-    applyStarsAndEnhancement(selectedSecondary, state.uwEnhanceScale)
-    applyStarsAndEnhancement(selectedAccessory, state.uwEnhanceScale)
-    applyStarsAndEnhancement(selectedOrb, state.uwEnhanceScale)
-    applyStarsAndEnhancement(selectedWeapon, state.uwEnhanceScale)
+    selectedArmor.stats = getters.applyStarAndEnhancement(selectedArmor.stats,
+      selectedArmor.stars, selectedArmor.enhance, selectedArmor.rarity)
+    selectedSecondary.stats = getters.applyStarAndEnhancement(selectedSecondary.stats,
+      selectedSecondary.stars, selectedSecondary.enhance, selectedSecondary.rarity)
+    selectedAccessory.stats = getters.applyStarAndEnhancement(selectedAccessory.stats,
+      selectedAccessory.stars, selectedAccessory.enhance, selectedAccessory.rarity)
+    selectedOrb.stats = getters.applyStarAndEnhancement(selectedOrb.stats,
+      selectedOrb.stars, selectedOrb.enhance, selectedOrb.rarity)
+    selectedWeapon.stats = getters.applyStarAndEnhancement(selectedWeapon.stats,
+      selectedWeapon.stars, selectedWeapon.enhance, selectedWeapon.rarity)
 
     statValues = mergeStats(statValues, selectedArmor.stats)
     statValues = mergeStats(statValues, selectedSecondary.stats)

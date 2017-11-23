@@ -37,9 +37,9 @@
         <label class="label">Stats</label>
         <table class="table is-fullwidth">
           <tbody>
-            <tr v-for="(value, stat) in item.stats">
+            <tr v-for="(value, stat) in statWithEnhancement(item)">
               <td>{{ statToLabel(stat) }}</td>
-              <td class="has-text-right">{{ statWithEnhancement(value) }}</td>
+              <td class="has-text-right">{{ value }}</td>
             </tr>
           </tbody>
         </table>
@@ -121,31 +121,10 @@
         let item = Object.assign({}, this.item, { stars: this.star, enhance: this.enhancement })
         this.$store.dispatch(actionTypes.selectItem, item)
       },
-      statWithEnhancement(base) {
-        let weaponScale = [1, 1.1, 1.3, 1.6, 2, 2.5]
-        let armorScale = [1, 1.1, 1.25, 1.45, 1.7, 2]
-        let accessoryScale = [1, 1.1, 1.2, 1.3, 1.4, 1.5]
-
-        let starCoeff = 1
-
-        switch(this.item.type) {
-          case 'Armor':
-          case 'Secondary Armor':
-            starCoeff = armorScale[this.star]
-            break;
-          case 'Accessory':
-          case 'Orb':
-            starCoeff = accessoryScale[this.star]
-            break;
-          case 'Weapon':
-            starCoeff = weaponScale[this.star]
-            break;
-          default:
-            break;
-        }
-
-        let coeff = 1 + (this.enhancement * 0.11)
-        return Math.floor(base * coeff * starCoeff)
+      statWithEnhancement(item) {
+        // clone stats to avoid modifying state, ugly I know
+        let stats = JSON.parse(JSON.stringify(item.stats))
+        return this.$store.getters.applyStarAndEnhancement(stats, this.star, this.enhancement, item.rarity)
       },
       statToLabel(stat) {
         switch(stat) {

@@ -45,13 +45,13 @@
         let uniqueWeapon = {
           name: this.selectedHero.uniqueWeapon,
           stats: {
-            atk: 100
+            atk: this.selectedHero.uniqueBaseAtk
           },
           tier: 10,
           enhance: 0,
           stars: 0,
-          rarity: "Unique",
-          type: "Weapon",
+          rarity: 'Unique',
+          type: 'Weapon',
           classes: [this.selectedHero.classId]
         }
         let items = this.$store.getters.items.filter(item => item.classes.includes(this.selectedHero.classId))
@@ -92,7 +92,7 @@
       // listen to hero change
       this.$store.subscribe(mutation => {
         if(mutation.type === types.CHANGE_HERO) {
-          this.onItemChange()
+          this.onTierChange()
         }
       })
     },

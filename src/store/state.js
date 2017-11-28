@@ -135,7 +135,8 @@ export default {
     ccResist: 0,
     debuffResist: 0,
     lifesteal: 0,
-    atkSpd: 0
+    atkSpd: 0,
+    manaAtk: 0
   },
   selectedHero: {},
   selectedClass: {},

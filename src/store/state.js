@@ -138,12 +138,107 @@ export default {
     atkSpd: 0,
     manaAtk: 0
   },
-  selectedHero: {},
-  selectedClass: {},
-  selectedArmor: {},
-  selectedSecondary: {},
-  selectedWeapon: {},
-  selectedOrb: {},
-  selectedAccessory: {},
+  selectedHero: {
+    name: 'Demia',
+    title: 'Fortress of Steel',
+    damageType: 'Physical',
+    manaAtk: 0,
+    uniqueBaseAtk: 355,
+    uniqueWeapon: 'The Blue Light, Arpheus',
+    classId: 1,
+    id: 2
+  },
+  selectedClass: {
+    name: 'Knight',
+    id: 1,
+    stats: {
+      atk: 14352,
+      pDef: 6984,
+      mDef: 5432,
+      maxHp: 1354584,
+      critChance: 50,
+      critDamage: 0,
+      penetration: 0,
+      accuracy: 0,
+      pDodge: 0,
+      mDodge: 0,
+      pBlock: 200,
+      mBlock: 0,
+      pBlockDef: 0,
+      mBlockDef: 0,
+      pWeak: 0,
+      mWeak: 0,
+      pCritResist: 0,
+      mCritResist: 0,
+      pTough: 250,
+      mTough: 250,
+      heal: 0,
+      recovery: 0,
+      ccResist: 0,
+      debuffResist: 0,
+      lifesteal: 0,
+      atkSpd: 1000
+    }
+  },
+  selectedArmor: {
+    name: 'Oppurtune Fire Plate Armor',
+    stats: {
+      pDef: 4258
+    },
+    tier: 7,
+    rarity: 'Legendary',
+    type: 'Armor',
+    classes: [ 1, 2 ],
+    enhancement: 0,
+    stars: 0
+  },
+  selectedSecondary: {
+    name: 'Oppurtune Fire Shield',
+    stats: {
+      mDef: 4258
+    },
+    tier: 7,
+    rarity: 'Legendary',
+    type: 'Secondary Armor',
+    classes: [ 1, 2 ],
+    enhancement: 0,
+    stars: 0
+  },
+  selectedWeapon: {
+    name: 'Oppurtune Fire Lance',
+    stats: {
+      atk: 5834
+    },
+    tier: 7,
+    rarity: 'Legendary',
+    type: 'Weapon',
+    classes: [ 1 ],
+    enhancement: 0,
+    stars: 0
+  },
+  selectedOrb: {
+    name: 'Oppurtune Fire Orb',
+    stats: {
+      maxHp: 190116
+    },
+    tier: 7,
+    rarity: 'Legendary',
+    type: 'Orb',
+    classes: [ 1, 2, 3, 4, 5, 6, 7 ],
+    enhancement: 0,
+    stars: 0
+  },
+  selectedAccessory: {
+    name: 'Oppurtune Fire Bracelet',
+    stats: {
+      pDef: 2841
+    },
+    tier: 7,
+    rarity: 'Legendary',
+    type: 'Accessory',
+    classes: [ 1, 2, 3, 4, 5, 6, 7 ],
+    enhancement: 0,
+    stars: 0
+  },
   selectedArtifact: {}
 }

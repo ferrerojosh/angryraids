@@ -1,12 +1,12 @@
 <template>
   <div class="columns is-mobile">
-    <div class="column is-one-third kr-stat kr-stat-label">
+    <div class="column kr-stat is-two-fifths kr-stat-label">
       {{ label }}
     </div>
     <div class="column has-text-right kr-stat">
       <span class="kr-stat-total">{{ base + value }}</span> ({{ base }} + <span class="kr-stat-value">{{ value }}</span>)
     </div>
-    <div v-if="isOption" class="column has-text-right kr-stat kr-stat-percent">
+    <div v-if="isOption" class="column is-one-fifth has-text-right kr-stat kr-stat-percent">
       {{ percentage * 100 }}%
     </div>
   </div>

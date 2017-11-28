@@ -21,15 +21,15 @@
           <span class="is-pulled-left">Enhancement</span>
 
           <span class="is-pulled-right" @click="changeItemAttribute">
-            <i class="fa fa-minus-circle kr-enhance-btn" @click="minusEnhance()"></i>
-            <i class="fa fa-plus-circle kr-enhance-btn" @click="plusEnhance()"></i>
+            <!--<i class="fa fa-minus-circle kr-enhance-btn" @click="minusEnhance()"></i>-->
+            <!--<i class="fa fa-plus-circle kr-enhance-btn" @click="plusEnhance()"></i>-->
             <small class="kr-enhance-btn" @click="maxEnhance()">Max</small>
           </span>
         </label>
         <div class="is-clearfix"></div>
         <div class="control">
           <div class="is-fullwidth">
-            <progress class="progress is-warning" :value="enhancement" :max="numOfEnhancement"></progress>
+            <input class="input" type="number" v-model="enhancement" min="0" :max="numOfEnhancement">
           </div>
         </div>
       </div>

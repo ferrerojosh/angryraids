@@ -314,6 +314,7 @@ export default {
         { type: 'CC Resist', value: statValues.ccResist, base: state.selectedClass.stats.ccResist },
         { type: 'Lifesteal', value: statValues.lifesteal, base: state.selectedClass.stats.lifesteal },
         { type: 'ATK Spd', value: statValues.atkSpd, base: state.selectedClass.stats.atkSpd },
+        { type: 'MP Recovery/Attack', value: statValues.manaAtk, base: state.selectedHero.manaAtk },
       ]
     }
   }

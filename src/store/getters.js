@@ -31,9 +31,7 @@ export default {
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
-  options: state => {
-
-  },
+  options: state => state.options,
   items: state => {
     let items = []
     // generate sets
@@ -247,6 +245,12 @@ export default {
     items.forEach(item => {
       item.enhancement = 0
       item.stars = 0
+      item.options = [
+        state.options[0],
+        state.options[1],
+        state.options[2],
+        state.options[3]
+      ]
     })
 
     return items
@@ -283,6 +287,7 @@ export default {
     selectedWeapon.stats = getters.applyStarAndEnhancement(selectedWeapon.stats,
       selectedWeapon.stars, selectedWeapon.enhancement, selectedWeapon.rarity)
 
+    // merge base stats
     statValues = mergeStats(statValues, selectedArmor.stats)
     statValues = mergeStats(statValues, selectedSecondary.stats)
     statValues = mergeStats(statValues, selectedAccessory.stats)

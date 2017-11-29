@@ -7,7 +7,7 @@
       <span class="kr-stat-total">{{ base + value }}</span> ({{ base }} + <span class="kr-stat-value">{{ value }}</span>)
     </div>
     <div v-if="isOption" class="column is-one-fifth has-text-right kr-stat kr-stat-percent">
-      {{ percentage * 100 }}%
+      {{ Math.floor(percentage * 100) }}%
     </div>
   </div>
 </template>
@@ -31,10 +31,10 @@
       calculateStatWithCap(stat, maxK, x1, a1, b1, x2, a2, b2, minK, x3, a3, b3, x4, a4, b4) {
         return (
           (stat === 0) ? 0 :
-          (stat > x1) ? attenuateInv(stat, maxK, a1, b1) :
+          (stat > x1) ? this.attenuateInv(stat, maxK, a1, b1) :
           (stat > x2) ? Math.floor(a2 * stat / 1000) + b2 :
-          (stat < x3) ? attenuateInv(stat, minK, a3, b3) :
-          (stat < x4) ? attenuate(stat, minK, a4, b4) : stat
+          (stat < x3) ? this.attenuateInv(stat, minK, a3, b3) :
+          (stat < x4) ? this.attenuate(stat, minK, a4, b4) : stat
         ) / 1000
       }
     },

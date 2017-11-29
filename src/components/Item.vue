@@ -17,7 +17,9 @@
         </span>
       </div>
     </div>
-    <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
+    <div v-if="selectedItem">
+      <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
+    </div>
   </section>
 </template>
 
@@ -56,20 +58,7 @@
     computed: {
       selectedItem: {
         get() {
-          switch(this.type) {
-            case 'Weapon':
-              return this.$store.state.selectedWeapon
-            case 'Armor':
-              return this.$store.state.selectedArmor
-            case 'Secondary Armor':
-              return this.$store.state.selectedSecondary
-            case 'Accessory':
-              return this.$store.state.selectedAccessory
-            case 'Orb':
-              return this.$store.state.selectedOrb
-            case 'Artifact':
-              return this.$store.state.selectedArtifact
-          }
+          return this.$store.getters.selectedItemByType(this.type)
         },
         set(val) {
           this.$store.dispatch(actionTypes.selectItem, val)
@@ -90,7 +79,8 @@
           stars: 0,
           rarity: 'Unique',
           type: 'Weapon',
-          classes: [this.selectedHero.classId]
+          classes: [this.selectedHero.classId],
+          options: []
         }
         let items = this.$store.getters.items.filter(item => item.classes.includes(this.selectedHero.classId))
         items.push(uniqueWeapon)

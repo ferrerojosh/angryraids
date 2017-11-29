@@ -31,6 +31,7 @@ export default {
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
+  selectedItemByType: state => (type) => state.selectedItems[type],
   options: state => state.options,
   items: state => {
     let items = []
@@ -269,37 +270,54 @@ export default {
 
     // the ugly cloning ughh if only Object.assign didn't copy reactive properties
     let statValues = JSON.parse(JSON.stringify(state.statValues))
-    let selectedArmor = JSON.parse(JSON.stringify(state.selectedArmor))
-    let selectedSecondary = JSON.parse(JSON.stringify(state.selectedSecondary))
-    let selectedAccessory = JSON.parse(JSON.stringify(state.selectedAccessory))
-    let selectedOrb =  JSON.parse(JSON.stringify(state.selectedOrb))
-    let selectedWeapon =  JSON.parse(JSON.stringify(state.selectedWeapon))
+    let selectedItems = JSON.parse(JSON.stringify(state.selectedItems))
 
-    // apply enhancement and star rating
-    selectedArmor.stats = getters.applyStarAndEnhancement(selectedArmor.stats,
-      selectedArmor.stars, selectedArmor.enhancement, selectedArmor.rarity)
-    selectedSecondary.stats = getters.applyStarAndEnhancement(selectedSecondary.stats,
-      selectedSecondary.stars, selectedSecondary.enhancement, selectedSecondary.rarity)
-    selectedAccessory.stats = getters.applyStarAndEnhancement(selectedAccessory.stats,
-      selectedAccessory.stars, selectedAccessory.enhancement, selectedAccessory.rarity)
-    selectedOrb.stats = getters.applyStarAndEnhancement(selectedOrb.stats,
-      selectedOrb.stars, selectedOrb.enhancement, selectedOrb.rarity)
-    selectedWeapon.stats = getters.applyStarAndEnhancement(selectedWeapon.stats,
-      selectedWeapon.stars, selectedWeapon.enhancement, selectedWeapon.rarity)
+    // apply stats
+    for(let itemType in selectedItems) {
+      if(selectedItems.hasOwnProperty(itemType)) {
+        let item = selectedItems[itemType]
+        if(item.hasOwnProperty('name')) {
+          // apply enhancement and star rating
+          let appliedStats = getters.applyStarAndEnhancement(item.stats, item.stars, item.enhancement, item.rarity)
+          // merge base stats
+          statValues = mergeStats(statValues, appliedStats)
+          // merge option stats
+          for(let itemOption of item.options) {
+            if(itemOption.hasOwnProperty('stats')) {
+              statValues = mergeStats(statValues, itemOption.stats)
+            }
+          }
+        }
 
-    // merge base stats
-    statValues = mergeStats(statValues, selectedArmor.stats)
-    statValues = mergeStats(statValues, selectedSecondary.stats)
-    statValues = mergeStats(statValues, selectedAccessory.stats)
-    statValues = mergeStats(statValues, selectedOrb.stats)
-    statValues = mergeStats(statValues, selectedWeapon.stats)
+      }
+    }
+
+    // apply stat modifiers
+    for(let itemType in selectedItems) {
+      if(selectedItems.hasOwnProperty(itemType)) {
+        let item = selectedItems[itemType]
+        if(item.hasOwnProperty('name')) {
+          // apply modifiers
+          for(let itemOption of item.options) {
+            if(itemOption.hasOwnProperty('modifiers')) {
+              for(let p in itemOption.modifiers) {
+                if(itemOption.modifiers.hasOwnProperty(p)) {
+                  statValues[p] = statValues[p] * itemOption.modifiers[p]
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
 
     return {
       basicStats: [
-        { type: 'MAX HP', value: statValues.maxHp, base: state.selectedClass.stats.maxHp },
-        { type: 'ATK', value: statValues.atk, base: state.selectedClass.stats.atk },
-        { type: 'P.DEF', value: statValues.pDef, base: state.selectedClass.stats.pDef },
-        { type: 'M.DEF', value: statValues.mDef, base: state.selectedClass.stats.mDef }
+        { type: 'MAX HP', value: Math.floor(statValues.maxHp), base: state.selectedClass.stats.maxHp },
+        { type: 'ATK', value: Math.floor(statValues.atk), base: state.selectedClass.stats.atk },
+        { type: 'P.DEF', value: Math.floor(statValues.pDef), base: state.selectedClass.stats.pDef },
+        { type: 'M.DEF', value: Math.floor(statValues.mDef), base: state.selectedClass.stats.mDef }
       ],
       additionalOptions: [
         { type: 'Crit', value: statValues.critChance, base: state.selectedClass.stats.critChance },

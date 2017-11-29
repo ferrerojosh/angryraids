@@ -5,7 +5,7 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
-  applyStarAndEnhancement: (state, getters) => (stats, star, enhance, rarity = 'Legendary') => {
+  applyStarAndEnhancement: (state, getters) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
 
     if(rarity === 'Legendary') {
@@ -17,13 +17,13 @@ export default {
             starCoefficient = state.defScale[star]
 
           let base = stats[stat]
-          let coefficient = 1 + (enhance * 0.11)
+          let coefficient = 1 + (enhancement * 0.11)
 
           stats[stat] = Math.floor(base * coefficient * starCoefficient)
         }
       }
     } else if (rarity === 'Unique') {
-      let result = Math.floor(state.uwScale[star] * state.uwEnhanceScale[enhance])
+      let result = Math.floor(state.uwScale[star] * state.uwEnhanceScale[enhancement])
       stats.atk = Math.floor(result * stats.atk / 1000)
     }
 
@@ -245,7 +245,7 @@ export default {
     }
 
     items.forEach(item => {
-      item.enhance = 0
+      item.enhancement = 0
       item.stars = 0
     })
 
@@ -273,15 +273,15 @@ export default {
 
     // apply enhancement and star rating
     selectedArmor.stats = getters.applyStarAndEnhancement(selectedArmor.stats,
-      selectedArmor.stars, selectedArmor.enhance, selectedArmor.rarity)
+      selectedArmor.stars, selectedArmor.enhancement, selectedArmor.rarity)
     selectedSecondary.stats = getters.applyStarAndEnhancement(selectedSecondary.stats,
-      selectedSecondary.stars, selectedSecondary.enhance, selectedSecondary.rarity)
+      selectedSecondary.stars, selectedSecondary.enhancement, selectedSecondary.rarity)
     selectedAccessory.stats = getters.applyStarAndEnhancement(selectedAccessory.stats,
-      selectedAccessory.stars, selectedAccessory.enhance, selectedAccessory.rarity)
+      selectedAccessory.stars, selectedAccessory.enhancement, selectedAccessory.rarity)
     selectedOrb.stats = getters.applyStarAndEnhancement(selectedOrb.stats,
-      selectedOrb.stars, selectedOrb.enhance, selectedOrb.rarity)
+      selectedOrb.stars, selectedOrb.enhancement, selectedOrb.rarity)
     selectedWeapon.stats = getters.applyStarAndEnhancement(selectedWeapon.stats,
-      selectedWeapon.stars, selectedWeapon.enhance, selectedWeapon.rarity)
+      selectedWeapon.stars, selectedWeapon.enhancement, selectedWeapon.rarity)
 
     statValues = mergeStats(statValues, selectedArmor.stats)
     statValues = mergeStats(statValues, selectedSecondary.stats)

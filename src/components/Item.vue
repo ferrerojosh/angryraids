@@ -4,7 +4,7 @@
     <div class="field has-addons">
       <div class="control is-expanded">
         <span class="select is-fullwidth">
-          <select v-model="selectedItem" @change="onItemChange()">
+          <select v-model="selectedItem">
             <option v-for="item in items" :key="item.name" :value="item">{{ item.name }}</option>
           </select>
         </span>
@@ -33,10 +33,47 @@
       type: String,
     },
     data: () => ({
-      selectedItem: {},
       selectedTier: 7
     }),
+    watch: {
+      selectedTier() {
+        this.onTierChange()
+      }
+    },
+    methods: {
+      onTierChange() {
+        this.selectedItem = this.items[ 0 ]
+      },
+    },
+    mounted() {
+      this.$store.subscribe(mutation => {
+        if(mutation.type === types.CHANGE_HERO) {
+          this.onTierChange()
+        }
+      })
+    },
     computed: {
+      selectedItem: {
+        get() {
+          switch(this.type) {
+            case 'Weapon':
+              return this.$store.state.selectedWeapon
+            case 'Armor':
+              return this.$store.state.selectedArmor
+            case 'Secondary Armor':
+              return this.$store.state.selectedSecondary
+            case 'Accessory':
+              return this.$store.state.selectedAccessory
+            case 'Orb':
+              return this.$store.state.selectedOrb
+            case 'Artifact':
+              return this.$store.state.selectedArtifact
+          }
+        },
+        set(val) {
+          this.$store.dispatch(actionTypes.selectItem, val)
+        }
+      },
       itemsByTier() {
         return this.itemsByClass.filter(item => item.tier === this.selectedTier)
       },
@@ -48,7 +85,7 @@
             atk: this.selectedHero.uniqueBaseAtk
           },
           tier: 10,
-          enhance: 0,
+          enhancement: 0,
           stars: 0,
           rarity: 'Unique',
           type: 'Weapon',
@@ -79,30 +116,10 @@
       },
       numOfTiers() {
         let tiers = new Set() // unique set
-
         this.itemsByClass.filter(item => item.type === this.type).forEach(item => {
           tiers.add(item.tier)
         })
-
         return Array.from(tiers)
-      }
-    },
-    mounted() {
-      this.onTierChange()
-      // listen to hero change
-      this.$store.subscribe(mutation => {
-        if(mutation.type === types.CHANGE_HERO) {
-          this.onTierChange()
-        }
-      })
-    },
-    methods: {
-      onTierChange() {
-        this.selectedItem = this.items[0]
-        this.onItemChange()
-      },
-      onItemChange() {
-        this.$store.dispatch(actionTypes.selectItem, this.selectedItem)
       }
     }
   }

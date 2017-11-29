@@ -45,8 +45,8 @@
         <label class="label">Item Option {{ i }}</label>
         <div class="control">
           <div class="select is-fullwidth">
-            <select>
-              <option>Select option</option>
+            <select v-model="item.options[i - 1]">
+              <option v-for="option in options" :value="option">{{ option.name }}</option>
             </select>
           </div>
         </div>
@@ -78,6 +78,11 @@
         },
         set(val) {
           this.item.stars = val
+        }
+      },
+      options: {
+        get() {
+          return this.$store.getters.options
         }
       },
       enhancement: {

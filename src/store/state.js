@@ -1,11 +1,13 @@
 import heroes from '../heroes.json'
 import classes from '../classes.json'
 import sets from '../sets.json'
+import options from '../options.json'
 
 export default {
   heroes: heroes,
   classes: classes,
   sets: sets,
+  options: options,
   uwEnhanceScale: [
     950,
     1000,
@@ -190,7 +192,45 @@ export default {
     type: 'Armor',
     classes: [ 1, 2 ],
     enhancement: 0,
-    stars: 0
+    stars: 0,
+    options: [
+      {
+        name: 'ATK + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          atk: 1.11
+        }
+      },
+      {
+        name: 'MAX HP + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          maxHp: 1.11
+        }
+      },
+      {
+        name: 'M.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          mDef: 1.11
+        }
+      },
+      {
+        name: 'P.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          pDef: 1.11
+        }
+      }
+    ]
   },
   selectedSecondary: {
     name: 'Oppurtune Fire Shield',
@@ -202,7 +242,45 @@ export default {
     type: 'Secondary Armor',
     classes: [ 1, 2 ],
     enhancement: 0,
-    stars: 0
+    stars: 0,
+    options: [
+      {
+        name: 'ATK + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          atk: 1.11
+        }
+      },
+      {
+        name: 'MAX HP + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          maxHp: 1.11
+        }
+      },
+      {
+        name: 'M.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          mDef: 1.11
+        }
+      },
+      {
+        name: 'P.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          pDef: 1.11
+        }
+      }
+    ]
   },
   selectedWeapon: {
     name: 'Oppurtune Fire Lance',
@@ -214,7 +292,45 @@ export default {
     type: 'Weapon',
     classes: [ 1 ],
     enhancement: 0,
-    stars: 0
+    stars: 0,
+    options: [
+      {
+        name: 'ATK + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          atk: 1.11
+        }
+      },
+      {
+        name: 'MAX HP + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          maxHp: 1.11
+        }
+      },
+      {
+        name: 'M.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          mDef: 1.11
+        }
+      },
+      {
+        name: 'P.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          pDef: 1.11
+        }
+      }
+    ]
   },
   selectedOrb: {
     name: 'Oppurtune Fire Orb',
@@ -226,7 +342,45 @@ export default {
     type: 'Orb',
     classes: [ 1, 2, 3, 4, 5, 6, 7 ],
     enhancement: 0,
-    stars: 0
+    stars: 0,
+    options: [
+      {
+        name: 'ATK + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          atk: 1.11
+        }
+      },
+      {
+        name: 'MAX HP + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          maxHp: 1.11
+        }
+      },
+      {
+        name: 'M.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          mDef: 1.11
+        }
+      },
+      {
+        name: 'P.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          pDef: 1.11
+        }
+      }
+    ]
   },
   selectedAccessory: {
     name: 'Oppurtune Fire Bracelet',
@@ -238,7 +392,45 @@ export default {
     type: 'Accessory',
     classes: [ 1, 2, 3, 4, 5, 6, 7 ],
     enhancement: 0,
-    stars: 0
+    stars: 0,
+    options: [
+      {
+        name: 'ATK + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          atk: 1.11
+        }
+      },
+      {
+        name: 'MAX HP + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          maxHp: 1.11
+        }
+      },
+      {
+        name: 'M.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          mDef: 1.11
+        }
+      },
+      {
+        name: 'P.DEF + 11%',
+        tiers: [
+          7
+        ],
+        modifiers: {
+          pDef: 1.11
+        }
+      }
+    ]
   },
   selectedArtifact: {}
 }

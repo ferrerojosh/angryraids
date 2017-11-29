@@ -5,7 +5,7 @@
         <label class="label">Stars</label>
         <div class="control">
           <div class="select is-fullwidth">
-            <select v-model="star" @change="changeItemAttribute">
+            <select v-model="star">
               <option value="0">None</option>
               <option value="1">&#9733;</option>
               <option value="2">&#9733;&#9733;</option>
@@ -19,17 +19,12 @@
       <div class="field">
         <label class="label">
           <span class="is-pulled-left">Enhancement</span>
-
-          <span class="is-pulled-right" @click="changeItemAttribute">
-            <i class="fa fa-minus-circle kr-enhance-btn" @click="minusEnhance()"></i>
-            <i class="fa fa-plus-circle kr-enhance-btn" @click="plusEnhance()"></i>
-            <small class="kr-enhance-btn" @click="maxEnhance()">Max</small>
-          </span>
+          <small @click="maxEnhance" class="is-pulled-right kr-enhance-btn">Max</small>
         </label>
         <div class="is-clearfix"></div>
         <div class="control">
           <div class="is-fullwidth">
-            <progress class="progress is-warning" :value="enhancement" :max="numOfEnhancement"></progress>
+            <input class="input" type="number" v-model="enhancement" :min="0" :max="numOfEnhancement">
           </div>
         </div>
       </div>
@@ -50,8 +45,8 @@
         <label class="label">Item Option {{ i }}</label>
         <div class="control">
           <div class="select is-fullwidth">
-            <select>
-              <option>Select option</option>
+            <select v-model="item.options[i - 1]">
+              <option v-for="option in options" :value="option">{{ option.name }}</option>
             </select>
           </div>
         </div>
@@ -70,10 +65,6 @@
       numOfOptions: Number,
       item: Object
     },
-    data: () => ({
-      star: 0,
-      enhancement: 0
-    }),
     watch: {
       item() {
         this.star = 0
@@ -81,6 +72,33 @@
       }
     },
     computed: {
+      star: {
+        get() {
+          return this.item.stars
+        },
+        set(val) {
+          this.item.stars = val
+        }
+      },
+      options: {
+        get() {
+          return this.$store.getters.options
+        }
+      },
+      enhancement: {
+        get() {
+          return this.item.enhancement
+        },
+        set(val) {
+          if(val > this.numOfEnhancement) {
+            this.item.enhancement = this.numOfEnhancement
+          } else if (val < 0 || val === '') {
+            this.item.enhancement = 0
+          } else {
+            this.item.enhancement = val
+          }
+        }
+      },
       numOfEnhancement() {
         switch(this.item.rarity) {
           case 'Legendary':
@@ -96,8 +114,6 @@
       }
     },
     mounted() {
-      this.changeItemAttribute()
-
       this.$store.subscribe(mutation => {
         if(mutation.type === types.CHANGE_HERO) {
           this.enhancement = 0
@@ -106,22 +122,11 @@
       })
     },
     methods: {
-      plusEnhance() {
-        let result = this.enhancement + 1
-        this.enhancement = result <= this.numOfEnhancement ? result : this.enhancement
-      },
       maxEnhance() {
         this.enhancement = this.numOfEnhancement
       },
-      minusEnhance() {
-        let result = this.enhancement - 1
-        this.enhancement = result >= 0 ? result : this.enhancement
-      },
-      changeItemAttribute() {
-        let item = Object.assign({}, this.item, { stars: this.star, enhance: this.enhancement })
-        this.$store.dispatch(actionTypes.selectItem, item)
-      },
       statWithEnhancement(item) {
+        if(item.stats === undefined) return 0
         // clone stats to avoid modifying state, ugly I know
         let stats = JSON.parse(JSON.stringify(item.stats))
         return this.$store.getters.applyStarAndEnhancement(stats, this.star, this.enhancement, item.rarity)
@@ -150,6 +155,7 @@
           case 'ccResist': return 'CC Resist'
           case 'lifesteal': return 'Lifesteal'
           case 'atkSpd': return 'ATK Spd'
+          case 'manaAtk': return 'MP Recovery/Attack'
           default: return '???'
         }
       }

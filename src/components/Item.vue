@@ -4,7 +4,7 @@
     <div class="field has-addons">
       <div class="control is-expanded">
         <span class="select is-fullwidth">
-          <select v-model="selectedItem" @change="onItemChange()">
+          <select v-model="selectedItem">
             <option v-for="item in items" :key="item.name" :value="item">{{ item.name }}</option>
           </select>
         </span>
@@ -17,7 +17,9 @@
         </span>
       </div>
     </div>
-    <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
+    <div v-if="selectedItem">
+      <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
+    </div>
   </section>
 </template>
 
@@ -33,10 +35,35 @@
       type: String,
     },
     data: () => ({
-      selectedItem: {},
       selectedTier: 7
     }),
+    watch: {
+      selectedTier() {
+        this.onTierChange()
+      }
+    },
+    methods: {
+      onTierChange() {
+        this.selectedItem = this.items[ 0 ]
+      },
+    },
+    mounted() {
+      this.onTierChange()
+      this.$store.subscribe(mutation => {
+        if(mutation.type === types.CHANGE_HERO) {
+          this.onTierChange()
+        }
+      })
+    },
     computed: {
+      selectedItem: {
+        get() {
+          return this.$store.getters.selectedItemByType(this.type)
+        },
+        set(val) {
+          this.$store.dispatch(actionTypes.selectItem, val)
+        }
+      },
       itemsByTier() {
         return this.itemsByClass.filter(item => item.tier === this.selectedTier)
       },
@@ -48,11 +75,12 @@
             atk: this.selectedHero.uniqueBaseAtk
           },
           tier: 10,
-          enhance: 0,
+          enhancement: 0,
           stars: 0,
           rarity: 'Unique',
           type: 'Weapon',
-          classes: [this.selectedHero.classId]
+          classes: [this.selectedHero.classId],
+          options: []
         }
         let items = this.$store.getters.items.filter(item => item.classes.includes(this.selectedHero.classId))
         items.push(uniqueWeapon)
@@ -79,30 +107,10 @@
       },
       numOfTiers() {
         let tiers = new Set() // unique set
-
         this.itemsByClass.filter(item => item.type === this.type).forEach(item => {
           tiers.add(item.tier)
         })
-
         return Array.from(tiers)
-      }
-    },
-    mounted() {
-      this.onTierChange()
-      // listen to hero change
-      this.$store.subscribe(mutation => {
-        if(mutation.type === types.CHANGE_HERO) {
-          this.onTierChange()
-        }
-      })
-    },
-    methods: {
-      onTierChange() {
-        this.selectedItem = this.items[0]
-        this.onItemChange()
-      },
-      onItemChange() {
-        this.$store.dispatch(actionTypes.selectItem, this.selectedItem)
       }
     }
   }

@@ -1,11 +1,13 @@
 import heroes from '../heroes.json'
 import classes from '../classes.json'
 import sets from '../sets.json'
+import options from '../options.json'
 
 export default {
   heroes: heroes,
   classes: classes,
   sets: sets,
+  options: options,
   uwEnhanceScale: [
     950,
     1000,
@@ -135,14 +137,56 @@ export default {
     ccResist: 0,
     debuffResist: 0,
     lifesteal: 0,
-    atkSpd: 0
+    atkSpd: 0,
+    manaAtk: 0
   },
-  selectedHero: {},
-  selectedClass: {},
-  selectedArmor: {},
-  selectedSecondary: {},
-  selectedWeapon: {},
-  selectedOrb: {},
-  selectedAccessory: {},
-  selectedArtifact: {}
+  selectedHero: {
+    name: 'Demia',
+    title: 'Fortress of Steel',
+    damageType: 'Physical',
+    manaAtk: 0,
+    uniqueBaseAtk: 355,
+    uniqueWeapon: 'The Blue Light, Arpheus',
+    classId: 1,
+    id: 2
+  },
+  selectedClass: {
+    name: 'Knight',
+    id: 1,
+    stats: {
+      atk: 14352,
+      pDef: 6984,
+      mDef: 5432,
+      maxHp: 1354584,
+      critChance: 50,
+      critDamage: 0,
+      penetration: 0,
+      accuracy: 0,
+      pDodge: 0,
+      mDodge: 0,
+      pBlock: 200,
+      mBlock: 0,
+      pBlockDef: 0,
+      mBlockDef: 0,
+      pWeak: 0,
+      mWeak: 0,
+      pCritResist: 0,
+      mCritResist: 0,
+      pTough: 250,
+      mTough: 250,
+      heal: 0,
+      recovery: 0,
+      ccResist: 0,
+      debuffResist: 0,
+      lifesteal: 0,
+      atkSpd: 1000
+    }
+  },
+  selectedItems: {
+    'Weapon': {},
+    'Armor': {},
+    'Secondary Armor': {},
+    'Accessory': {},
+    'Orb': {}
+  }
 }

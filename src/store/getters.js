@@ -5,7 +5,7 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
-  applyStarAndEnhancement: (state, getters) => (stats, star, enhance, rarity = 'Legendary') => {
+  applyStarAndEnhancement: (state, getters) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
 
     if(rarity === 'Legendary') {
@@ -17,13 +17,13 @@ export default {
             starCoefficient = state.defScale[star]
 
           let base = stats[stat]
-          let coefficient = 1 + (enhance * 0.11)
+          let coefficient = 1 + (enhancement * 0.11)
 
           stats[stat] = Math.floor(base * coefficient * starCoefficient)
         }
       }
     } else if (rarity === 'Unique') {
-      let result = Math.floor(state.uwScale[star] * state.uwEnhanceScale[enhance])
+      let result = Math.floor(state.uwScale[star] * state.uwEnhanceScale[enhancement])
       stats.atk = Math.floor(result * stats.atk / 1000)
     }
 
@@ -31,9 +31,8 @@ export default {
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
-  options: state => {
-
-  },
+  selectedItemByType: state => (type) => state.selectedItems[type],
+  options: state => state.options,
   items: state => {
     let items = []
     // generate sets
@@ -245,8 +244,14 @@ export default {
     }
 
     items.forEach(item => {
-      item.enhance = 0
+      item.enhancement = 0
       item.stars = 0
+      item.options = [
+        state.options[0],
+        state.options[1],
+        state.options[2],
+        state.options[3]
+      ]
     })
 
     return items
@@ -265,36 +270,54 @@ export default {
 
     // the ugly cloning ughh if only Object.assign didn't copy reactive properties
     let statValues = JSON.parse(JSON.stringify(state.statValues))
-    let selectedArmor = JSON.parse(JSON.stringify(state.selectedArmor))
-    let selectedSecondary = JSON.parse(JSON.stringify(state.selectedSecondary))
-    let selectedAccessory = JSON.parse(JSON.stringify(state.selectedAccessory))
-    let selectedOrb =  JSON.parse(JSON.stringify(state.selectedOrb))
-    let selectedWeapon =  JSON.parse(JSON.stringify(state.selectedWeapon))
+    let selectedItems = JSON.parse(JSON.stringify(state.selectedItems))
 
-    // apply enhancement and star rating
-    selectedArmor.stats = getters.applyStarAndEnhancement(selectedArmor.stats,
-      selectedArmor.stars, selectedArmor.enhance, selectedArmor.rarity)
-    selectedSecondary.stats = getters.applyStarAndEnhancement(selectedSecondary.stats,
-      selectedSecondary.stars, selectedSecondary.enhance, selectedSecondary.rarity)
-    selectedAccessory.stats = getters.applyStarAndEnhancement(selectedAccessory.stats,
-      selectedAccessory.stars, selectedAccessory.enhance, selectedAccessory.rarity)
-    selectedOrb.stats = getters.applyStarAndEnhancement(selectedOrb.stats,
-      selectedOrb.stars, selectedOrb.enhance, selectedOrb.rarity)
-    selectedWeapon.stats = getters.applyStarAndEnhancement(selectedWeapon.stats,
-      selectedWeapon.stars, selectedWeapon.enhance, selectedWeapon.rarity)
+    // apply stats
+    for(let itemType in selectedItems) {
+      if(selectedItems.hasOwnProperty(itemType)) {
+        let item = selectedItems[itemType]
+        if(item.hasOwnProperty('name')) {
+          // apply enhancement and star rating
+          let appliedStats = getters.applyStarAndEnhancement(item.stats, item.stars, item.enhancement, item.rarity)
+          // merge base stats
+          statValues = mergeStats(statValues, appliedStats)
+          // merge option stats
+          for(let itemOption of item.options) {
+            if(itemOption.hasOwnProperty('stats')) {
+              statValues = mergeStats(statValues, itemOption.stats)
+            }
+          }
+        }
 
-    statValues = mergeStats(statValues, selectedArmor.stats)
-    statValues = mergeStats(statValues, selectedSecondary.stats)
-    statValues = mergeStats(statValues, selectedAccessory.stats)
-    statValues = mergeStats(statValues, selectedOrb.stats)
-    statValues = mergeStats(statValues, selectedWeapon.stats)
+      }
+    }
+
+    // apply stat modifiers
+    for(let itemType in selectedItems) {
+      if(selectedItems.hasOwnProperty(itemType)) {
+        let item = selectedItems[itemType]
+        if(item.hasOwnProperty('name')) {
+          // apply modifiers
+          for(let itemOption of item.options) {
+            if(itemOption.hasOwnProperty('modifiers')) {
+              for(let p in itemOption.modifiers) {
+                if(itemOption.modifiers.hasOwnProperty(p)) {
+                  statValues[p] = statValues[p] * itemOption.modifiers[p]
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
 
     return {
       basicStats: [
-        { type: 'MAX HP', value: statValues.maxHp, base: state.selectedClass.stats.maxHp },
-        { type: 'ATK', value: statValues.atk, base: state.selectedClass.stats.atk },
-        { type: 'P.DEF', value: statValues.pDef, base: state.selectedClass.stats.pDef },
-        { type: 'M.DEF', value: statValues.mDef, base: state.selectedClass.stats.mDef }
+        { type: 'MAX HP', value: Math.floor(statValues.maxHp), base: state.selectedClass.stats.maxHp },
+        { type: 'ATK', value: Math.floor(statValues.atk), base: state.selectedClass.stats.atk },
+        { type: 'P.DEF', value: Math.floor(statValues.pDef), base: state.selectedClass.stats.pDef },
+        { type: 'M.DEF', value: Math.floor(statValues.mDef), base: state.selectedClass.stats.mDef }
       ],
       additionalOptions: [
         { type: 'Crit', value: statValues.critChance, base: state.selectedClass.stats.critChance },
@@ -314,6 +337,7 @@ export default {
         { type: 'CC Resist', value: statValues.ccResist, base: state.selectedClass.stats.ccResist },
         { type: 'Lifesteal', value: statValues.lifesteal, base: state.selectedClass.stats.lifesteal },
         { type: 'ATK Spd', value: statValues.atkSpd, base: state.selectedClass.stats.atkSpd },
+        { type: 'MP Recovery/Attack', value: statValues.manaAtk, base: state.selectedHero.manaAtk },
       ]
     }
   }

@@ -1,0 +1,321 @@
+[
+  {
+    "name": "Rune of Fierce Attack (ATK + 15%)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "modifiers": {
+      "atk": 1.15
+    }
+  },
+  {
+    "name": "Rune of Sharpness (Penetration + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "penetration": 150
+    }
+  },
+  {
+    "name": "Rune of Iron Wall (P.Block DEF + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "pBlockDef": 150
+    }
+  },
+  {
+    "name": "Rune of Toughness (P.Tough + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "pTough": 150
+    }
+  },
+  {
+    "name": "Rune of Denial (M.Block DEF + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "mBlockDef": 150
+    }
+  },
+  {
+    "name": "Rune of Willpower (M.Tough + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "mTough": 150
+    }
+  },
+  {
+    "name": "Rune of Thirst (Lifesteal + 150)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "lifesteal": 150
+    }
+  },
+  {
+    "name": "Rune of Fierce Attack (MP Recovery/Attack + 400)",
+    "type": "Weapon",
+    "rarity": "Heroic",
+    "stats": {
+      "manaAtk": 400
+    }
+  },
+  {
+  "name": "Rune of Fierce Attack (ATK + 20%)",
+  "type": "Weapon",
+  "rarity": "Ancient",
+  "modifiers": {
+    "atk": 1.2
+  }
+},
+  {
+    "name": "Rune of Sharpness (Penetration + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "penetration": 200
+    }
+  },
+  {
+    "name": "Rune of Iron Wall (P.Block DEF + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "pBlockDef": 200
+    }
+  },
+  {
+    "name": "Rune of Toughness (P.Tough + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 200
+    }
+  },
+  {
+    "name": "Rune of Denial (M.Block DEF + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "mBlockDef": 200
+    }
+  },
+  {
+    "name": "Rune of Willpower (M.Tough + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "mTough": 200
+    }
+  },
+  {
+    "name": "Rune of Thirst (Lifesteal + 200)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "lifesteal": 150
+    }
+  },
+  {
+    "name": "Rune of Fierce Attack (MP Recovery/Attack + 400)",
+    "type": "Weapon",
+    "rarity": "Ancient",
+    "stats": {
+      "manaAtk": 400
+    }
+  },
+  {
+    "name": "Rune of Frenzy (Crit DMG + 30%)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "critDamage": 300
+    }
+  },
+  {
+    "name": "Rune of Precision (ACC + 150)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "accuracy": 150
+    }
+  },
+  {
+    "name": "Rune of Steel (P.Block + 150)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "pBlock": 150
+    }
+  },
+  {
+    "name": "Rune of Patience (P.DEF + 30%)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "modifiers": {
+      "pDef": 1.3
+    }
+  },
+  {
+    "name": "Rune of Exclusion (M.Block + 150)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "mBlock": 150
+    }
+  },
+  {
+    "name": "Rune of Protection (M.DEF + 30%)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "modifiers": {
+      "mDef": 1.3
+    }
+  },
+  {
+    "name": "Rune of Resistance (CC Resist + 150)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "ccResist": 150
+    }
+  },
+  {
+    "name": "Rune of Stamina (Max HP + 15%)",
+    "type": "Armor",
+    "rarity": "Heroic",
+    "modifiers": {
+      "maxHp": 1.15
+    }
+  },{
+  "name": "Rune of Frenzy (Crit DMG + 40%)",
+  "type": "Armor",
+  "rarity": "Ancient",
+  "stats": {
+    "critDamage": 400
+  }
+},
+  {
+    "name": "Rune of Precision (ACC + 200)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "accuracy": 200
+    }
+  },
+  {
+    "name": "Rune of Steel (P.Block + 200)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "pBlock": 200
+    }
+  },
+  {
+    "name": "Rune of Patience (P.DEF + 40%)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 1.4
+    }
+  },
+  {
+    "name": "Rune of Exclusion (M.Block + 200)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "mBlock": 200
+    }
+  },
+  {
+    "name": "Rune of Protection (M.DEF + 40%)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "modifiers": {
+      "mDef": 1.4
+    }
+  },
+  {
+    "name": "Rune of Resistance (CC Resist + 200)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "ccResist": 200
+    }
+  },
+  {
+    "name": "Rune of Stamina (Max HP + 20%)",
+    "type": "Armor",
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 1.2
+    }
+  },
+  {
+    "name": "Rune of the Heartless (Crit + 150)",
+    "type": "Secondary Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "critChance": 150
+    }
+  },
+  {
+    "name": "Rune of Agility (P.Dodge + 150)",
+    "type": "Secondary Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "pDodge": 150
+    }
+  },
+  {
+    "name": "Rune of Flexibility (M.Dodge + 150)",
+    "type": "Secondary Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "mDodge": 150
+    }
+  },
+  {
+    "name": "Rune of Potential (MP Recovery/DMG + 50%)",
+    "type": "Secondary Armor",
+    "rarity": "Heroic",
+    "stats": {
+      "manaDmg": 500
+    }
+  },
+  {
+    "name": "Rune of the Heartless (Crit + 200)",
+    "type": "Secondary Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "critChance": 200
+    }
+  },
+  {
+    "name": "Rune of Agility (P.Dodge + 200)",
+    "type": "Secondary Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 200
+    }
+  },
+  {
+    "name": "Rune of Flexibility (M.Dodge + 200)",
+    "type": "Secondary Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "mDodge": 200
+    }
+  },
+  {
+    "name": "Rune of Potential (MP Recovery/DMG + 60%)",
+    "type": "Secondary Armor",
+    "rarity": "Ancient",
+    "stats": {
+      "manaDmg": 600
+    }
+  }
+]

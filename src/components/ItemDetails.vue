@@ -1,58 +1,78 @@
 <template>
-  <div class="columns">
-    <div class="column">
-      <div class="field">
-        <label class="label">Stars</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select v-model="star">
-              <option value="0">None</option>
-              <option value="1">&#9733;</option>
-              <option value="2">&#9733;&#9733;</option>
-              <option value="3">&#9733;&#9733;&#9733;</option>
-              <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
-              <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-            </select>
+  <section>
+    <label v-if="numOfRunes > 0" class="label">Runes</label>
+    <div v-for="i in numOfRunes" class="field has-addons">
+      <div class="control is-expanded">
+        <span class="select is-fullwidth">
+          <select v-model="item.runes[i - 1]">
+            <option v-for="rune in runesByRarity(runeRarity[i - 1])" :value="rune">{{ rune.name }}</option>
+          </select>
+        </span>
+      </div>
+      <div class="control">
+        <span class="select">
+          <select v-model="runeRarity[i - 1]">
+            <option value="Heroic">Heroic</option>
+            <option value="Ancient">Ancient</option>
+          </select>
+        </span>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">Stars</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select v-model="star">
+                <option value="0">None</option>
+                <option value="1">&#9733;</option>
+                <option value="2">&#9733;&#9733;</option>
+                <option value="3">&#9733;&#9733;&#9733;</option>
+                <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">
-          <span class="is-pulled-left">Enhancement</span>
-          <small @click="maxEnhance" class="is-pulled-right kr-enhance-btn">Max</small>
-        </label>
-        <div class="is-clearfix"></div>
-        <div class="control">
-          <div class="is-fullwidth">
-            <input class="input" type="number" v-model="enhancement" :min="0" :max="numOfEnhancement">
+        <div class="field">
+          <label class="label">
+            <span>Enhancement</span>
+            <small @click="maxEnhance" class="is-pulled-right kr-enhance-btn">Max</small>
+          </label>
+          <div class="is-clearfix"></div>
+          <div class="control">
+            <div class="is-fullwidth">
+              <input class="input" type="number" v-model="enhancement" :min="0" :max="numOfEnhancement">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Stats</label>
-        <table class="table is-fullwidth">
-          <tbody>
+        <div class="field">
+          <label class="label">Stats</label>
+          <table class="table is-fullwidth">
+            <tbody>
             <tr v-for="(value, stat) in statWithEnhancement(item)">
               <td>{{ statToLabel(stat) }}</td>
               <td class="has-text-right">{{ value }}</td>
             </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div v-for="i in numOfOptions" class="field">
-        <label class="label">Item Option {{ i }}</label>
-        <div class="control">
-          <div class="select is-fullwidth">
-            <select v-model="item.options[i - 1]">
-              <option v-for="option in options" :value="option">{{ option.name }}</option>
-            </select>
+      <div class="column">
+        <div v-for="i in numOfOptions" class="field">
+          <label class="label">Item Option {{ i }}</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select v-model="item.options[i - 1]">
+                <option v-for="option in options" :value="option">{{ option.name }}</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -63,8 +83,11 @@
     name: 'kr-item-details',
     props: {
       numOfOptions: Number,
-      item: Object
+      item: Object,
     },
+    data: () => ({
+      runeRarity: new Array(4).fill('Heroic')
+    }),
     watch: {
       item() {
         this.star = 0
@@ -80,11 +103,6 @@
           this.item.stars = val
         }
       },
-      options: {
-        get() {
-          return this.$store.getters.options
-        }
-      },
       enhancement: {
         get() {
           return this.item.enhancement
@@ -97,6 +115,25 @@
           } else {
             this.item.enhancement = val
           }
+        }
+      },
+      options() {
+        return this.$store.getters.options
+      },
+      availableRunes() {
+        return this.$store.getters.runesByType(this.item.type)
+      },
+      numOfRunes() {
+        if(this.item.type === 'Weapon') {
+          if(this.item.rarity === 'Unique') {
+            return 3
+          } else return 1
+        } else if (
+          this.item.type === 'Armor' ||
+          this.item.type === 'Secondary Armor') {
+          return 1
+        } else {
+          return 0
         }
       },
       numOfEnhancement() {
@@ -124,6 +161,9 @@
     methods: {
       maxEnhance() {
         this.enhancement = this.numOfEnhancement
+      },
+      runesByRarity(rarity) {
+        return this.availableRunes.filter(r => r.rarity === rarity)
       },
       statWithEnhancement(item) {
         if(item.stats === undefined) return 0

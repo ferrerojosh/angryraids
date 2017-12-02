@@ -80,7 +80,8 @@
           rarity: 'Unique',
           type: 'Weapon',
           classes: [this.selectedHero.classId],
-          options: []
+          options: [],
+          runes: []
         }
         let items = this.$store.getters.items.filter(item => item.classes.includes(this.selectedHero.classId))
         items.push(uniqueWeapon)

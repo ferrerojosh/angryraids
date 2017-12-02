@@ -7,9 +7,13 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/hero/:heroName',
       name: 'Simulator',
       component: Simulator
+    },
+    {
+      path: '*',
+      redirect: '/hero/Demia'
     }
   ],
   mode: 'history'

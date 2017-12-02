@@ -1,13 +1,3 @@
-let mergeStats = (stat1, stat2) => {
-  if (stat2 === undefined) return stat1
-  for (let p in stat1) {
-    if (stat1.hasOwnProperty(p) && stat2.hasOwnProperty(p)) {
-      stat1[ p ] = stat1[ p ] + stat2[ p ]
-    }
-  }
-  return stat1
-}
-
 export default {
   heroesByClass: state => {
     return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
@@ -301,22 +291,17 @@ export default {
 
     return count
   },
-  setBonusStats: state => {
-    let statValues = JSON.parse(JSON.stringify(state.statValues))
-
-    // apply set bonus stats
-    for (let set of state.sets) {
-      let setCount = state.selectedItems.filter(i => i.setId === set.id).length
-      console.log(`${set.prefix}: ${setCount}`)
-      for (let idx = 0; idx < setCount; idx++) {
-        if (set.bonus[ idx ] !== undefined) {
-          statValues = mergeStats(statValues, set.bonus[ idx ].stats)
+  stats: (state, getters) => {
+    let mergeStats = (stat1, stat2) => {
+      if (stat2 === undefined) return stat1
+      for (let p in stat1) {
+        if (stat1.hasOwnProperty(p) && stat2.hasOwnProperty(p)) {
+          stat1[ p ] = stat1[ p ] + stat2[ p ]
         }
       }
+      return stat1
     }
-    return statValues
-  },
-  stats: (state, getters) => {
+
     // the ugly cloning ughh if only Object.assign didn't copy reactive properties
     let statValues = JSON.parse(JSON.stringify(state.statValues))
     let selectedItems = JSON.parse(JSON.stringify(state.selectedItems))

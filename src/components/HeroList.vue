@@ -1,9 +1,10 @@
 <template>
   <aside>
     <ul class="kr-heroes">
-      <kr-hero-avatar @click.native="select(hero)"
+      <kr-hero-avatar @click.native="selectHero(hero)"
                       v-for="hero in heroesByClass"
                       :key="hero.id"
+                      :ref="hero.name"
                       :src="heroImage(hero.name)"
                       :selected="hero.id == selectedId">
       </kr-hero-avatar>
@@ -23,17 +24,28 @@
       ...mapGetters([
         'heroesByClass',
         'selectedId',
-      ])
+      ]),
+      selectedHero: {
+        get() {
+          return this.$store.getters.selectedHero
+        },
+        set(hero) {
+          this.$store.dispatch(actionTypes.selectHero, hero)
+        }
+      }
     },
     mounted() {
-      this.select(this.heroesByClass[0])
+      let heroName = this.$store.state.route.params.heroName
+      this.$refs[heroName][0].$el.scrollIntoView()
+      this.selectedHero = this.heroesByClass.find(h => h.name === heroName)
     },
     methods: {
       heroImage(name) {
         return `/static/img/heroes/${name}.png`
       },
-      select(hero) {
-        this.$store.dispatch(actionTypes.selectHero, hero)
+      selectHero(hero) {
+        this.selectedHero = hero
+        this.$router.push({ name: 'Simulator', params: { heroName: hero.name }})
       }
     }
   }

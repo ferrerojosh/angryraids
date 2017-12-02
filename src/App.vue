@@ -5,7 +5,7 @@
       <header class="section">
         <h1 class="title">AngryRaids</h1>
         <h2 class="subtitle">King's Raid Equipment Simulator</h2>
-        <small>Release 0.1.6. In need of data in order to pursue further development, please
+        <small>Release 0.1.7. In need of data in order to pursue further development, please
           <a href="https://github.com/ferrerojosh/angryraids/issues" target="_blank">submit an issue on github</a>
           to help.
         </small>

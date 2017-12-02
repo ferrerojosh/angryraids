@@ -387,7 +387,7 @@ export default {
     // apply set bonus modifiers
     for (let set of state.sets) {
       let setCount = getters.countBySetId(set.id)
-      for (let idx = 0; idx < setCount; idx++) {
+      for (let idx = 1; idx <= setCount; idx++) {
         if (set.bonus[ idx ] !== undefined) {
           if (set.bonus[ idx ].hasOwnProperty('modifiers')) {
             for (let p in set.bonus[ idx ].modifiers) {

@@ -392,7 +392,7 @@ export default {
           if (set.bonus[ idx ].hasOwnProperty('modifiers')) {
             for (let p in set.bonus[ idx ].modifiers) {
               if (set.bonus[ idx ].modifiers.hasOwnProperty(p)) {
-                statValues[ p ] = statValues[ p ] * set.bonus[ idx ][ p ]
+                statValues[ p ] = statValues[ p ] * set.bonus[ idx ].modifiers[ p ]
               }
             }
           }

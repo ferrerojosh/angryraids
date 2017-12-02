@@ -4,10 +4,14 @@
     "prefix": "Oppurtune Fire",
     "bonus": {
       "2": {
-        "crit": 35
+        "stats": {
+          "critChance": 100
+        }
       },
       "4": {
-        "crit": 50
+        "stats": {
+          "critChance": 130
+        }
       }
     }
   },
@@ -16,10 +20,14 @@
     "prefix": "Gritty Frost",
     "bonus": {
       "2": {
-        "maxHp": 1.1
+        "modifiers": {
+          "maxHp": 1.1
+        }
       },
       "4": {
-        "maxHp": 1.3
+        "modifiers": {
+          "maxHp": 1.3
+        }
       }
     }
   },
@@ -28,12 +36,16 @@
     "prefix": "Unrelenting Poison",
     "bonus": {
       "2": {
-        "pCritResist": 100,
-        "mCritResist": 100
+        "stats": {
+          "pCritResist": 100,
+          "mCritResist": 100
+        }
       },
       "4": {
-        "pCritResist": 130,
-        "mCritResist": 130
+        "stats": {
+          "pCritResist": 130,
+          "mCritResist": 130
+        }
       }
     }
   },
@@ -42,10 +54,14 @@
     "prefix": "Swift Darkness",
     "bonus": {
       "2": {
-        "manaAtk": 35
+        "stats": {
+          "manaAtk": 280
+        }
       },
       "4": {
-        "manaAtk": 50
+        "stats": {
+          "manaAtk": 360
+        }
       }
     }
   }

@@ -2,12 +2,14 @@ import heroes from '../heroes.json'
 import classes from '../classes.json'
 import sets from '../sets.json'
 import options from '../options.json'
+import runes from '../runes.json'
 
 export default {
   heroes: heroes,
   classes: classes,
   sets: sets,
   options: options,
+  runes: runes,
   uwEnhanceScale: [
     950,
     1000,
@@ -138,7 +140,8 @@ export default {
     debuffResist: 0,
     lifesteal: 0,
     atkSpd: 0,
-    manaAtk: 0
+    manaAtk: 0,
+    manaDmg: 0
   },
   selectedHero: {
     name: 'Demia',

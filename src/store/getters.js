@@ -301,21 +301,6 @@ export default {
 
     return count
   },
-  setBonusStats: state => {
-    let statValues = JSON.parse(JSON.stringify(state.statValues))
-
-    // apply set bonus stats
-    for (let set of state.sets) {
-      let setCount = state.selectedItems.filter(i => i.setId === set.id).length
-      console.log(`${set.prefix}: ${setCount}`)
-      for (let idx = 0; idx < setCount; idx++) {
-        if (set.bonus[ idx ] !== undefined) {
-          statValues = mergeStats(statValues, set.bonus[ idx ].stats)
-        }
-      }
-    }
-    return statValues
-  },
   stats: (state, getters) => {
     // the ugly cloning ughh if only Object.assign didn't copy reactive properties
     let statValues = JSON.parse(JSON.stringify(state.statValues))
@@ -387,12 +372,12 @@ export default {
     // apply set bonus modifiers
     for (let set of state.sets) {
       let setCount = getters.countBySetId(set.id)
-      for (let idx = 0; idx < setCount; idx++) {
+      for (let idx = 1; idx <= setCount; idx++) {
         if (set.bonus[ idx ] !== undefined) {
           if (set.bonus[ idx ].hasOwnProperty('modifiers')) {
             for (let p in set.bonus[ idx ].modifiers) {
               if (set.bonus[ idx ].modifiers.hasOwnProperty(p)) {
-                statValues[ p ] = statValues[ p ] * set.bonus[ idx ][ p ]
+                statValues[ p ] = statValues[ p ] * set.bonus[ idx ].modifiers[ p ]
               }
             }
           }

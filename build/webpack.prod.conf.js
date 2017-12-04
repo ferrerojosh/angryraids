@@ -96,6 +96,10 @@ const webpackConfig = merge(baseWebpackConfig, {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
+      },
+      {
+        from: '_redirects',
+        to: ''
       }
     ]),
     // service worker caching
@@ -105,7 +109,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css,png,svg,ico,woff2}'],
       minify: true,
       stripPrefix: 'dist/'
-    })
+    }),
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'angryraids',
+      filepath: 'dist/hero/service-worker.js',
+      staticFileGlobs: ['dist/**/*.{js,html,css,png,svg,ico,woff2}'],
+      minify: true,
+      stripPrefix: 'dist/'
+    }),
   ]
 })
 

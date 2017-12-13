@@ -16,5 +16,4 @@ export default new Router({
       redirect: '/hero/Demia'
     }
   ],
-  mode: 'history'
 })

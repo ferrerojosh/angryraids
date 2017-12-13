@@ -4,7 +4,7 @@
       {{ label }}
     </div>
     <div class="column has-text-right kr-stat">
-      <span class="kr-stat-total">{{ base + value }}</span> ({{ base }} + <span class="kr-stat-value">{{ value }}</span>)
+      <span class="kr-stat-total">{{ value }}</span> ({{ base }} + <span class="kr-stat-value">{{ value - base }}</span>)
     </div>
     <div v-if="isOption" class="column is-one-fifth has-text-right kr-stat kr-stat-percent">
       {{ Math.floor(percentage * 100) }}%
@@ -41,7 +41,7 @@
     computed: {
       percentage() {
         let maxK, x1, a1, b1, x2, a2, b2, minK, x3, a3, b3, x4, a4, b4
-        let totalStat = (this.value + this.base)
+        let totalStat = (this.value)
 
         switch(this.label) {
           case 'Crit':

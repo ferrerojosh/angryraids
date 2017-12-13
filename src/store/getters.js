@@ -357,6 +357,8 @@ export default {
 
     // merge base stats
     mergeStats(statValues, state.selectedClass.stats)
+    // add base mana attack
+    statValues.manaAtk = state.selectedHero.manaAtk
 
     // apply stats
     for (let itemType in selectedItems) {

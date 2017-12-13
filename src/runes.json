@@ -4,7 +4,7 @@
     "type": "Weapon",
     "rarity": "Heroic",
     "modifiers": {
-      "atk": 1.15
+      "atk": 0.15
     }
   },
   {
@@ -68,7 +68,7 @@
   "type": "Weapon",
   "rarity": "Ancient",
   "modifiers": {
-    "atk": 1.2
+    "atk": 0.2
   }
 },
   {
@@ -156,7 +156,7 @@
     "type": "Armor",
     "rarity": "Heroic",
     "modifiers": {
-      "pDef": 1.3
+      "pDef": 0.3
     }
   },
   {
@@ -172,7 +172,7 @@
     "type": "Armor",
     "rarity": "Heroic",
     "modifiers": {
-      "mDef": 1.3
+      "mDef": 0.3
     }
   },
   {
@@ -188,7 +188,7 @@
     "type": "Armor",
     "rarity": "Heroic",
     "modifiers": {
-      "maxHp": 1.15
+      "maxHp": 0.15
     }
   },{
   "name": "Rune of Frenzy (Crit DMG + 40%)",
@@ -219,7 +219,7 @@
     "type": "Armor",
     "rarity": "Ancient",
     "modifiers": {
-      "pDef": 1.4
+      "pDef": 0.4
     }
   },
   {
@@ -235,7 +235,7 @@
     "type": "Armor",
     "rarity": "Ancient",
     "modifiers": {
-      "mDef": 1.4
+      "mDef": 0.4
     }
   },
   {
@@ -251,7 +251,7 @@
     "type": "Armor",
     "rarity": "Ancient",
     "modifiers": {
-      "maxHp": 1.2
+      "maxHp": 0.2
     }
   },
   {

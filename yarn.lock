@@ -4951,6 +4951,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-clazy-load@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vue-clazy-load/-/vue-clazy-load-0.3.0.tgz#5ef0ad858f526d3caf3fbdfef4bdcbb5d27daa81"
+
 vue-hot-reload-api@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"

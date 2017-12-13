@@ -5,6 +5,7 @@
                       v-for="hero in heroesByClass"
                       :key="hero.id"
                       :ref="hero.name"
+                      :name="hero.name"
                       :src="heroImage(hero.name)"
                       :selected="hero.id == selectedId">
       </kr-hero-avatar>

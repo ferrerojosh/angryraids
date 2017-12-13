@@ -109,14 +109,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css,png,svg,ico,woff2}'],
       minify: true,
       stripPrefix: 'dist/'
-    }),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'angryraids',
-      filepath: 'dist/hero/service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,png,svg,ico,woff2}'],
-      minify: true,
-      stripPrefix: 'dist/'
-    }),
+    })
   ]
 })
 

@@ -2,9 +2,9 @@
   <li class="is-inline-block">
     <clazy-load tag="figure" :src="src" :class="classes">
       <transition name="fade" slot="image">
-        <img :src="src" :alt="name">
+        <img :src="src" class="kr-hero-img" :alt="name">
       </transition>
-      <transition slot="placeholder">
+      <transition name="fade" slot="placeholder">
         <div class="sk-circle sk-circle-figure">
           <div class="sk-circle1 sk-child"></div>
           <div class="sk-circle2 sk-child"></div>
@@ -53,6 +53,9 @@
     border-radius: 5px
     display: inline-block
 
+  .kr-hero-img
+    transition: opacity 500ms ease-in-out
+
   .kr-hero-selected
     box-shadow: 0 0 0 5px #FFEF75 inset
 
@@ -60,9 +63,7 @@
     display: inline-block
     margin: 37px 40px
 
-  .fade-enter-active, .fade-leave-active
-    transition: opacity .5s
-
   .fade-enter, .fade-leave-to
     opacity: 0
+    transform: scale(.8)
 </style>

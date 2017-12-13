@@ -4,7 +4,7 @@
       <transition name="fade" slot="image">
         <img :src="src" :alt="name">
       </transition>
-      <transition name="fade" slot="placeholder">
+      <transition slot="placeholder">
         <div class="sk-circle sk-circle-figure">
           <div class="sk-circle1 sk-child"></div>
           <div class="sk-circle2 sk-child"></div>

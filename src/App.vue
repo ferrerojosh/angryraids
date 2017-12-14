@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main class="container">
-      <img class="is-pulled-left" src="/static/img/icons/android-chrome-192x192.png">
+      <img class="is-pulled-left" alt="" src="/static/img/icons/android-chrome-192x192.png">
       <header class="section">
         <h1 class="title">AngryRaids</h1>
         <h2 class="subtitle">King's Raid Equipment Simulator</h2>
@@ -19,9 +19,9 @@
       <router-view></router-view>
     </main>
     <footer class="github-footer">
-      <a href="https://github.com/ferrerojosh/angryraids" target="_blank">
+      <a href="https://github.com/ferrerojosh/angryraids" rel="noopener" target="_blank">
         <i class="fa fa-3x fa-github"></i>
-        <p>Freshly <img width="24" height="24" src="/static/img/icons/bread.svg"> baked by Gavenda</p>
+        <p>Freshly <img width="24" height="24" src="/static/img/icons/bread.svg" alt="baked"> by Gavenda</p>
       </a>
     </footer>
   </div>

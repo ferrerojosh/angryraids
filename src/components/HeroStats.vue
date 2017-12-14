@@ -4,7 +4,7 @@
       <section class="section kr-hero-info">
         <h1 class="title">{{ selectedHero.name }}</h1>
         <h2 class="subtitle">{{ selectedHero.title }}</h2>
-        <a :href="`https://maskofgoblin.com/?item=${selectedHero.name}`" target="_blank">
+        <a :href="`https://maskofgoblin.com/?item=${selectedHero.name}`" rel="noopener" target="_blank">
           Full Hero Information
         </a>
       </section>
@@ -32,7 +32,7 @@
         <small>
           Note: Crit DMG and P/M.Block DEF have hidden base values for all heroes,
           those base values are not shown. For overview for each hero, please refer to
-          <a href="https://maskofgoblin.com/" target="_blank">Mask of Goblin</a>
+          <a href="https://maskofgoblin.com/" rel="noopener" target="_blank">Mask of Goblin</a>
         </small>
       </section>
     </div>

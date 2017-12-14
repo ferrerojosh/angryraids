@@ -13,6 +13,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const loadMinified = require('./load-minified')
+const PreloadWebpackPlugin = require('preload-webpack-plugin')
 
 const env = config.build.env
 
@@ -109,7 +110,11 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css,png,svg,ico,woff2}'],
       minify: true,
       stripPrefix: 'dist/'
-    })
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      include: 'all'
+    }),
   ]
 })
 

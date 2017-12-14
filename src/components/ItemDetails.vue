@@ -4,14 +4,14 @@
     <div v-for="i in numOfRunes" class="field has-addons">
       <div class="control is-expanded">
         <span class="select is-fullwidth">
-          <select v-model="item.runes[i - 1]">
+          <select v-model="item.runes[i - 1]" :title="`Rune Slot ${i}`">
             <option v-for="rune in runesByRarity(runeRarity[i - 1])" :value="rune">{{ rune.name }}</option>
           </select>
         </span>
       </div>
       <div class="control">
         <span class="select">
-          <select v-model="runeRarity[i - 1]">
+          <select v-model="runeRarity[i - 1]" :title="`Rune Slot Rarity ${i}`">
             <option value="Heroic">Heroic</option>
             <option value="Ancient">Ancient</option>
           </select>
@@ -24,7 +24,7 @@
           <label class="label">Stars</label>
           <div class="control">
             <div class="select is-fullwidth">
-              <select v-model="star">
+              <select v-model="star" title="Stars">
                 <option value="0">None</option>
                 <option value="1">&#9733;</option>
                 <option value="2">&#9733;&#9733;</option>
@@ -43,7 +43,7 @@
           <div class="is-clearfix"></div>
           <div class="control">
             <div class="is-fullwidth">
-              <input class="input" type="number" v-model="enhancement" :min="0" :max="numOfEnhancement">
+              <input title="Enhancement" class="input" type="number" v-model="enhancement" :min="0" :max="numOfEnhancement">
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
           <label class="label">Item Option {{ i }}</label>
           <div class="control">
             <div class="select is-fullwidth">
-              <select v-model="item.options[i - 1]">
+              <select :title="`Item Option ${i}`" v-model="item.options[i - 1]">
                 <option v-for="option in options" :value="option">{{ option.name }}</option>
               </select>
             </div>

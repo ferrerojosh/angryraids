@@ -10,9 +10,10 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: {
-    app: './src/main.js'
-  },
+  entry: [
+    'intersection-observer',
+    './src/main.js'
+  ],
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

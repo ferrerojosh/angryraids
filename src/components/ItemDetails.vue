@@ -2,18 +2,18 @@
   <section>
     <label v-if="numOfRunes > 0" class="label">Runes</label>
     <div v-for="i in numOfRunes" class="field has-addons">
-      <div class="control is-expanded">
-        <span class="select is-fullwidth">
-          <select v-model="item.runes[i - 1]" :title="`Rune Slot ${i}`">
-            <option v-for="rune in runesByRarity(runeRarity[i - 1])" :value="rune">{{ rune.name }}</option>
-          </select>
-        </span>
-      </div>
-      <div class="control">
+      <div class="control is-tier-control">
         <span class="select">
           <select v-model="runeRarity[i - 1]" :title="`Rune Slot Rarity ${i}`">
             <option value="Heroic">Heroic</option>
             <option value="Ancient">Ancient</option>
+          </select>
+        </span>
+      </div>
+      <div class="control is-expanded">
+        <span class="select is-fullwidth">
+          <select v-model="item.runes[i - 1]" :title="`Rune Slot ${i}`">
+            <option v-for="rune in runesByRarity(runeRarity[i - 1])" :value="rune">{{ rune.name }}</option>
           </select>
         </span>
       </div>

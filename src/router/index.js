@@ -7,13 +7,13 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/hero/:heroName',
+      path: '/:heroName',
       name: 'Simulator',
       component: Simulator
     },
     {
       path: '*',
-      redirect: '/hero/Demia'
+      redirect: '/Sonia'
     }
   ],
 })

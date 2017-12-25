@@ -8,14 +8,6 @@
         <small>Release 0.1.8</small>
 
       </header>
-      <div class="is-clearfix"></div>
-      <div class="changes">
-        <p>What's new?</p>
-        <ul>
-          <li>Recently fixed a wrong calculation on applying stat modifiers.</li>
-        </ul>
-      </div>
-
       <router-view></router-view>
     </main>
     <footer class="github-footer">

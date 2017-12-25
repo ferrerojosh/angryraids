@@ -2,17 +2,17 @@
   <section class="kr-item">
     <label class="label">{{ type }}</label>
     <div class="field has-addons">
+      <div class="control is-tier-control">
+        <span class="select">
+          <select v-model="selectedTier" @change="onTierChange()">
+            <option v-for="tier in numOfTiers" :value="tier">Tier {{ tier }}</option>
+          </select>
+        </span>
+      </div>
       <div class="control is-expanded">
         <span class="select is-fullwidth">
           <select v-model="selectedItem">
             <option v-for="item in items" :key="item.name" :value="item">{{ item.name }}</option>
-          </select>
-        </span>
-      </div>
-      <div class="control">
-        <span class="select">
-          <select v-model="selectedTier" @change="onTierChange()">
-            <option v-for="tier in numOfTiers" :value="tier">Tier {{ tier }}</option>
           </select>
         </span>
       </div>

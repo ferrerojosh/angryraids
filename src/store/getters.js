@@ -5,8 +5,9 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
-  applyStarAndEnhancement: (state, getters) => (stats, star, enhancement, rarity = 'Legendary') => {
+  applyStarAndEnhancement: (state) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
+    let appliedStats = {}
 
     if (rarity === 'Legendary') {
       for (let stat in stats) {
@@ -19,15 +20,15 @@ export default {
           let base = stats[ stat ]
           let coefficient = 1 + (enhancement * 0.11)
 
-          stats[ stat ] = Math.floor(base * coefficient * starCoefficient)
+          appliedStats[ stat ] = Math.floor(base * coefficient * starCoefficient)
         }
       }
     } else if (rarity === 'Unique') {
       let result = Math.floor(state.uwScale[ star ] * state.uwEnhanceScale[ enhancement ])
-      stats.atk = Math.floor(result * stats.atk / 1000)
+      appliedStats.atk = Math.floor(result * stats.atk / 1000)
     }
 
-    return stats
+    return appliedStats
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
@@ -342,28 +343,28 @@ export default {
   },
   stats: (state, getters) => {
     let mergeStats = (stat1, stat2) => {
+      let mergedStats = {}
       if (stat2 === undefined) return stat1
       for (let p in stat1) {
-        if (stat1.hasOwnProperty(p) && stat2.hasOwnProperty(p)) {
-          stat1[ p ] = stat1[ p ] + stat2[ p ]
+        if (stat1.hasOwnProperty(p)) {
+          mergedStats[ p ] = stat1[ p ]
+          if(stat2.hasOwnProperty(p)) {
+            mergedStats[ p ] = stat1[ p ] + stat2[ p ]
+          }
         }
       }
-      return stat1
+      return mergedStats
     }
 
-    // the ugly cloning ughh if only Object.assign didn't copy reactive properties
-    let statValues = JSON.parse(JSON.stringify(state.statValues))
-    let selectedItems = JSON.parse(JSON.stringify(state.selectedItems))
+    let statValues = mergeStats(state.statValues, state.selectedClass.stats)
 
-    // merge base stats
-    mergeStats(statValues, state.selectedClass.stats)
     // add base mana attack
     statValues.manaAtk = state.selectedHero.manaAtk
 
     // apply stats
-    for (let itemType in selectedItems) {
-      if (selectedItems.hasOwnProperty(itemType)) {
-        let item = selectedItems[ itemType ]
+    for (let itemType in state.selectedItems) {
+      if (state.selectedItems.hasOwnProperty(itemType)) {
+        let item = state.selectedItems[ itemType ]
         if (item.hasOwnProperty('name')) {
           // apply enhancement and star rating
           let appliedStats = getters.applyStarAndEnhancement(item.stats, item.stars, item.enhancement, item.rarity)

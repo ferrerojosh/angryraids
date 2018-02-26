@@ -5,8 +5,9 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
-  applyStarAndEnhancement: (state, getters) => (stats, star, enhancement, rarity = 'Legendary') => {
+  applyStarAndEnhancement: (state) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
+    let appliedStats = {}
 
     if (rarity === 'Legendary') {
       for (let stat in stats) {
@@ -19,15 +20,15 @@ export default {
           let base = stats[ stat ]
           let coefficient = 1 + (enhancement * 0.11)
 
-          stats[ stat ] = Math.floor(base * coefficient * starCoefficient)
+          appliedStats[ stat ] = Math.floor(base * coefficient * starCoefficient)
         }
       }
     } else if (rarity === 'Unique') {
       let result = Math.floor(state.uwScale[ star ] * state.uwEnhanceScale[ enhancement ])
-      stats.atk = Math.floor(result * stats.atk / 1000)
+      appliedStats.atk = Math.floor(result * stats.atk / 1000)
     }
 
-    return stats
+    return appliedStats
   },
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
@@ -291,25 +292,79 @@ export default {
 
     return count
   },
-  stats: (state, getters) => {
-    let mergeStats = (stat1, stat2) => {
-      if (stat2 === undefined) return stat1
-      for (let p in stat1) {
-        if (stat1.hasOwnProperty(p) && stat2.hasOwnProperty(p)) {
-          stat1[ p ] = stat1[ p ] + stat2[ p ]
+  itemModifiers: (state, getters) => {
+    let statModifiers = JSON.parse(JSON.stringify(state.statValues))
+
+    // retrieve stat modifiers
+    for (let itemType in state.selectedItems) {
+      if (state.selectedItems.hasOwnProperty(itemType)) {
+        let item = state.selectedItems[ itemType ]
+        if (item.hasOwnProperty('name')) {
+          // add modifiers
+          for (let itemOption of item.options) {
+            if (itemOption.hasOwnProperty('modifiers')) {
+              for (let p in itemOption.modifiers) {
+                if (itemOption.modifiers.hasOwnProperty(p)) {
+                  statModifiers[ p ] = statModifiers[ p ] + itemOption.modifiers[ p ]
+                }
+              }
+            }
+          }
+          // add rune modifiers
+          for (let itemRunes of item.runes) {
+            if (itemRunes.hasOwnProperty('modifiers')) {
+              for (let p in itemRunes.modifiers) {
+                if (itemRunes.modifiers.hasOwnProperty(p)) {
+                  statModifiers[ p ] = statModifiers[ p ] + itemRunes.modifiers[ p ]
+                }
+              }
+            }
+          }
         }
       }
-      return stat1
+    }
+    // retrieve set bonus modifiers
+    for (let set of state.sets) {
+      let setCount = getters.countBySetId(set.id)
+      for (let idx = 1; idx <= setCount; idx++) {
+        if (set.bonus[ idx ] !== undefined) {
+          if (set.bonus[ idx ].hasOwnProperty('modifiers')) {
+            for (let p in set.bonus[ idx ].modifiers) {
+              if (set.bonus[ idx ].modifiers.hasOwnProperty(p)) {
+                statModifiers[ p ] = statModifiers[ p ] + set.bonus[ idx ].modifiers[ p ]
+              }
+            }
+          }
+        }
+      }
     }
 
-    // the ugly cloning ughh if only Object.assign didn't copy reactive properties
-    let statValues = JSON.parse(JSON.stringify(state.statValues))
-    let selectedItems = JSON.parse(JSON.stringify(state.selectedItems))
+    return statModifiers
+  },
+  stats: (state, getters) => {
+    let mergeStats = (stat1, stat2) => {
+      let mergedStats = {}
+      if (stat2 === undefined) return stat1
+      for (let p in stat1) {
+        if (stat1.hasOwnProperty(p)) {
+          mergedStats[ p ] = stat1[ p ]
+          if(stat2.hasOwnProperty(p)) {
+            mergedStats[ p ] = stat1[ p ] + stat2[ p ]
+          }
+        }
+      }
+      return mergedStats
+    }
+
+    let statValues = mergeStats(state.statValues, state.selectedClass.stats)
+
+    // add base mana attack
+    statValues.manaAtk = state.selectedHero.manaAtk
 
     // apply stats
-    for (let itemType in selectedItems) {
-      if (selectedItems.hasOwnProperty(itemType)) {
-        let item = selectedItems[ itemType ]
+    for (let itemType in state.selectedItems) {
+      if (state.selectedItems.hasOwnProperty(itemType)) {
+        let item = state.selectedItems[ itemType ]
         if (item.hasOwnProperty('name')) {
           // apply enhancement and star rating
           let appliedStats = getters.applyStarAndEnhancement(item.stats, item.stars, item.enhancement, item.rarity)
@@ -341,47 +396,11 @@ export default {
         }
       }
     }
-    // apply stat modifiers
-    for (let itemType in selectedItems) {
-      if (selectedItems.hasOwnProperty(itemType)) {
-        let item = selectedItems[ itemType ]
-        if (item.hasOwnProperty('name')) {
-          // apply modifiers
-          for (let itemOption of item.options) {
-            if (itemOption.hasOwnProperty('modifiers')) {
-              for (let p in itemOption.modifiers) {
-                if (itemOption.modifiers.hasOwnProperty(p)) {
-                  statValues[ p ] = statValues[ p ] * itemOption.modifiers[ p ]
-                }
-              }
-            }
-          }
-          // apply rune modifiers
-          for (let itemRunes of item.runes) {
-            if (itemRunes.hasOwnProperty('modifiers')) {
-              for (let p in itemRunes.modifiers) {
-                if (itemRunes.modifiers.hasOwnProperty(p)) {
-                  statValues[ p ] = statValues[ p ] * itemRunes.modifiers[ p ]
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    // apply set bonus modifiers
-    for (let set of state.sets) {
-      let setCount = getters.countBySetId(set.id)
-      for (let idx = 1; idx <= setCount; idx++) {
-        if (set.bonus[ idx ] !== undefined) {
-          if (set.bonus[ idx ].hasOwnProperty('modifiers')) {
-            for (let p in set.bonus[ idx ].modifiers) {
-              if (set.bonus[ idx ].modifiers.hasOwnProperty(p)) {
-                statValues[ p ] = statValues[ p ] * set.bonus[ idx ].modifiers[ p ]
-              }
-            }
-          }
-        }
+
+    // apply modifiers
+    for(let p in statValues) {
+      if(statValues.hasOwnProperty(p)) {
+        statValues[ p ] = statValues[ p ] * (1 + getters.itemModifiers[p])
       }
     }
 

@@ -181,7 +181,7 @@
   },
   {
     "name": "Dimael",
-    "title": "Shadow Edgy Hunter",
+    "title": "Shadow Hunter",
     "damageType": "Magical",
     "manaAtk": 215,
     "uniqueBaseAtk": 547,
@@ -458,5 +458,35 @@
     "uniqueWeapon": "Merciful Threat, Phistonia",
     "classId": 5,
     "id": 46
+  },
+  {
+    "name": "Mirianne",
+    "title": "Servant of Blue",
+    "damageType": "Magical",
+    "manaAtk": 155,
+    "uniqueBaseAtk": 486,
+    "uniqueWeapon": "Endless Acceleration, Riventina",
+    "classId": 2,
+    "id": 47
+  },
+  {
+    "name": "Sonia",
+    "title": "The Blue Hurricane",
+    "damageType": "Magical",
+    "manaAtk": 205,
+    "uniqueBaseAtk": 390,
+    "uniqueWeapon": "Eye of the Storm, Yanadis",
+    "classId": 1,
+    "id": 48
+  },
+  {
+    "name": "Scarlet",
+    "title": "Faith of Silver",
+    "damageType": "Physical",
+    "manaAtk": 285,
+    "uniqueBaseAtk": 442,
+    "uniqueWeapon": "Blade of Conviction, White Belona",
+    "classId": 2,
+    "id": 49
   }
 ]

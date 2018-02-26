@@ -1,8 +1,26 @@
 <template>
   <li class="is-inline-block">
-    <figure :class="classes">
-      <img :src="src">
-    </figure>
+    <clazy-load tag="figure" :src="src" :class="classes">
+      <transition name="fade" slot="image">
+        <img :src="src" class="kr-hero-img" :alt="name">
+      </transition>
+      <transition name="fade" slot="placeholder">
+        <div class="sk-fading-circle sk-circle-figure">
+          <div class="sk-circle1 sk-circle"></div>
+          <div class="sk-circle2 sk-circle"></div>
+          <div class="sk-circle3 sk-circle"></div>
+          <div class="sk-circle4 sk-circle"></div>
+          <div class="sk-circle5 sk-circle"></div>
+          <div class="sk-circle6 sk-circle"></div>
+          <div class="sk-circle7 sk-circle"></div>
+          <div class="sk-circle8 sk-circle"></div>
+          <div class="sk-circle9 sk-circle"></div>
+          <div class="sk-circle10 sk-circle"></div>
+          <div class="sk-circle11 sk-circle"></div>
+          <div class="sk-circle12 sk-circle"></div>
+        </div>
+      </transition>
+    </clazy-load>
   </li>
 </template>
 
@@ -10,6 +28,7 @@
   export default {
     name: 'kr-hero-avatar',
     props: {
+      name: String,
       src: String,
       selected: Boolean
     },
@@ -34,6 +53,17 @@
     border-radius: 5px
     display: inline-block
 
+  .kr-hero-img
+    transition: opacity 500ms ease-in-out
+
   .kr-hero-selected
     box-shadow: 0 0 0 5px #FFEF75 inset
+
+  .sk-circle-figure
+    display: inline-block
+    margin: 37px 40px
+
+  .fade-enter, .fade-leave-to
+    opacity: 0
+    transform: scale(.8)
 </style>

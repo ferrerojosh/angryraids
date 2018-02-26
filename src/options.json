@@ -3,28 +3,28 @@
     "name": "ATK + 11%",
     "tiers": [7],
     "modifiers": {
-      "atk": 1.11
+      "atk": 0.11
     }
   },
   {
     "name": "MAX HP + 11%",
     "tiers": [7],
     "modifiers": {
-      "maxHp": 1.11
+      "maxHp": 0.11
     }
   },
   {
     "name": "M.DEF + 11%",
     "tiers": [7],
     "modifiers": {
-      "mDef": 1.11
+      "mDef": 0.11
     }
   },
   {
     "name": "P.DEF + 11%",
     "tiers": [7],
     "modifiers": {
-      "pDef": 1.11
+      "pDef": 0.11
     }
   },
   {

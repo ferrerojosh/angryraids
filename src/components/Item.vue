@@ -101,6 +101,7 @@
           rarity: 'Unique',
           type: 'Weapon',
           classes: [this.selectedHero.classId],
+          enchantOption: {},
           options: [],
           runes: []
         }

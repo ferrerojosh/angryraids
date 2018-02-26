@@ -466,7 +466,7 @@
     "manaAtk": 155,
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Endless Acceleration, Riventina",
-    "classId": 2,
+    "classId": 3,
     "id": 47
   },
   {
@@ -488,5 +488,35 @@
     "uniqueWeapon": "Blade of Conviction, White Belona",
     "classId": 2,
     "id": 49
+  },
+  {
+    "name": "Ezekiel",
+    "title": "The Cursed Blood",
+    "damageType": "Magical",
+    "manaAtk": 185,
+    "uniqueBaseAtk": 486,
+    "uniqueWeapon": "Jailer of Despair, Barbatos",
+    "classId": 3,
+    "id": 50
+  },
+  {
+    "name": "Ophelia",
+    "title": "Pathfinder of Fate",
+    "damageType": "Magical",
+    "manaAtk": 450,
+    "uniqueBaseAtk": 510,
+    "uniqueWeapon": "Cards of Destiny, Del Arcana",
+    "classId": 5,
+    "id": 51
+  },
+  {
+    "name": "Requina",
+    "title": "Merchant of Poison",
+    "damageType": "Physical",
+    "manaAtk": 400,
+    "uniqueBaseAtk": 547,
+    "uniqueWeapon": "The Flute of Silent Winds, Rakshathar",
+    "classId": 4,
+    "id": 52
   }
 ]

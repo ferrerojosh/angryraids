@@ -45,7 +45,6 @@
 
         switch(this.label) {
           case 'Crit':
-          case 'ACC':
             maxK = 2000
             x1 = 2000
             a1 = 1
@@ -61,10 +60,28 @@
             a4 = 0
             b4 = 0
             break
+          case 'ACC':
+            maxK = 2000
+            x1 = 2000
+            a1 = 1
+            b1 = 1500
+            x2 = 1500
+            a2 = 500
+            b2 = 750
+            minK = -920
+            x3 = -3
+            a3 = 3
+            b3 = -938
+            x4 = 0
+            a4 = 0
+            b4 = 0
+            break
           case 'P.Dodge':
           case 'M.Dodge':
           case 'P.Block':
           case 'M.Block':
+          case 'P.Crit Resist':
+          case 'M.Crit Resist':
           case 'Lifesteal':
             maxK = 1000
             x1 = 1000
@@ -84,10 +101,6 @@
           case 'Penetration':
           case 'P.Tough':
           case 'M.Tough':
-          case 'P.Block DEF':
-          case 'M.Block DEF':
-          case 'P.Crit Resist':
-          case 'M.Crit Resist':
           case 'CC Resist':
             maxK = 900
             x1 = 1000
@@ -119,6 +132,39 @@
             x4 = 500
             a4 = 1
             b4 = -1500
+            break
+          case 'P.Block DEF':
+          case 'M.Block DEF':
+            maxK = 450
+            x1 = 775
+            a1 = 3
+            b1 = 1500
+            x2 = 225
+            a2 = 204
+            b2 = 179
+            minK = -290
+            x3 = -2
+            a3 = 3
+            b3 = -938
+            x4 = -1
+            a4 = 0
+            b4 = 0
+            break
+          case 'MP Recovery/Attack':
+            maxK = 2300
+            x1 = 2400
+            a1 = 1
+            b1 = -900
+            x2 = 1200
+            a2 = 500
+            b2 = 600
+            minK = 0
+            x3 = -500
+            a3 = 0
+            b3 = 0
+            x4 = 0
+            a4 = 0
+            b4 = 0
             break
           default:
             return totalStat / 1000

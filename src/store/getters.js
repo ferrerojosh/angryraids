@@ -5,6 +5,7 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
+  version: state => state.version,
   applyStarAndEnhancement: (state) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
     let appliedStats = {}

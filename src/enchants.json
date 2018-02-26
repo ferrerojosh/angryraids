@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Crit Chance",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "critChance"
+  },
+  {
+    "name": "Lifesteal",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "lifesteal"
+  },
+  {
+    "name": "P.DMG Resistance (P.Tough)",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pTough"
+  },
+  {
+    "name": "M.DEF",
+    "max": 22,
+    "value": 22,
+    "type": "modifier",
+    "stat": "mDef"
+  },
+  {
+    "name": "P.Block",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pBlock"
+  },
+  {
+    "name": "Damage Reduction upon P.Block  (P.Block DEF)",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pBlockDef"
+  },
+  {
+    "name": "M.Dodge",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pDodge"
+  },
+  {
+    "name": "ACC",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "accuracy"
+  },
+  {
+    "name": "CC Resist",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "ccResist"
+  },
+  {
+    "name": "ATK",
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "atk"
+  },
+  {
+    "name": "P.Crit Resist",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pCritResist"
+  },
+  {
+    "name": "M.Crit Resist",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "mCritResist"
+  },
+  {
+    "name": "MAX HP",
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "maxHp"
+  },
+  {
+    "name": "CC Accuracy",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "ccAccuracy"
+  },
+  {
+    "name": "Crit DMG",
+    "max": 220,
+    "value": 220,
+    "type": "stat",
+    "stat": "critDamage"
+  },
+  {
+    "name": "Penetration",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "penetration"
+  },
+  {
+    "name": "M.DMG Resistance (M.Tough)",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "mTough"
+  },
+  {
+    "name": "P.DEF",
+    "max": 22,
+    "value": 22,
+    "type": "modifier",
+    "stat": "pDef"
+  },
+  {
+    "name": "M.Block",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "mBlock"
+  },
+  {
+    "name": "DMG Reduction upon M.Block (M.Block DEF)",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "mBlockDef"
+  },
+  {
+    "name": "ATK Spd",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "atkSpd"
+  },
+  {
+    "name": "MP Recovery/DMG",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "manaDmg"
+  },
+  {
+    "name": "Recovery",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "recovery"
+  },
+  {
+    "name": "P.Dodge",
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pDodge"
+  }
+]

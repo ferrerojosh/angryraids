@@ -2,7 +2,7 @@ import { types } from './mutations'
 
 export const actionTypes = {
   selectHero: 'selectHero',
-  selectItem: 'selectItem'
+  selectItem: 'selectItem',
 }
 
 export default {
@@ -11,5 +11,5 @@ export default {
   },
   [actionTypes.selectItem](context, item) {
     context.commit(types.CHANGE_ITEM, item)
-  }
+  },
 }

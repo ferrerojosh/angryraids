@@ -11,6 +11,7 @@
       "critDamage": 0,
       "penetration": 0,
       "accuracy": 0,
+      "ccAccuracy": 0,
       "pDodge": 0,
       "mDodge": 0,
       "pBlock": 200,

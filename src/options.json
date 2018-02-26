@@ -1,93 +1,106 @@
 [
   {
-    "name": "ATK + 11%",
+    "name": "ATK",
     "tiers": [7],
-    "modifiers": {
-      "atk": 0.11
-    }
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "atk"
   },
   {
-    "name": "MAX HP + 11%",
+    "name": "MAX HP",
     "tiers": [7],
-    "modifiers": {
-      "maxHp": 0.11
-    }
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "maxHp"
   },
   {
-    "name": "M.DEF + 11%",
+    "name": "M.DEF",
     "tiers": [7],
-    "modifiers": {
-      "mDef": 0.11
-    }
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "mDef"
   },
   {
-    "name": "P.DEF + 11%",
+    "name": "P.DEF",
     "tiers": [7],
-    "modifiers": {
-      "pDef": 0.11
-    }
+    "max": 11,
+    "value": 11,
+    "type": "modifier",
+    "stat": "pDef"
   },
   {
-    "name": "ATK Spd + 110",
+    "name": "ATK Spd",
     "tiers": [7],
-    "stats": {
-      "atkSpd": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "atkSpd"
   },
   {
-    "name": "Crit + 110",
+    "name": "Crit",
     "tiers": [7],
-    "stats": {
-      "critChance": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "critChance"
   },
   {
-    "name": "Crit DMG + 22%",
+    "name": "Crit DMG",
     "tiers": [7],
-    "stats": {
-      "critDamage": 220
-    }
+    "max": 220,
+    "value": 220,
+    "type": "stat",
+    "stat": "critDamage"
   },
   {
-    "name": "Penetration + 110",
+    "name": "Penetration",
     "tiers": [7],
-    "stats": {
-      "penetration": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "penetration"
   },
   {
-    "name": "ACC + 110",
+    "name": "ACC",
     "tiers": [7],
-    "stats": {
-      "accuracy": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "accuracy"
   },
   {
-    "name": "Lifesteal + 110",
+    "name": "Lifesteal",
     "tiers": [7],
-    "stats": {
-      "lifesteal": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "lifesteal"
   },
   {
-    "name": "P.Block + 220",
+    "name": "P.Block",
     "tiers": [7],
-    "stats": {
-      "pBlock": 220
-    }
+    "max": 220,
+    "value": 220,
+    "type": "stat",
+    "stat": "pBlock"
   },
   {
-    "name": "P.Dodge + 110",
+    "name": "P.Dodge",
     "tiers": [7],
-    "stats": {
-      "pDodge": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "pDodge"
   },
   {
-    "name": "CC Resist + 110",
+    "name": "CC Resist",
     "tiers": [7],
-    "stats": {
-      "ccResist": 110
-    }
+    "max": 110,
+    "value": 110,
+    "type": "stat",
+    "stat": "ccResist"
   }
 ]

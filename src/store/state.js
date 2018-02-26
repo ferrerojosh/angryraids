@@ -3,6 +3,7 @@ import classes from '../classes.json'
 import sets from '../sets.json'
 import options from '../options.json'
 import runes from '../runes.json'
+import enchants from '../enchants.json'
 
 export default {
   heroes: heroes,
@@ -10,6 +11,7 @@ export default {
   sets: sets,
   options: options,
   runes: runes,
+  enchants: enchants,
   uwEnhanceScale: [
     950,
     1000,
@@ -124,6 +126,7 @@ export default {
     critDamage: 0,
     penetration: 0,
     accuracy: 0,
+    ccAccuracy: 0,
     pDodge: 0,
     mDodge: 0,
     pBlock: 0,

@@ -412,10 +412,6 @@ export default {
     // apply modifiers
     for(let p in statValues) {
       if(statValues.hasOwnProperty(p)) {
-        if(p === 'atk') {
-          console.log(`total stat value: ${statValues[p]}`)
-          console.log(`total modifiers: ${getters.itemModifiers[p]}`)
-        }
         statValues[ p ] = statValues[ p ] * (1 + getters.itemModifiers[p])
       }
     }

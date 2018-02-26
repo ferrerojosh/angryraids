@@ -1,7 +1,7 @@
 <template>
   <section class="card">
     <kr-hero-list></kr-hero-list>
-    <div class="columns is-gapless">
+    <div class="columns is-gapless simulator-content">
       <!-- Stats View -->
       <kr-hero-stats class="column is-one-third"></kr-hero-stats>
       <!-- Equipment View -->

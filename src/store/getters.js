@@ -308,13 +308,13 @@ export default {
           for (let itemOption of item.options) {
             // new method
             if(itemOption.type === 'modifier') {
-              statModifiers[ itemOption.stat ] = statModifiers[ itemOption.stat ] + ( parseInt(itemOption.value) / 100 )
+              statModifiers[ itemOption.stat ] = statModifiers[ itemOption.stat ] + ( parseFloat(itemOption.value) / 100 )
             }
           }
 
           // add enchant scroll
           if(item.enchantOption.type === 'modifier') {
-            statModifiers[ item.enchantOption.stat ] = statModifiers[ item.enchantOption.stat ] + ( parseInt(item.enchantOption.value) / 100 )
+            statModifiers[ item.enchantOption.stat ] = statModifiers[ item.enchantOption.stat ] + ( parseFloat(item.enchantOption.value) / 100 )
           }
 
           // add rune modifiers

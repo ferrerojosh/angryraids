@@ -61,6 +61,7 @@
             b4 = 0
             break
           case 'ACC':
+          case 'CC Accuracy':
             maxK = 2000
             x1 = 2000
             a1 = 1

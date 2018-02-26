@@ -380,10 +380,14 @@ export default {
           // merge option stats
           for(let itemOption of item.options) {
             // new method
-            statValues[itemOption.stat] = statValues[itemOption.stat] + parseInt(itemOption.value)
+            if(itemOption.type === 'stat') {
+              statValues[itemOption.stat] = statValues[itemOption.stat] + parseInt(itemOption.value)
+            }
           }
           // enchant scroll
-          statValues[item.enchantOption.stat] = statValues[item.enchantOption.stat] + parseInt(item.enchantOption.value)
+          if(item.enchantOption.type === 'stat') {
+            statValues[item.enchantOption.stat] = statValues[item.enchantOption.stat] + parseInt(item.enchantOption.value)
+          }
           // merge rune stats
           for (let itemRune of item.runes) {
             if (itemRune.hasOwnProperty('stats')) {
@@ -408,6 +412,10 @@ export default {
     // apply modifiers
     for(let p in statValues) {
       if(statValues.hasOwnProperty(p)) {
+        if(p === 'atk') {
+          console.log(`total stat value: ${statValues[p]}`)
+          console.log(`total modifiers: ${getters.itemModifiers[p]}`)
+        }
         statValues[ p ] = statValues[ p ] * (1 + getters.itemModifiers[p])
       }
     }
@@ -415,7 +423,7 @@ export default {
     return {
       basicStats: [
         { type: 'MAX HP', value: Math.floor(statValues.maxHp), base: state.selectedClass.stats.maxHp },
-        { type: 'ATK', value: Math.floor(statValues.atk), base: state.selectedClass.stats.atk },
+        { type: 'ATK', value: Math.floor(statValues.atk), base: Math.floor(state.selectedClass.stats.atk) },
         { type: 'P.DEF', value: Math.floor(statValues.pDef), base: state.selectedClass.stats.pDef },
         { type: 'M.DEF', value: Math.floor(statValues.mDef), base: state.selectedClass.stats.mDef }
       ],

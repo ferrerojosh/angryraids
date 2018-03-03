@@ -266,7 +266,7 @@ export default {
     items.forEach(item => {
       item.enhancement = 0
       item.stars = 0
-      item.availableOptions = JSON.parse(JSON.stringify(state.options))
+      item.availableOptions = JSON.parse(JSON.stringify(state.options.filter(o => o.tiers.includes(item.tier))))
       item.options = [
         item.availableOptions[ 0 ],
         item.availableOptions[ 4 ],

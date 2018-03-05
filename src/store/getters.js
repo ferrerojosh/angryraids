@@ -5,6 +5,7 @@ export default {
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
+  version: state => state.version,
   applyStarAndEnhancement: (state) => (stats, star, enhancement, rarity = 'Legendary') => {
     let starCoefficient = 1
     let appliedStats = {}
@@ -265,12 +266,15 @@ export default {
     items.forEach(item => {
       item.enhancement = 0
       item.stars = 0
+      item.availableOptions = JSON.parse(JSON.stringify(state.options.filter(o => o.tiers.includes(item.tier))))
       item.options = [
-        state.options[ 0 ],
-        state.options[ 1 ],
-        state.options[ 2 ],
-        state.options[ 3 ]
+        item.availableOptions[ 0 ],
+        item.availableOptions[ 4 ],
+        item.availableOptions[ 5 ],
+        item.availableOptions[ 6 ]
       ]
+      item.availableEnchants = JSON.parse(JSON.stringify(state.enchants))
+      item.enchantOption = item.availableEnchants[0]
       let rune = getters.runesByType(item.type)[ 0 ]
       if (rune !== undefined)
         item.runes = [ rune ]
@@ -302,14 +306,17 @@ export default {
         if (item.hasOwnProperty('name')) {
           // add modifiers
           for (let itemOption of item.options) {
-            if (itemOption.hasOwnProperty('modifiers')) {
-              for (let p in itemOption.modifiers) {
-                if (itemOption.modifiers.hasOwnProperty(p)) {
-                  statModifiers[ p ] = statModifiers[ p ] + itemOption.modifiers[ p ]
-                }
-              }
+            // new method
+            if(itemOption.type === 'modifier') {
+              statModifiers[ itemOption.stat ] = statModifiers[ itemOption.stat ] + ( parseFloat(itemOption.value) / 100 )
             }
           }
+
+          // add enchant scroll
+          if(item.enchantOption.type === 'modifier') {
+            statModifiers[ item.enchantOption.stat ] = statModifiers[ item.enchantOption.stat ] + ( parseFloat(item.enchantOption.value) / 100 )
+          }
+
           // add rune modifiers
           for (let itemRunes of item.runes) {
             if (itemRunes.hasOwnProperty('modifiers')) {
@@ -371,10 +378,15 @@ export default {
           // merge base stats
           statValues = mergeStats(statValues, appliedStats)
           // merge option stats
-          for (let itemOption of item.options) {
-            if (itemOption.hasOwnProperty('stats')) {
-              statValues = mergeStats(statValues, itemOption.stats)
+          for(let itemOption of item.options) {
+            // new method
+            if(itemOption.type === 'stat') {
+              statValues[itemOption.stat] = statValues[itemOption.stat] + parseInt(itemOption.value)
             }
+          }
+          // enchant scroll
+          if(item.enchantOption.type === 'stat') {
+            statValues[item.enchantOption.stat] = statValues[item.enchantOption.stat] + parseInt(item.enchantOption.value)
           }
           // merge rune stats
           for (let itemRune of item.runes) {
@@ -407,7 +419,7 @@ export default {
     return {
       basicStats: [
         { type: 'MAX HP', value: Math.floor(statValues.maxHp), base: state.selectedClass.stats.maxHp },
-        { type: 'ATK', value: Math.floor(statValues.atk), base: state.selectedClass.stats.atk },
+        { type: 'ATK', value: Math.floor(statValues.atk), base: Math.floor(state.selectedClass.stats.atk) },
         { type: 'P.DEF', value: Math.floor(statValues.pDef), base: state.selectedClass.stats.pDef },
         { type: 'M.DEF', value: Math.floor(statValues.mDef), base: state.selectedClass.stats.mDef }
       ],
@@ -416,6 +428,7 @@ export default {
         { type: 'Crit DMG', value: statValues.critDamage, base: state.selectedClass.stats.critDamage },
         { type: 'Penetration', value: statValues.penetration, base: state.selectedClass.stats.penetration },
         { type: 'ACC', value: statValues.accuracy, base: state.selectedClass.stats.accuracy },
+        { type: 'CC Accuracy', value: statValues.ccAccuracy + statValues.accuracy, base: state.selectedClass.stats.ccAccuracy + state.selectedClass.stats.accuracy },
         { type: 'P.Dodge', value: statValues.pDodge, base: state.selectedClass.stats.pDodge },
         { type: 'M.Dodge', value: statValues.mDodge, base: state.selectedClass.stats.mDodge },
         { type: 'P.Block', value: statValues.pBlock, base: state.selectedClass.stats.pBlock },
@@ -429,6 +442,7 @@ export default {
         { type: 'CC Resist', value: statValues.ccResist, base: state.selectedClass.stats.ccResist },
         { type: 'Lifesteal', value: statValues.lifesteal, base: state.selectedClass.stats.lifesteal },
         { type: 'ATK Spd', value: statValues.atkSpd, base: state.selectedClass.stats.atkSpd },
+        { type: 'Recovery', value: statValues.recovery, base: state.selectedClass.stats.recovery },
         { type: 'MP Recovery/Attack', value: statValues.manaAtk, base: state.selectedHero.manaAtk },
         { type: 'MP Recovery/DMG', value: statValues.manaDmg, base: 0 },
       ]

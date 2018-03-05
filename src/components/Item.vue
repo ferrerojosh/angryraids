@@ -1,6 +1,13 @@
 <template>
   <section class="kr-item">
-    <label class="label">{{ type }}</label>
+    <article v-if="message" :class="messageClass">
+      <div class="message-header">
+        <p>{{ messageTitle }}</p>
+      </div>
+      <div class="message-body">
+        {{ message }}
+      </div>
+    </article>
     <div class="field has-addons">
       <div class="control is-tier-control">
         <span class="select">
@@ -18,7 +25,7 @@
       </div>
     </div>
     <div v-if="selectedItem">
-      <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"></kr-item-details>
+      <kr-item-details :item="selectedItem" :numOfOptions="numOfOptions"/>
     </div>
   </section>
 </template>
@@ -29,10 +36,21 @@
   import { actionTypes } from '../store/actions'
 
   export default {
-    components: { KrItemDetails },
+    components: {
+      KrItemDetails
+    },
     name: 'kr-item',
     props: {
       type: String,
+      message: String,
+      messageTitle: {
+        default: 'Info',
+        type: String
+      },
+      messageType: {
+        default: 'info',
+        type: String
+      }
     },
     data: () => ({
       selectedTier: 7
@@ -64,6 +82,9 @@
           this.$store.dispatch(actionTypes.selectItem, val)
         }
       },
+      messageClass() {
+        return `message is-${this.messageType}`
+      },
       itemsByTier() {
         return this.itemsByClass.filter(item => item.tier === this.selectedTier)
       },
@@ -80,6 +101,7 @@
           rarity: 'Unique',
           type: 'Weapon',
           classes: [this.selectedHero.classId],
+          enchantOption: {},
           options: [],
           runes: []
         }
@@ -116,10 +138,3 @@
     }
   }
 </script>
-
-<style lang="sass">
-  .kr-item
-    padding: 1rem
-    box-shadow: 0 1px 1px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
-    margin-bottom: 1.5rem
-</style>

@@ -2,6 +2,7 @@
 @import '~bulma/sass/utilities/functions'
 
 $family-sans-serif: BlinkMacSystemFont, -apple-system, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$message-body-radius: 0
 
 html, body
   background: whitesmoke !important
@@ -10,6 +11,15 @@ html, body
   width: 110px
   > .select > select
     width: 110px
+
+.is-option-max
+  width: 60px
+  > .button
+    width: 60px
+    justify-content: left
+
+.simulator-content
+  padding-bottom: 4rem
 
 /* Turn on custom 8px wide scrollbar */
 ::-webkit-scrollbar

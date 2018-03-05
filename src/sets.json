@@ -1,5 +1,21 @@
 [
   {
+    "id": 4,
+    "prefix": "Swift Darkness",
+    "bonus": {
+      "2": {
+        "stats": {
+          "manaAtk": 280
+        }
+      },
+      "4": {
+        "stats": {
+          "manaAtk": 360
+        }
+      }
+    }
+  },
+  {
     "id": 1,
     "prefix": "Oppurtune Fire",
     "bonus": {
@@ -45,22 +61,6 @@
         "stats": {
           "pCritResist": 130,
           "mCritResist": 130
-        }
-      }
-    }
-  },
-  {
-    "id": 4,
-    "prefix": "Swift Darkness",
-    "bonus": {
-      "2": {
-        "stats": {
-          "manaAtk": 280
-        }
-      },
-      "4": {
-        "stats": {
-          "manaAtk": 360
         }
       }
     }

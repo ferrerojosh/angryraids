@@ -3,6 +3,7 @@ import classes from '../classes.json'
 import sets from '../sets.json'
 import options from '../options.json'
 import runes from '../runes.json'
+import enchants from '../enchants.json'
 
 export default {
   heroes: heroes,
@@ -10,6 +11,7 @@ export default {
   sets: sets,
   options: options,
   runes: runes,
+  enchants: enchants,
   uwEnhanceScale: [
     950,
     1000,
@@ -93,12 +95,14 @@ export default {
     76128,
     78817
   ],
+  version: '0.2.3',
   uwScale: [1, 1.1, 1.3, 1.6, 2, 2.5],
   atkHpScale: [1, 1.1, 1.2, 1.3, 1.4, 1.5],
   defScale: [1, 1.1, 1.25, 1.45, 1.7, 2],
-  wepKnightTierBase: [0, 0, 0, 786, 1516, 2828, 3919, 5834],
-  wepWarriorTierBase: [0, 0, 0, 851, 1637, 3058, 4235, 6309],
-  wepAssassinTierBase: [0, 0, 0, 924, 1781, 3325, 4607, 6858],
+  enchantScrollOptions: '',
+  wepKnightTierBase: [0, 0, 0, 862, 1663, 3102, 4299, 6400],
+  wepWarriorTierBase: [0, 0, 0, 979, 1883, 3517, 4870, 7255],
+  wepAssassinTierBase: [0, 0, 0, 1073, 2068, 3860, 5349, 7962],
   wepArcherTierBase: [0, 0, 0, 1211, 2334, 4355, 6037, 8987],
   wepMechanicTierBase: [0, 0, 0, 1105, 2128, 3973, 5506, 8200],
   wepStaffTierBase: [0, 0, 0, 1126, 2170, 4050, 5613, 8356],
@@ -122,6 +126,7 @@ export default {
     critDamage: 0,
     penetration: 0,
     accuracy: 0,
+    ccAccuracy: 0,
     pDodge: 0,
     mDodge: 0,
     pBlock: 0,

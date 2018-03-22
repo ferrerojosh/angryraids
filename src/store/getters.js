@@ -263,16 +263,26 @@ export default {
       }
     }
 
+    let nonSetItems = JSON.parse(JSON.stringify(state.nonSetItems))
+
+    items.push(...nonSetItems)
+
     items.forEach(item => {
       item.enhancement = 0
       item.stars = 0
       item.availableOptions = JSON.parse(JSON.stringify(state.options.filter(o => o.tiers.includes(item.tier))))
-      item.options = [
-        item.availableOptions[ 0 ],
-        item.availableOptions[ 4 ],
-        item.availableOptions[ 5 ],
-        item.availableOptions[ 6 ]
-      ]
+
+      if(item.rarity === 'Legendary') {
+        item.options = [
+          item.availableOptions[ 0 ],
+          item.availableOptions[ 4 ],
+          item.availableOptions[ 5 ],
+          item.availableOptions[ 6 ]
+        ]
+      } else {
+        item.options = []
+      }
+
       item.availableEnchants = JSON.parse(JSON.stringify(state.enchants))
       item.enchantOption = item.availableEnchants[0]
       let rune = getters.runesByType(item.type)[ 0 ]

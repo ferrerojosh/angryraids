@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Common Treasure",
+    "stats": {},
+    "tier": 7,
+    "rarity": "Legendary",
+    "type": "Treasure",
+    "classes": [ 1, 2, 4, 4, 5, 6, 7]
+  },
+  {
+    "name": "Parvita of Defence",
+    "stats": {
+      "atk": 283
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 1 ]
+  },
+  {
+    "name": "Tynoram of Charge",
+    "stats": {
+      "atk": 320
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 2 ]
+  },
+  {
+    "name": "Xaphyx of Ambush",
+    "stats": {
+      "atk": 352
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 3 ]
+  },
+  {
+    "name": "Marcena of Aim",
+    "stats": {
+      "atk": 397
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 4 ]
+  },
+  {
+    "name": "Voltenux of Penetration",
+    "stats": {
+      "atk": 362
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 6 ]
+  },
+  {
+    "name": "Giltair of Explosion",
+    "stats": {
+      "atk": 370
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 5 ]
+  },
+  {
+    "name": "Suyrtema of Heal",
+    "stats": {
+      "atk": 370
+    },
+    "tier": 10,
+    "rarity": "Unique",
+    "type": "Weapon",
+    "classes": [ 7 ]
+  }
+]

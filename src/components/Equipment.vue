@@ -15,6 +15,9 @@
     <tab-pane label="Orb">
       <kr-item type="Orb"/>
     </tab-pane>
+    <tab-pane label="Treasure">
+      <kr-item type="Treasure"/>
+    </tab-pane>
   </tabs>
   <!--<section class="columns">-->
     <!--<div class="column">-->

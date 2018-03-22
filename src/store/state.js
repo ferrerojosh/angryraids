@@ -4,6 +4,7 @@ import sets from '../sets.json'
 import options from '../options.json'
 import runes from '../runes.json'
 import enchants from '../enchants.json'
+import nonSetItems from '../nonSetItems.json'
 
 export default {
   heroes: heroes,
@@ -12,6 +13,7 @@ export default {
   options: options,
   runes: runes,
   enchants: enchants,
+  nonSetItems: nonSetItems,
   uwEnhanceScale: [
     950,
     1000,
@@ -95,7 +97,7 @@ export default {
     76128,
     78817
   ],
-  version: '0.2.3',
+  version: '0.2.4',
   uwScale: [1, 1.1, 1.3, 1.6, 2, 2.5],
   atkHpScale: [1, 1.1, 1.2, 1.3, 1.4, 1.5],
   defScale: [1, 1.1, 1.25, 1.45, 1.7, 2],

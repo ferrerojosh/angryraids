@@ -518,5 +518,45 @@
     "uniqueWeapon": "The Flute of Silent Winds, Rakshathar",
     "classId": 4,
     "id": 52
+  },
+  {
+    "name": "Aselica",
+    "title": "Guardian of the Sun",
+    "damageType": "Magical",
+    "manaAtk": 210,
+    "uniqueBaseAtk": 390,
+    "uniqueWeapon": "Solar Halo, Ignisius",
+    "classId": 1,
+    "id": 53
+  },
+  {
+    "name": "Veronica",
+    "title": "The Eye of Discernment",
+    "damageType": "Magical",
+    "manaAtk": 350,
+    "uniqueBaseAtk": 510,
+    "uniqueWeapon": "Infinite Charter, Accordio",
+    "classId": 5,
+    "id": 54
+  },
+  {
+    "name": "Crow",
+    "title": "The Punishing Bullet",
+    "damageType": "Physical",
+    "manaAtk": 450,
+    "uniqueBaseAtk": 499,
+    "uniqueWeapon": "Hellhound, Akistra",
+    "classId": 6,
+    "id": 55
+  },
+  {
+    "name": "Shea",
+    "title": "Guardian of the Sun",
+    "damageType": "Magical",
+    "manaAtk": 400,
+    "uniqueBaseAtk": 510,
+    "uniqueWeapon": "Charming Melody, Schwanheite",
+    "classId": 7,
+    "id": 56
   }
 ]

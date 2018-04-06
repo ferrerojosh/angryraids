@@ -13,7 +13,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/Sonia'
+      redirect: '/Aselica'
     }
   ],
 })

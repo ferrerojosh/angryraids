@@ -2,6 +2,12 @@ export default {
   heroesByClass: state => {
     return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
   },
+  imgFolderByClassId: state => (classId) => {
+    let heroClass = state.classes.find(c => {
+      return c.id === classId
+    });
+    return heroClass.imgFolder;
+  },
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },

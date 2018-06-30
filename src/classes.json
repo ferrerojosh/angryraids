@@ -1,6 +1,7 @@
 [
   {
     "name": "Knight",
+    "imgFolder": "knights",
     "id": 1,
     "stats": {
       "atk": 15712,
@@ -34,6 +35,7 @@
   },
   {
     "name": "Warrior",
+    "imgFolder": "warriors",
     "id": 2,
     "stats": {
       "atk": 17848,
@@ -67,6 +69,7 @@
   },
   {
     "name": "Assassin",
+    "imgFolder": "assassins",
     "id": 3,
     "stats": {
       "atk": 19592,
@@ -100,6 +103,7 @@
   },
   {
     "name": "Archer",
+    "imgFolder": "archers",
     "id": 4,
     "stats": {
       "atk": 22112,
@@ -133,6 +137,7 @@
   },
   {
     "name": "Wizard",
+    "imgFolder": "wizards",
     "id": 5,
     "stats": {
       "atk": 23280,
@@ -166,6 +171,7 @@
   },
   {
     "name": "Mechanic",
+    "imgFolder": "mechanics",
     "id": 6,
     "stats": {
       "atk": 20176,
@@ -199,6 +205,7 @@
   },
   {
     "name": "Priest",
+    "imgFolder": "priests",
     "id": 7,
     "stats": {
       "atk": 18424,

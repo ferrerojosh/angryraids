@@ -56,11 +56,11 @@
     }
   },
   {
-    "name": "Rune of Fierce Attack (MP Recovery/Attack + 400)",
+    "name": "Rune of Fierce Attack (MP Recovery/Attack + 300)",
     "type": "Weapon",
     "rarity": "Heroic",
     "stats": {
-      "manaAtk": 400
+      "manaAtk": 300
     }
   },
   {

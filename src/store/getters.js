@@ -40,7 +40,13 @@ export default {
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
   selectedItemByType: state => (type) => state.selectedItems[ type ],
-  runesByType: state => (type) => state.runes.filter(rune => rune.type === type),
+  runesByType: state => (type) => state.runes.filter(rune => {
+    if (Array.isArray(rune.type)) {
+      return rune.type.includes(type)
+    } else {
+      return rune.type === type
+    }
+  }),
   options: state => state.options,
   items: (state, getters) => {
     let items = []

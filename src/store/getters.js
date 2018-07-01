@@ -1,6 +1,7 @@
 export default {
   heroesByClass: state => {
-    return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
+    let heroClassId = state.selectedClass.id
+    return state.heroes.filter(h => h.classId === heroClassId).sort((a, b) => (a.classId < b.classId ? -1 : 1))
   },
   imgFolderByClassId: state => (classId) => {
     let heroClass = state.classes.find(c => {
@@ -8,6 +9,8 @@ export default {
     });
     return heroClass.imgFolder;
   },
+  selectedClass: state => state.selectedClass,
+  classes: state => state.classes,
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
@@ -449,7 +452,7 @@ export default {
         statValues[ p ] = statValues[ p ] * (1 + getters.itemModifiers[p])
       }
     }
-    console.log(statValues);
+
     return {
       basicStats: [
         { type: 'MAX HP', value: Math.floor(statValues.maxHp), base: state.selectedClass.stats.maxHp },

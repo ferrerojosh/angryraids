@@ -119,6 +119,7 @@ export default {
   necklaceTierBase: [0, 0, 0, 384, 736, 1377, 1993, 2841, 3553],
   ringTierBase: [0, 0, 0, 24404, 47039, 87848, 127282, 181282, 226962],
   orbTierBase: [0, 0, 0, 0, 0, 86454, 138285, 190116, 226962],
+  treasureTierBase: [0, 0, 0, 0, 0, 0, 0, 190116, 226962],
   statValues: {
     atk: 0,
     pDef: 0,
@@ -199,6 +200,7 @@ export default {
     'Armor': {},
     'Secondary Armor': {},
     'Accessory': {},
-    'Orb': {}
+    'Orb': {},
+    'Treasure': {}
   }
 }

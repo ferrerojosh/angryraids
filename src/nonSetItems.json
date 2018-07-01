@@ -1,7 +1,9 @@
 [
   {
     "name": "Common Treasure",
-    "stats": {},
+    "stats": {
+      "maxHp": 226962
+    },
     "tier": 8,
     "rarity": "Legendary",
     "type": "Treasure",
@@ -9,7 +11,9 @@
   },
   {
     "name": "Common Treasure",
-    "stats": {},
+    "stats": {
+      "maxHp": 190116
+    },
     "tier": 7,
     "rarity": "Legendary",
     "type": "Treasure",

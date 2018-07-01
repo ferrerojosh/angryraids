@@ -1,6 +1,198 @@
 [
   {
     "name": "ATK",
+    "tiers": [8],
+    "max": 12,
+    "value": 12,
+    "type": "modifier",
+    "stat": "atk"
+  },
+  {
+    "name": "MAX HP",
+    "tiers": [8],
+    "max": 12,
+    "value": 12,
+    "type": "modifier",
+    "stat": "maxHp"
+  },
+  {
+    "name": "M.DEF",
+    "tiers": [8],
+    "max": 12,
+    "value": 12,
+    "type": "modifier",
+    "stat": "mDef"
+  },
+  {
+    "name": "P.DEF",
+    "tiers": [8],
+    "max": 12,
+    "value": 12,
+    "type": "modifier",
+    "stat": "pDef"
+  },
+  {
+    "name": "ATK Spd",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "atkSpd"
+  },
+  {
+    "name": "Crit",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "critChance"
+  },
+  {
+    "name": "Crit DMG",
+    "tiers": [8],
+    "max": 220,
+    "value": 220,
+    "type": "stat",
+    "stat": "critDamage"
+  },
+  {
+    "name": "Penetration",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "penetration"
+  },
+  {
+    "name": "ACC",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "accuracy"
+  },
+  {
+    "name": "Lifesteal",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "lifesteal"
+  },
+  {
+    "name": "P.Block",
+    "tiers": [8],
+    "max": 220,
+    "value": 220,
+    "type": "stat",
+    "stat": "pBlock"
+  },
+  {
+    "name": "P.Dodge",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "pDodge"
+  },
+  {
+    "name": "CC Resist",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "ccResist"
+  },
+  {
+    "name": "DEF",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "modifier",
+    "stat": ["pDef", "mDef"]
+  },
+  {
+    "name": "Block",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": ["pBlock", "mBlock"]
+  },
+  {
+    "name": "Dodge",
+    "tiers": [8],
+    "max": 60,
+    "value": 60,
+    "type": "stat",
+    "stat": ["pDodge", "mDodge"]
+  },
+  {
+    "name": "M.Block",
+    "tiers": [8],
+    "max": 240,
+    "value": 240,
+    "type": "stat",
+    "stat": "mBlock"
+  },
+  {
+    "name": "Debuff ACC",
+    "tiers": [8],
+    "max": 240,
+    "value": 240,
+    "type": "stat",
+    "stat": "debuffAcc"
+  },
+  {
+    "name": "MP Recovery/Sec",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "manaSec"
+  },
+  {
+    "name": "Crit Resist",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": ["pCritResist","mCritResist"]
+  },
+  {
+    "name": "MP Recovery/Attack",
+    "tiers": [8],
+    "max": 240,
+    "value": 240,
+    "type": "stat",
+    "stat": "manaAtk"
+  },
+  {
+    "name": "M.Crit Resist",
+    "tiers": [8],
+    "max": 240,
+    "value": 240,
+    "type": "stat",
+    "stat": "mCritResist"
+  },
+  {
+    "name": "P.Crit Resist",
+    "tiers": [8],
+    "max": 240,
+    "value": 240,
+    "type": "stat",
+    "stat": "pCritResist"
+  },
+  {
+    "name": "M.Dodge",
+    "tiers": [8],
+    "max": 120,
+    "value": 120,
+    "type": "stat",
+    "stat": "mDodge"
+  },
+  {
+    "name": "ATK",
     "tiers": [7],
     "max": 11,
     "value": 11,

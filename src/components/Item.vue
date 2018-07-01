@@ -53,7 +53,7 @@
       }
     },
     data: () => ({
-      selectedTier: 7
+      selectedTier: 8
     }),
     watch: {
       selectedTier() {

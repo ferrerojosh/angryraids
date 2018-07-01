@@ -54,7 +54,7 @@ export default {
     for (let set of state.sets) {
       // legendary sets for now, todo ancient sets
 
-      for (let tier = 3; tier <= 7; tier++) {
+      for (let tier = 3; tier <= 8; tier++) {
         // weapon
 
         // knight

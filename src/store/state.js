@@ -149,7 +149,9 @@ export default {
     lifesteal: 0,
     atkSpd: 0,
     manaAtk: 0,
-    manaDmg: 0
+    manaDmg: 0,
+    manaSec: 0,
+    debuffAccuracy: 0
   },
   selectedHero: {
     name: 'Demia',
@@ -192,7 +194,8 @@ export default {
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   selectedItems: {

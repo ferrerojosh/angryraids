@@ -30,7 +30,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -64,7 +65,8 @@
       "ccResist": 150,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -98,7 +100,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -132,7 +135,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -166,7 +170,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -200,7 +205,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
@@ -234,7 +240,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   }
 ]

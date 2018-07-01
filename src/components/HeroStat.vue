@@ -62,6 +62,7 @@
             break
           case 'ACC':
           case 'CC Accuracy':
+          case 'Debuff Accuracy':
             maxK = 2000
             x1 = 2000
             a1 = 1

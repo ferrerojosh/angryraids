@@ -106,8 +106,8 @@
   {
     "name": "DEF",
     "tiers": [8],
-    "max": 120,
-    "value": 120,
+    "max": 12,
+    "value": 12,
     "type": "modifier",
     "stat": ["pDef", "mDef"]
   },
@@ -141,7 +141,7 @@
     "max": 240,
     "value": 240,
     "type": "stat",
-    "stat": "debuffAcc"
+    "stat": "debuffAccuracy"
   },
   {
     "name": "MP Recovery/Sec",

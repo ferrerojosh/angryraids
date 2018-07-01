@@ -205,5 +205,6 @@ export default {
     'Accessory': {},
     'Orb': {},
     'Treasure': {}
-  }
+  },
+  searchHeroName: ''
 }

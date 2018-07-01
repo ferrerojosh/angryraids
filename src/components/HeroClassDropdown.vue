@@ -7,6 +7,10 @@
         </select>
       </div>
     </div>
+    <div class="control">
+      <input title="Search" v-model="searchHeroName" placeholder="Search Hero Name"
+             class="input" type="text">
+    </div>
   </div>
 </template>
 
@@ -19,6 +23,14 @@
         ...mapGetters([
           'classes',
         ]),
+        searchHeroName: {
+          get() {
+            return this.$store.getters.searchHeroName
+          },
+          set(searchText) {
+            this.$store.dispatch(actionTypes.searchHero, searchText)
+          }
+        },
         selectedClass: {
           get() {
             return this.$store.getters.selectedClass

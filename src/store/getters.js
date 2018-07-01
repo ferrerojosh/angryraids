@@ -10,6 +10,7 @@ export default {
     return heroClass.imgFolder;
   },
   selectedClass: state => state.selectedClass,
+  searchHeroName: state => state.searchHeroName,
   classes: state => state.classes,
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))

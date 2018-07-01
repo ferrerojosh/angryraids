@@ -3,6 +3,7 @@
     <ul class="kr-heroes">
       <kr-hero-avatar @click.native="selectHero(hero)"
                       v-for="hero in heroesByClass"
+                      v-if="hero.name.toUpperCase().includes(searchHeroName.toUpperCase())"
                       :key="hero.id"
                       :ref="hero.name"
                       :name="hero.name"
@@ -25,7 +26,8 @@
       ...mapGetters([
         'heroesByClass',
         'selectedId',
-        'imgFolderByClassId'
+        'imgFolderByClassId',
+        'searchHeroName'
       ]),
       selectedHero: {
         get() {

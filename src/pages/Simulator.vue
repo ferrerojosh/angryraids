@@ -1,5 +1,6 @@
 <template>
   <section class="card">
+    <kr-hero-class-dropdown></kr-hero-class-dropdown>
     <kr-hero-list></kr-hero-list>
     <article class="message is-warning">
       <div class="message-body">
@@ -19,9 +20,11 @@
   import KrHeroList from '../components/HeroList.vue'
   import KrHeroStats from '../components/HeroStats.vue'
   import KrEquipment from '../components/Equipment.vue'
+  import KrHeroClassDropdown from "../components/HeroClassDropdown";
 
   export default {
     components: {
+      KrHeroClassDropdown,
       KrEquipment,
       KrHeroStats,
       KrHeroList

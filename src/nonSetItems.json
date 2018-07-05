@@ -1,11 +1,23 @@
 [
   {
     "name": "Common Treasure",
-    "stats": {},
+    "stats": {
+      "maxHp": 226962
+    },
+    "tier": 8,
+    "rarity": "Legendary",
+    "type": "Treasure",
+    "classes": [ 1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    "name": "Common Treasure",
+    "stats": {
+      "maxHp": 190116
+    },
     "tier": 7,
     "rarity": "Legendary",
     "type": "Treasure",
-    "classes": [ 1, 2, 4, 4, 5, 6, 7]
+    "classes": [ 1, 2, 3, 4, 5, 6, 7]
   },
   {
     "name": "Parvita of Defence",

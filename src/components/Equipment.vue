@@ -16,11 +16,7 @@
       <kr-item type="Orb"/>
     </tab-pane>
     <tab-pane label="Treasure">
-      <article class="message is-info">
-        <div class="message-body">
-          Coming soon!
-        </div>
-      </article>
+      <kr-item type="Treasure"/>
     </tab-pane>
   </tabs>
   <!--<section class="columns">-->

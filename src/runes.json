@@ -56,11 +56,11 @@
     }
   },
   {
-    "name": "Rune of Fierce Attack (MP Recovery/Attack + 400)",
+    "name": "Rune of Fierce Attack (MP Recovery/Attack + 300)",
     "type": "Weapon",
     "rarity": "Heroic",
     "stats": {
-      "manaAtk": 400
+      "manaAtk": 300
     }
   },
   {
@@ -316,6 +316,576 @@
     "rarity": "Ancient",
     "stats": {
       "manaDmg": 600
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and Penetration + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and Crit + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and Crit DMG + 22%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "critDamage": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and ACC + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "manaAtk": 220
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ATK + 11% and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11,
+      "maxHp": 0.11
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Penetration + 110 and Crit + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "critChance": 110,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Penetration + 110 and Crit DMG + 22%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "critDamage": 220,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Penetration + 110 and ACC + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "accuracy": 110,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Penetration + 110 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "manaAtk": 220,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Penetration + 110 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit + 110 and Crit DMG + 22%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "critDamage": 220,
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit + 110 and ACC + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "accuracy": 110,
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit + 110 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "manaAtk": 220,
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit + 110 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit DMG + 22% and ACC + 110)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "accuracy": 110,
+      "critDamage": 220
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (Crit DMG + 22% and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "manaAtk": 220,
+      "critDamage": 220
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ACC + 110 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "manaAtk": 220,
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Fear: Velkazar (ACC + 110 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Tough + 55 and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "pTough": 55,
+      "mTough": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Tough + 55 and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "pDodge": 55,
+      "mDodge": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Tough + 55 and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Tough + 55 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "manaAtk": 220
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Tough + 55 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "pTough": 55,
+      "mTough": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (DEF + 11% and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (DEF + 11% and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (DEF + 11% and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "manaAtk": 220
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (DEF + 11% and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11,
+      "maxHp": 0.11
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Dodge + 55 and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55,
+      "pDodge": 55,
+      "mDodge": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Dodge + 55 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55,
+      "manaAtk": 220
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Dodge + 55 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Block + 55 and MP Recovery/Attack + 220)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55,
+      "manaAtk": 220
+    }
+  },
+  {
+    "name": "Rune of Immortality: Velkazar (Block + 55 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ATK + 11% and Tough + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "pTough": 55,
+      "mTough": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ATK + 11% and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11,
+      "pDef": 0.11,
+      "mDef": 0.11
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ATK + 11% and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ATK + 11% and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "atk": 0.11
+    },
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Penetration + 110 and Tough + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Penetration + 110 and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Penetration + 110 and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Penetration + 110 and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55,
+      "penetration": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit + 110 and Tough + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit + 110 and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit + 110 and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55,
+      "critChance": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit + 110 and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "critChance": 110,
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit DMG + 22% and Tough + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "critDamage": 220
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit DMG + 22% and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11
+    },
+    "stats": {
+      "critDamage": 220
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit DMG + 22% and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55,
+      "critDamage": 220
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (Crit DMG + 22% and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "critDamage": 220,
+      "pBlock": 55,
+      "mBlock": 55
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ACC + 110 and Tough + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pTough": 55,
+      "mTough": 55,
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ACC + 110 and DEF + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "pDef": 0.11,
+      "mDef": 0.11,
+      "maxHp": 0.11
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ACC + 110 and Dodge + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pDodge": 55,
+      "mDodge": 55,
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (ACC + 110 and Block + 55)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "stats": {
+      "pBlock": 55,
+      "mBlock": 55,
+      "accuracy": 110
+    }
+  },
+  {
+    "name": "Rune of Disaster: Velkazar (MP Recovery/Attack + 220 and Max HP + 11%)",
+    "type": ["Weapon", "Armor", "Secondary Armor"],
+    "rarity": "Ancient",
+    "modifiers": {
+      "maxHp": 0.11
+    },
+    "stats": {
+      "manaAtk": 220
     }
   }
 ]

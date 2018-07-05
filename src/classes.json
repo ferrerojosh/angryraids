@@ -1,20 +1,21 @@
 [
   {
     "name": "Knight",
+    "imgFolder": "knights",
     "id": 1,
     "stats": {
-      "atk": 15712,
-      "pDef": 6984,
-      "mDef": 5432,
-      "maxHp": 1354584,
+      "atk": 17632,
+      "pDef": 7832,
+      "mDef": 6096,
+      "maxHp": 1520472,
       "critChance": 50,
       "critDamage": 0,
       "penetration": 0,
       "accuracy": 0,
       "pDodge": 0,
       "mDodge": 0,
-      "pBlock": 200,
-      "mBlock": 0,
+      "pBlock": 100,
+      "mBlock": 100,
       "pBlockDef": 0,
       "mBlockDef": 0,
       "pWeak": 0,
@@ -29,24 +30,26 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Warrior",
+    "imgFolder": "warriors",
     "id": 2,
     "stats": {
-      "atk": 17848,
-      "pDef": 5816,
-      "mDef": 6984,
-      "maxHp": 1150488,
+      "atk": 20032,
+      "pDef": 6528,
+      "mDef": 7832,
+      "maxHp": 1291376,
       "critChance": 150,
       "critDamage": 0,
-      "penetration": 0,
+      "penetration": 150,
       "accuracy": 100,
       "pDodge": 100,
       "mDodge": 100,
-      "pBlock": 100,
+      "pBlock": 0,
       "mBlock": 0,
       "pBlockDef": 0,
       "mBlockDef": 0,
@@ -54,25 +57,27 @@
       "mWeak": 0,
       "pCritResist": 0,
       "mCritResist": 0,
-      "pTough": 100,
-      "mTough": 100,
+      "pTough": 0,
+      "mTough": 0,
       "heal": 0,
       "recovery": 0,
       "ccAccuracy": 0,
       "ccResist": 150,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Assassin",
+    "imgFolder": "assassins",
     "id": 3,
     "stats": {
-      "atk": 19592,
-      "pDef": 6208,
-      "mDef": 5432,
-      "maxHp": 1099264,
+      "atk": 21992,
+      "pDef": 6968,
+      "mDef": 6096,
+      "maxHp": 1233888,
       "critChance": 200,
       "critDamage": 300,
       "penetration": 0,
@@ -95,17 +100,19 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Archer",
+    "imgFolder": "archers",
     "id": 4,
     "stats": {
-      "atk": 22112,
-      "pDef": 4264,
-      "mDef": 3488,
-      "maxHp": 846664,
+      "atk": 24824,
+      "pDef": 4784,
+      "mDef": 3912,
+      "maxHp": 950344,
       "critChance": 150,
       "critDamage": 0,
       "penetration": 250,
@@ -128,17 +135,19 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Wizard",
+    "imgFolder": "wizards",
     "id": 5,
     "stats": {
-      "atk": 23280,
-      "pDef": 3104,
-      "mDef": 4656,
-      "maxHp": 782056,
+      "atk": 26128,
+      "pDef": 3480,
+      "mDef": 5224,
+      "maxHp": 877832,
       "critChance": 100,
       "critDamage": 0,
       "penetration": 150,
@@ -161,17 +170,19 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Mechanic",
+    "imgFolder": "mechanics",
     "id": 6,
     "stats": {
-      "atk": 20176,
-      "pDef": 4264,
-      "mDef": 3488,
-      "maxHp": 918448,
+      "atk": 22648,
+      "pDef": 4784,
+      "mDef": 3912,
+      "maxHp": 1030920,
       "critChance": 150,
       "critDamage": 500,
       "penetration": 100,
@@ -194,17 +205,19 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   },
   {
     "name": "Priest",
+    "imgFolder": "priests",
     "id": 7,
     "stats": {
-      "atk": 18424,
-      "pDef": 3880,
-      "mDef": 4848,
-      "maxHp": 876928,
+      "atk": 20688,
+      "pDef": 4352,
+      "mDef": 5440,
+      "maxHp": 984320,
       "critChance": 100,
       "critDamage": 0,
       "penetration": 0,
@@ -227,7 +240,8 @@
       "ccResist": 0,
       "debuffResist": 0,
       "lifesteal": 0,
-      "atkSpd": 1000
+      "atkSpd": 1000,
+      "debuffAccuracy": 0
     }
   }
 ]

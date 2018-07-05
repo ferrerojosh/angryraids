@@ -9,7 +9,7 @@
         </a>
       </section>
       <section class="kr-hero-stats">
-        Level 80
+        Level 90
       </section>
       <section class="kr-hero-basic section">
         <kr-hero-stat v-for="basicStat in stats.basicStats"

@@ -2,7 +2,9 @@ export const types = {
   CHANGE_HERO: 'CHANGE_HERO',
   CHANGE_ITEM: 'CHANGE_ITEM',
   CHANGE_ITEM_OPTIONS: 'CHANGE_ITEM_OPTIONS',
-  CHANGE_ITEM_OPTION_VALUE: 'CHANGE_ITEM_OPTION_VALUE'
+  CHANGE_ITEM_OPTION_VALUE: 'CHANGE_ITEM_OPTION_VALUE',
+  CHANGE_CLASS: 'CHANGE_CLASS',
+  SEARCH_HERO: 'SEARCH_HERO'
 }
 
 export default {
@@ -18,5 +20,11 @@ export default {
   },
   [types.CHANGE_ITEM_OPTIONS](state, payload) {
     state.selectedItems[payload.type].options[payload.slot] = payload.option
+  },
+  [types.CHANGE_CLASS](state, heroClass) {
+    state.selectedClass = state.classes.find(c => c.id === heroClass.id)
+  },
+  [types.SEARCH_HERO](state, searchText) {
+    state.searchHeroName = searchText
   }
 }

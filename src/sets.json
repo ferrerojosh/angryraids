@@ -5,12 +5,12 @@
     "bonus": {
       "2": {
         "stats": {
-          "manaAtk": 280
+          "manaAtk": 200
         }
       },
       "4": {
         "stats": {
-          "manaAtk": 360
+          "manaAtk": 260
         }
       }
     }
@@ -42,7 +42,7 @@
       },
       "4": {
         "modifiers": {
-          "maxHp": 0.3
+          "maxHp": 0.13
         }
       }
     }
@@ -61,6 +61,22 @@
         "stats": {
           "pCritResist": 130,
           "mCritResist": 130
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "prefix": "Lava",
+    "bonus": {
+      "2": {
+        "stats": {
+          "critDamage": 200
+        }
+      },
+      "4": {
+        "stats": {
+          "critDamage": 260
         }
       }
     }

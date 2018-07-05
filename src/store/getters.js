@@ -1,7 +1,17 @@
 export default {
   heroesByClass: state => {
-    return state.heroes.sort((a, b) => (a.classId < b.classId ? -1 : 1))
+    let heroClassId = state.selectedClass.id
+    return state.heroes.filter(h => h.classId === heroClassId).sort((a, b) => (a.classId < b.classId ? -1 : 1))
   },
+  imgFolderByClassId: state => (classId) => {
+    let heroClass = state.classes.find(c => {
+      return c.id === classId
+    });
+    return heroClass.imgFolder;
+  },
+  selectedClass: state => state.selectedClass,
+  searchHeroName: state => state.searchHeroName,
+  classes: state => state.classes,
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },
@@ -34,7 +44,13 @@ export default {
   selectedHero: state => state.selectedHero,
   selectedId: state => state.selectedHero.id,
   selectedItemByType: state => (type) => state.selectedItems[ type ],
-  runesByType: state => (type) => state.runes.filter(rune => rune.type === type),
+  runesByType: state => (type) => state.runes.filter(rune => {
+    if (Array.isArray(rune.type)) {
+      return rune.type.includes(type)
+    } else {
+      return rune.type === type
+    }
+  }),
   options: state => state.options,
   items: (state, getters) => {
     let items = []
@@ -42,7 +58,7 @@ export default {
     for (let set of state.sets) {
       // legendary sets for now, todo ancient sets
 
-      for (let tier = 3; tier <= 7; tier++) {
+      for (let tier = 3; tier <= 8; tier++) {
         // weapon
 
         // knight
@@ -318,7 +334,13 @@ export default {
           for (let itemOption of item.options) {
             // new method
             if(itemOption.type === 'modifier') {
-              statModifiers[ itemOption.stat ] = statModifiers[ itemOption.stat ] + ( parseFloat(itemOption.value) / 100 )
+              if (Array.isArray(itemOption.stat)) {
+                for (let itemOptionStat of itemOption.stat) {
+                  statModifiers[ itemOptionStat ] = statModifiers[ itemOptionStat ] + ( parseFloat(itemOption.value) / 100 )
+                }
+              } else {
+                statModifiers[ itemOption.stat ] = statModifiers[ itemOption.stat ] + ( parseFloat(itemOption.value) / 100 )
+              }
             }
           }
 
@@ -391,7 +413,13 @@ export default {
           for(let itemOption of item.options) {
             // new method
             if(itemOption.type === 'stat') {
-              statValues[itemOption.stat] = statValues[itemOption.stat] + parseInt(itemOption.value)
+              if (Array.isArray(itemOption.stat)) {
+                for (let itemOptionStat of itemOption.stat) {
+                  statValues[itemOptionStat] = statValues[itemOptionStat] + parseInt(itemOption.value)
+                }
+              } else {
+                statValues[itemOption.stat] = statValues[itemOption.stat] + parseInt(itemOption.value)
+              }
             }
           }
           // enchant scroll
@@ -439,6 +467,7 @@ export default {
         { type: 'Penetration', value: statValues.penetration, base: state.selectedClass.stats.penetration },
         { type: 'ACC', value: statValues.accuracy, base: state.selectedClass.stats.accuracy },
         { type: 'CC Accuracy', value: statValues.ccAccuracy + statValues.accuracy, base: state.selectedClass.stats.ccAccuracy + state.selectedClass.stats.accuracy },
+        { type: 'Debuff Accuracy', value: statValues.debuffAccuracy + statValues.accuracy, base: state.selectedClass.stats.debuffAccuracy + state.selectedClass.stats.accuracy },
         { type: 'P.Dodge', value: statValues.pDodge, base: state.selectedClass.stats.pDodge },
         { type: 'M.Dodge', value: statValues.mDodge, base: state.selectedClass.stats.mDodge },
         { type: 'P.Block', value: statValues.pBlock, base: state.selectedClass.stats.pBlock },
@@ -455,6 +484,7 @@ export default {
         { type: 'Recovery', value: statValues.recovery, base: state.selectedClass.stats.recovery },
         { type: 'MP Recovery/Attack', value: statValues.manaAtk, base: state.selectedHero.manaAtk },
         { type: 'MP Recovery/DMG', value: statValues.manaDmg, base: 0 },
+        { type: 'MP Recovery/Sec', value: statValues.manaSec, base: 0 },
       ]
     }
   }

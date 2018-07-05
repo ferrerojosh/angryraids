@@ -53,7 +53,7 @@
       }
     },
     data: () => ({
-      selectedTier: 7
+      selectedTier: 8
     }),
     watch: {
       selectedTier() {
@@ -118,7 +118,7 @@
       numOfOptions() {
         switch(this.selectedItem.rarity) {
           case 'Legendary':
-            return 4
+            return this.selectedItem.type === "Treasure" ? 2 : 4
           case 'Ancient':
           case 'Heroic':
             return 3

@@ -1,7 +1,3 @@
-# SUPERSEDED BY THE ANGULAR VERSION, PLEASE CLICK [HERE](https://github.com/ferrerojosh/ng-angryraids/)
-
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-
 # Angry Raids
 
 Equipment simulator for King's Raid

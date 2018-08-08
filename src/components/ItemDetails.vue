@@ -170,7 +170,7 @@
           case 'Rare':
             return 10
           case 'Unique':
-            return 80
+            return 90
         }
       }
     },

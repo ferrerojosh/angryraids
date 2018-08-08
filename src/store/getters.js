@@ -3,6 +3,7 @@ export default {
     let heroClassId = state.selectedClass.id
     return state.heroes.filter(h => h.classId === heroClassId).sort((a, b) => (a.classId < b.classId ? -1 : 1))
   },
+  allHeroes: state => state.heroes,
   imgFolderByClassId: state => (classId) => {
     let heroClass = state.classes.find(c => {
       return c.id === classId
@@ -12,6 +13,7 @@ export default {
   selectedClass: state => state.selectedClass,
   searchHeroName: state => state.searchHeroName,
   classes: state => state.classes,
+  classById: state => (classId) => state.classes.find(c => c.id === classId),
   heroesById: state => {
     return state.heroes.sort((a, b) => (a.id < b.id ? -1 : 1))
   },

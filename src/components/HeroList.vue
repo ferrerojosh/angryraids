@@ -8,7 +8,7 @@
                       :ref="hero.name"
                       :name="hero.name"
                       :src="heroImage(hero.name, hero.classId)"
-                      :selected="hero.id == selectedId">
+                      :selected="hero.id === selectedId">
       </kr-hero-avatar>
     </ul>
   </aside>
@@ -27,6 +27,8 @@
         'heroesByClass',
         'selectedId',
         'imgFolderByClassId',
+        'classById',
+        'allHeroes',
         'searchHeroName'
       ]),
       selectedHero: {
@@ -38,10 +40,15 @@
         }
       }
     },
-    mounted() {
+    created() {
       let heroName = this.$store.state.route.params.heroName
-      this.$refs[heroName][0].$el.scrollIntoView()
-      this.selectedHero = this.heroesByClass.find(h => h.name === heroName)
+      let hero = this.allHeroes.find(h => h.name === heroName)
+      let heroClass = this.classById(hero.classId)
+      this.$store.dispatch(actionTypes.selectClass, heroClass)
+      this.selectedHero = hero
+    },
+    mounted() {
+      this.$refs[this.selectedHero.name][0].$el.scrollIntoView()
     },
     methods: {
       heroImage(name, heroClassId) {

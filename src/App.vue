@@ -18,6 +18,7 @@
         </a>
       <p>Created by <a href="https://github.com/ferrerojosh" rel="noopener" target="_blank">@ferrerojosh</a></p>
       <p>IGN: Gavendae, Asia</p>
+      <p>Contributors - <a href="https://github.com/tsangrex" rel="noopener" target="_blank">@tsangrex</a></p>
     </footer>
   </div>
 </template>

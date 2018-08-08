@@ -4,7 +4,7 @@
       <section class="section kr-hero-info">
         <h1 class="title">{{ selectedHero.name }}</h1>
         <h2 class="subtitle">{{ selectedHero.title }}</h2>
-        <a :href="`https://maskofgoblin.com/?item=${selectedHero.name}`" rel="noopener" target="_blank">
+        <a :href="`https://maskofgoblin.com/hero/${selectedHero.id}`" rel="noopener" target="_blank">
           Full Hero Information
         </a>
       </section>

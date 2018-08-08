@@ -7,7 +7,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "The Guardian, Exian",
     "classId": 1,
-    "id": 1
+    "id": 15
   },
   {
     "name": "Demia",
@@ -17,7 +17,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "The Blue Light, Arpheus",
     "classId": 1,
-    "id": 2
+    "id": 20
   },
   {
     "name": "Phillop",
@@ -27,7 +27,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Dragon's Ruins, Atein",
     "classId": 1,
-    "id": 3
+    "id": 6
   },
   {
     "name": "Morrah",
@@ -37,7 +37,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Flame of Victory, Carprain",
     "classId": 1,
-    "id": 4
+    "id": 23
   },
   {
     "name": "Jane",
@@ -47,7 +47,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Unchanging Mind, Erekura",
     "classId": 1,
-    "id": 5
+    "id": 25
   },
   {
     "name": "Ricardo",
@@ -57,7 +57,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Light of Judgment, Theoria",
     "classId": 1,
-    "id": 6
+    "id": 36
   },
   {
     "name": "Kasel",
@@ -67,7 +67,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "The Holy Sword, Aea",
     "classId": 2,
-    "id": 7
+    "id": 1
   },
   {
     "name": "Gau",
@@ -77,7 +77,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Holy Bird, Numinu",
     "classId": 2,
-    "id": 8
+    "id": 5
   },
   {
     "name": "Naila",
@@ -87,7 +87,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Cursed Claws, Baroro",
     "classId": 2,
-    "id": 9
+    "id": 21
   },
   {
     "name": "Priscilla",
@@ -97,7 +97,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Tumultuous Dance, Excilius",
     "classId": 2,
-    "id": 10
+    "id": 44
   },
   {
     "name": "Viska",
@@ -107,7 +107,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Nightmare Fang, Kitrax",
     "classId": 2,
-    "id": 11
+    "id": 43
   },
   {
     "name": "Roi",
@@ -117,7 +117,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Specter's Breath, Redeal",
     "classId": 3,
-    "id": 12
+    "id": 4
   },
   {
     "name": "Reina",
@@ -127,7 +127,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Lightning Flash, Livatis",
     "classId": 3,
-    "id": 13
+    "id": 18
   },
   {
     "name": "Fluss",
@@ -137,7 +137,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Twinswords of Fury, Veralta",
     "classId": 3,
-    "id": 14
+    "id": 28
   },
   {
     "name": "Tanya",
@@ -147,7 +147,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Demon of the Calm, Caethasis",
     "classId": 3,
-    "id": 15
+    "id": 37
   },
   {
     "name": "Epis",
@@ -157,7 +157,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "The Seductress, Guillotine",
     "classId": 3,
-    "id": 16
+    "id": 9
   },
   {
     "name": "Selene",
@@ -167,7 +167,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Green Winds, Notos",
     "classId": 4,
-    "id": 17
+    "id": 10
   },
   {
     "name": "Yanne",
@@ -177,7 +177,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Dragonbane, Svelta",
     "classId": 4,
-    "id": 18
+    "id": 45
   },
   {
     "name": "Dimael",
@@ -187,7 +187,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Tears of the Moon, Nerius",
     "classId": 4,
-    "id": 19
+    "id": 17
   },
   {
     "name": "Luna",
@@ -197,7 +197,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Flower of Eternity, Hyacinth",
     "classId": 4,
-    "id": 20
+    "id": 29
   },
   {
     "name": "Arch",
@@ -207,7 +207,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Clear Blue Sky, Sherrkyle",
     "classId": 4,
-    "id": 21
+    "id": 31
   },
   {
     "name": "Cleo",
@@ -217,7 +217,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Primal Flame, Flenos",
     "classId": 5,
-    "id": 22
+    "id": 3
   },
   {
     "name": "Pavel",
@@ -227,7 +227,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Dragon Hearts, Andarta Andraste",
     "classId": 5,
-    "id": 23
+    "id": 19
   },
   {
     "name": "Maria",
@@ -237,7 +237,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Lea's Messenger, Cocytus",
     "classId": 5,
-    "id": 24
+    "id": 11
   },
   {
     "name": "Lorraine",
@@ -247,7 +247,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "",
     "classId": 5,
-    "id": 25
+    "id": 13
   },
   {
     "name": "Aisha",
@@ -267,7 +267,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Scarlet Ruler, Dominicia",
     "classId": 5,
-    "id": 27
+    "id": 62
   },
   {
     "name": "Nyx",
@@ -277,7 +277,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Dimensional Key, Magnus Fille",
     "classId": 5,
-    "id": 28
+    "id": 33
   },
   {
     "name": "Rodina",
@@ -287,7 +287,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Rodina Custom Rifle Mod.0",
     "classId": 6,
-    "id": 29
+    "id": 22
   },
   {
     "name": "Lakrak",
@@ -297,7 +297,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Lakrak MK-1",
     "classId": 6,
-    "id": 30
+    "id": 7
   },
   {
     "name": "Miruru",
@@ -307,7 +307,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Ultimate Weapon, Leviathan",
     "classId": 6,
-    "id": 31
+    "id": 12
   },
   {
     "name": "Annette",
@@ -317,7 +317,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Crystallized Technomagic, Rascal",
     "classId": 6,
-    "id": 32
+    "id": 34
   },
   {
     "name": "Mitra",
@@ -327,7 +327,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Roar of Madness, Velkinoth",
     "classId": 6,
-    "id": 33
+    "id": 35
   },
   {
     "name": "Oddy",
@@ -337,7 +337,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Moonshade Countdown, Tempodiana",
     "classId": 6,
-    "id": 34
+    "id": 42
   },
   {
     "name": "Frey",
@@ -347,7 +347,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "God's Authority, Rosmerta",
     "classId": 7,
-    "id": 35
+    "id": 2
   },
   {
     "name": "Kaulah",
@@ -357,7 +357,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "The Bluewind, Coventina",
     "classId": 7,
-    "id": 36
+    "id": 8
   },
   {
     "name": "Rephy",
@@ -367,7 +367,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "God's Lamp, Kurulati",
     "classId": 7,
-    "id": 37
+    "id": 16
   },
   {
     "name": "Laias",
@@ -377,7 +377,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Flowing Circle, Eltoirre",
     "classId": 7,
-    "id": 38
+    "id": 30
   },
   {
     "name": "Baudouin",
@@ -387,7 +387,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "God's Book, Genesis",
     "classId": 7,
-    "id": 39
+    "id": 24
   },
   {
     "name": "Leo",
@@ -397,7 +397,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Phoenix Quill, Belisa",
     "classId": 7,
-    "id": 40
+    "id": 27
   },
   {
     "name": "May",
@@ -407,7 +407,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "The Box of Fragrance, Etelia",
     "classId": 7,
-    "id": 41
+    "id": 90
   },
   {
     "name": "Cassandra",
@@ -417,7 +417,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Aurelian Whisper, Goldbreeze",
     "classId": 7,
-    "id": 42
+    "id": 39
   },
   {
     "name": "Gladi",
@@ -427,7 +427,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Beast Fist, Mastra",
     "classId": 3,
-    "id": 43
+    "id": 91
   },
   {
     "name": "Theo",
@@ -437,7 +437,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Lightning Bolt, Legios",
     "classId": 2,
-    "id": 44
+    "id": 40
   },
   {
     "name": "Mediana",
@@ -447,7 +447,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Merciful Threat, Phistonia",
     "classId": 7,
-    "id": 45
+    "id": 41
   },
   {
     "name": "Artemia",
@@ -457,7 +457,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Merciful Threat, Phistonia",
     "classId": 5,
-    "id": 46
+    "id": 64
   },
   {
     "name": "Mirianne",
@@ -467,7 +467,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Endless Acceleration, Riventina",
     "classId": 3,
-    "id": 47
+    "id": 65
   },
   {
     "name": "Sonia",
@@ -477,7 +477,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Eye of the Storm, Yanadis",
     "classId": 1,
-    "id": 48
+    "id": 63
   },
   {
     "name": "Scarlet",
@@ -487,7 +487,7 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Blade of Conviction, White Belona",
     "classId": 2,
-    "id": 49
+    "id": 62
   },
   {
     "name": "Ezekiel",
@@ -497,7 +497,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Jailer of Despair, Barbatos",
     "classId": 3,
-    "id": 50
+    "id": 38
   },
   {
     "name": "Ophelia",
@@ -507,7 +507,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Cards of Destiny, Del Arcana",
     "classId": 5,
-    "id": 51
+    "id": 49
   },
   {
     "name": "Requina",
@@ -517,7 +517,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "The Flute of Silent Winds, Rakshathar",
     "classId": 4,
-    "id": 52
+    "id": 50
   },
   {
     "name": "Aselica",
@@ -527,7 +527,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Solar Halo, Ignisius",
     "classId": 1,
-    "id": 53
+    "id": 51
   },
   {
     "name": "Veronica",
@@ -537,7 +537,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Infinite Charter, Accordio",
     "classId": 5,
-    "id": 54
+    "id": 92
   },
   {
     "name": "Crow",
@@ -547,7 +547,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "Hellhound, Akistra",
     "classId": 6,
-    "id": 55
+    "id": 52
   },
   {
     "name": "Shea",
@@ -557,7 +557,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Charming Melody, Schwanheite",
     "classId": 7,
-    "id": 56
+    "id": 66
   },
   {
     "name": "Zafir",
@@ -567,7 +567,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Glory of the God King, Zaries",
     "classId": 4,
-    "id": 57
+    "id": 46
   },
   {
     "name": "Kara",
@@ -577,7 +577,7 @@
     "uniqueBaseAtk": 499,
     "uniqueWeapon": "0-Form Perpetual Motion Cannon, Heaven Shatterer",
     "classId": 6,
-    "id": 58
+    "id": 67
   },
   {
     "name": "Lilia",
@@ -587,7 +587,7 @@
     "uniqueBaseAtk": 510,
     "uniqueWeapon": "Infinite Spring, Cielamaha",
     "classId": 5,
-    "id": 59
+    "id": 57
   },
   {
     "name": "Laudia",
@@ -597,7 +597,7 @@
     "uniqueBaseAtk": 486,
     "uniqueWeapon": "Whispering Sands, Arlaq",
     "classId": 3,
-    "id": 60
+    "id": 58
   },
   {
     "name": "Loman",
@@ -607,7 +607,7 @@
     "uniqueBaseAtk": 390,
     "uniqueWeapon": "Wave of Protection, Gaiamenes",
     "classId": 1,
-    "id": 61
+    "id": 93
   },
   {
     "name": "Shamilla",
@@ -617,7 +617,7 @@
     "uniqueBaseAtk": 547,
     "uniqueWeapon": "Wings of Corruption, Apoliox",
     "classId": 4,
-    "id": 62
+    "id": 53
   },
   {
     "name": "Chase",
@@ -627,6 +627,6 @@
     "uniqueBaseAtk": 442,
     "uniqueWeapon": "Blood Lancer Monolith",
     "classId": 2,
-    "id": 63
+    "id": 73
   }
 ]

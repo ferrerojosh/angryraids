@@ -558,5 +558,75 @@
     "uniqueWeapon": "Charming Melody, Schwanheite",
     "classId": 7,
     "id": 56
+  },
+  {
+    "name": "Zafir",
+    "title": "Prince of Sandstorms",
+    "damageType": "Physical",
+    "manaAtk": 450,
+    "uniqueBaseAtk": 547,
+    "uniqueWeapon": "Glory of the God King, Zaries",
+    "classId": 4,
+    "id": 57
+  },
+  {
+    "name": "Kara",
+    "title": "Epitome of Ancient Technomagic",
+    "damageType": "Magical",
+    "manaAtk": 475,
+    "uniqueBaseAtk": 499,
+    "uniqueWeapon": "0-Form Perpetual Motion Cannon, Heaven Shatterer",
+    "classId": 6,
+    "id": 58
+  },
+  {
+    "name": "Lilia",
+    "title": "The Daughter of Storm and Sea",
+    "damageType": "Physical",
+    "manaAtk": 450,
+    "uniqueBaseAtk": 510,
+    "uniqueWeapon": "Infinite Spring, Cielamaha",
+    "classId": 5,
+    "id": 59
+  },
+  {
+    "name": "Laudia",
+    "title": "Dancer of the Oasis",
+    "damageType": "Magical",
+    "manaAtk": 220,
+    "uniqueBaseAtk": 486,
+    "uniqueWeapon": "Whispering Sands, Arlaq",
+    "classId": 3,
+    "id": 60
+  },
+  {
+    "name": "Loman",
+    "title": "The Gatekeeper of Trust",
+    "damageType": "Physical",
+    "manaAtk": 250,
+    "uniqueBaseAtk": 390,
+    "uniqueWeapon": "Wave of Protection, Gaiamenes",
+    "classId": 1,
+    "id": 61
+  },
+  {
+    "name": "Shamilla",
+    "title": "The Vessel of Curses",
+    "damageType": "Magical",
+    "manaAtk": 375,
+    "uniqueBaseAtk": 547,
+    "uniqueWeapon": "Wings of Corruption, Apoliox",
+    "classId": 4,
+    "id": 62
+  },
+  {
+    "name": "Chase",
+    "title": "Type. 0",
+    "damageType": "Physical",
+    "manaAtk": 235,
+    "uniqueBaseAtk": 442,
+    "uniqueWeapon": "Blood Lancer Monolith",
+    "classId": 2,
+    "id": 63
   }
 ]

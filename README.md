@@ -4,20 +4,22 @@ Equipment simulator for King's Raid
 
 Assets for images comes from Duckness' [Mask of Goblin](https://github.com/duckness/Mask-of-Goblin)
 
-## Build Setup
+## Development server
 
-``` bash
-# install dependencies
-yarn install
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# serve with hot reload at localhost:8080
-yarn run dev
+## Code scaffolding
 
-# build for production with minification
-yarn run build
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-# build for production and view the bundle analyzer report
-yarn run build --report
-```
+## Build
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).

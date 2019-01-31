@@ -7,7 +7,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
@@ -15,7 +15,7 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
     HomeComponent,
     SimulatorComponent,
     HeaderComponent,

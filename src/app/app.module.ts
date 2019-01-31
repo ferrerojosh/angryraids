@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { NgSelectModule } from '@ng-select/ng-select';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +22,6 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgSelectModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

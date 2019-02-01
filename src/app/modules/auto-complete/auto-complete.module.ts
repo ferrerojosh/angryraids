@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AutoCompleteItemComponent } from './components/auto-complete-item/auto-complete-item.component';
 import { AutoCompleteComponent } from './containers/auto-complete/auto-complete.component';
 
@@ -10,8 +10,8 @@ import { AutoCompleteComponent } from './containers/auto-complete/auto-complete.
     AutoCompleteComponent
   ],
   imports: [
-    FormsModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
   ],
   exports: [
     AutoCompleteComponent

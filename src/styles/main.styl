@@ -1,13 +1,15 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+// Normalize browsers
+@import 'normalize.styl'
 // Import color configuration
 @import 'colors.styl'
-// Apply Milligram UI
-@import './milligram/milligram.styl'
+
+fonts = -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif
 
 // No margin for html and body
 html, body
   margin: 0
   padding: 0
-  font-family: 'Open Sans', sans-serif
-  font-weight: 400
+
+// Use system fonts
+body
+  font-family: fonts

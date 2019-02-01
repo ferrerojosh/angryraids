@@ -28,6 +28,11 @@
               "src/_redirects",
               "src/manifest.json"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
               "src/styles/main.styl"
             ],

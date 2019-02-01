@@ -1,1 +1,3 @@
-<input [placeholder]="placeholder" type="text">
+<div [formGroup]="autoCompleteForm">
+  <input [placeholder]="placeholder" formControlName="searchInput" type="text">
+</div>

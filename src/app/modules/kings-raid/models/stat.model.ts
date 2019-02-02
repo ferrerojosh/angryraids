@@ -1,8 +1,8 @@
+import { StatLimit } from './stat-limit.model';
+
 /**
  * Represents a stat in-game.
  */
-import { StatLimit } from './stat-limit.model';
-
 export class Stat {
 
   private baseValue = 0;

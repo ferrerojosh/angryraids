@@ -1,6 +1,8 @@
-import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { ActiveDescendantKeyManager } from '@angular/cdk/a11y';
+import { Component, HostListener, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { AutoCompleteItemComponent } from '../../components/auto-complete-item/auto-complete-item.component';
 
 /**
  * @description
@@ -31,6 +33,11 @@ export class AutoCompleteComponent implements OnInit, OnDestroy {
     searchInput: new FormControl(''),
   });
   valueChangesSubscription: Subscription;
+
+  @ViewChildren(AutoCompleteItemComponent)
+  autoCompleteItems: QueryList<AutoCompleteItemComponent>;
+
+  listKeyManager: ActiveDescendantKeyManager<AutoCompleteItemComponent>;
 
   ngOnInit() {
     // Listen to input value changes
@@ -64,9 +71,10 @@ export class AutoCompleteComponent implements OnInit, OnDestroy {
   get filteredData(): string[] {
     const filteredData = this.data
       .filter(c => c
-        .toString()
-        .toLowerCase()
-        .indexOf(this.value.toLowerCase()) >= 0
+          .toString()
+          .toLowerCase()
+          .indexOf(this.value.toLowerCase()) >= 0 &&
+        c !== this.value
       )
       .sort((a, b) => a.localeCompare(b));
     return filteredData.slice(0, 5);
@@ -79,6 +87,7 @@ export class AutoCompleteComponent implements OnInit, OnDestroy {
   onValueChange(value) {
     this.value = value;
     this.focused = true;
+    this.listKeyManager = new ActiveDescendantKeyManager(this.autoCompleteItems);
   }
 
   /**
@@ -94,5 +103,25 @@ export class AutoCompleteComponent implements OnInit, OnDestroy {
     this.autoCompleteForm.setValue({
       searchInput: dataItem
     });
+  }
+
+  onItemKeyup($event: KeyboardEvent) {
+    $event.stopImmediatePropagation();
+    switch ($event.key) {
+      case 'ArrowDown':
+      case 'ArrowUp':
+        this.listKeyManager.onKeydown($event);
+        break;
+      case 'Enter':
+        if (this.listKeyManager.activeItem) {
+          const label = this.listKeyManager.activeItem.getLabel();
+          this.autoCompleteForm.setValue({
+            searchInput: label
+          });
+        }
+        break;
+      default:
+        break;
+    }
   }
 }

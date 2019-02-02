@@ -1,6 +1,6 @@
-<div class="auto-complete" [formGroup]="autoCompleteForm">
+<div class="auto-complete" (keyup)="onItemKeyup($event)" [formGroup]="autoCompleteForm">
   <input [placeholder]="placeholder" formControlName="searchInput" type="text">
-  <div *ngIf="focused" class="auto-complete-list">
+  <div *ngIf="focused" class="auto-complete-list" role="listbox">
     <app-auto-complete-item *ngFor="let dataItem of filteredData"
                             (click)="selectItem(dataItem)"
                             [focused]="focusedStr(dataItem)"

@@ -1,6 +1,8 @@
-# Angry Raids
+# Angry Raids 
 
-Equipment simulator for King's Raid
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53442cab-310d-468f-b401-8749142897ed/deploy-status)](https://app.netlify.com/sites/angryraids/deploys)
+
+Equipment simulator for King's Raid.
 
 Assets for images comes from Duckness' [Mask of Goblin](https://github.com/duckness/Mask-of-Goblin)
 
@@ -8,18 +10,6 @@ Assets for images comes from Duckness' [Mask of Goblin](https://github.com/duckn
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).

@@ -3,7 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { UniqueWeaponService } from './unique-weapon.service';
 
 describe('UniqueWeaponService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({
+    providers: [UniqueWeaponService]
+  }));
 
   it('should be created', () => {
     const service: UniqueWeaponService = TestBed.get(UniqueWeaponService);

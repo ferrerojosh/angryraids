@@ -1,5 +1,8 @@
 // https://github.com/milligram/milligram-stylus/blob/master/src/_Form.styl
 
+input
+  -webkit-appearance: none !important
+
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -13,7 +16,8 @@ select
   appearance: none // Removes awkward default styles on some inputs for iOS
   background-color: transparent
   border: .1rem solid color-border
-  border-radius: 0 // Enforce a non rounded border, because S A F A R I
+  border-radius: 0 !important // Enforce a non rounded border, because S A F A R I
+  -webkit-border-radius: 0 !important
   box-shadow: none
   box-sizing: inherit // Forced to replace inherit values of the normalize.css
   height: 3.8rem

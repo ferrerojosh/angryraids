@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AutoCompleteModule } from './modules/auto-complete/auto-complete.module';
+import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
 
@@ -23,9 +24,10 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     BrowserModule,
     AppRoutingModule,
     AutoCompleteModule,
+    KingsRaidModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

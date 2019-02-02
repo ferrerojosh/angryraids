@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HeroBuilder } from './services/hero-builder.service';
 import { StatFactory } from './services/stat-factory.service';
 import { UniqueWeaponService } from './services/unique-weapon.service';
 
@@ -10,11 +11,13 @@ import { UniqueWeaponService } from './services/unique-weapon.service';
   declarations: [],
   providers: [
     UniqueWeaponService,
-    StatFactory
+    StatFactory,
+    HeroBuilder,
   ],
   exports: [
     UniqueWeaponService,
-    StatFactory
+    StatFactory,
+    HeroBuilder
   ]
 })
 export class KingsRaidModule {}

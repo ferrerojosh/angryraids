@@ -24,7 +24,7 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     BrowserModule,
     AppRoutingModule,
     AutoCompleteModule,
-    KingsRaidModule,
+    KingsRaidModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

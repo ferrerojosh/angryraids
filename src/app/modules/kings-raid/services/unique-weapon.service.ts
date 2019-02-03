@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class UniqueWeaponService {
-  starScaling = [1, 1.1, 1.3, 1.6, 2, 2.5];
+  starScaling = [1000, 1100, 1300, 1600, 2000, 2500];
   levelScaling = [
     950,
     1000,
@@ -110,8 +110,9 @@ export class UniqueWeaponService {
    *
    * @param level enhancement level
    * @param stars star rating
+   * @param baseAtk base atk value
    */
-  calculateAttack(level, stars): number {
+  calculateAttack(level, stars, baseAtk): number {
     if (level < 0 || level > 90) {
       throw new Error('Level must be within 0 to 90');
     }
@@ -119,6 +120,7 @@ export class UniqueWeaponService {
       throw new Error('Star rating must be within 0 to 5');
     }
 
-    return Math.floor(this.starScaling[stars] * this.levelScaling[level]) / 1000;
+    const attack = Math.floor((this.starScaling[stars] * this.levelScaling[level]) / 1000);
+    return Math.floor((attack * baseAtk) / 1000);
   }
 }

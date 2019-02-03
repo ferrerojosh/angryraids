@@ -4,7 +4,7 @@
 
 Equipment simulator for King's Raid.
 
-Assets for images comes from Duckness' [Mask of Goblin](https://github.com/duckness/Mask-of-Goblin)
+Image Assets and Data comes from Duckness' [Mask of Goblin](https://github.com/duckness/Mask-of-Goblin)
 
 ## Development server
 

@@ -1,0 +1,1170 @@
+{
+  "1": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 275,
+        "manaSec": 60
+      }
+    },
+    "name": "Kasel",
+    "title": "Warrior of the Holy Sword",
+    "uniqueWeapon": "The Holy Sword, Aea",
+    "uniqueTreasure1": "Crown of Light",
+    "uniqueTreasure2": "Emperor's Gauntlet",
+    "uniqueTreasure3": "Proxy's Insignia"
+  },
+  "2": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 325,
+        "manaSec": 60
+      }
+    },
+    "name": "Frey",
+    "title": "Priestess of Light",
+    "uniqueWeapon": "God's Authority, Rosmerta",
+    "uniqueTreasure1": "Angel's Egg",
+    "uniqueTreasure2": "Miraculous Medal",
+    "uniqueTreasure3": "Forgotten Arbiter's Feather"
+  },
+  "3": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 475,
+        "manaSec": 60
+      }
+    },
+    "name": "Cleo",
+    "title": "Sorceress of Purgatory",
+    "uniqueWeapon": "Primal Flame, Flenos",
+    "uniqueTreasure1": "Phoenix Lantern",
+    "uniqueTreasure2": "Flamel's Elixir",
+    "uniqueTreasure3": "Tome of Purgatory"
+  },
+  "4": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 290,
+        "manaSec": 60
+      }
+    },
+    "name": "Roi",
+    "title": "Swift Assassin",
+    "uniqueWeapon": "Specter's Breath, Redeal",
+    "uniqueTreasure1": "Shadow Blade",
+    "uniqueTreasure2": "Soma's Hood",
+    "uniqueTreasure3": "Cracked Mask"
+  },
+  "5": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 340,
+        "manaSec": 60
+      }
+    },
+    "name": "Gau",
+    "title": "Barbarian of Frozen Lands",
+    "uniqueWeapon": "Holy Bird, Numinu",
+    "uniqueTreasure1": "King of Frost Helmet",
+    "uniqueTreasure2": "Fighter's Horn",
+    "uniqueTreasure3": "Barbarian Mug"
+  },
+  "6": {
+    "class": "knight",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 275,
+        "manaSec": 60
+      }
+    },
+    "name": "Phillop",
+    "title": "King of Dwarves",
+    "uniqueWeapon": "Dragon's Ruins, Atein",
+    "uniqueTreasure1": "Mad Dragon Shield Decoration",
+    "uniqueTreasure2": "Dwarfish Capricorn Helmet",
+    "uniqueTreasure3": "Dwarven Ceremonial Hammer"
+  },
+  "7": {
+    "class": "mechanic",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 325,
+        "manaSec": 60
+      }
+    },
+    "name": "Lakrak",
+    "title": "Hand Cannon's Hunter",
+    "uniqueWeapon": "Lakrak MK-1",
+    "uniqueTreasure1": "Cudgel Bullet",
+    "uniqueTreasure2": "Special Gas Mask",
+    "uniqueTreasure3": "Goblincraft Special High-Density Gunpowder"
+  },
+  "8": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Kaulah",
+    "title": "Shaman of Lightning",
+    "uniqueWeapon": "The Bluewind, Coventina",
+    "uniqueTreasure1": "Thunderstone Bracelet",
+    "uniqueTreasure2": "Thunderbird Mask",
+    "uniqueTreasure3": "Skywind Feather Decoration"
+  },
+  "9": {
+    "class": "assassin",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 300,
+        "manaSec": 60
+      }
+    },
+    "name": "Epis",
+    "title": "Captivating Demon",
+    "uniqueWeapon": "The Seductress, Guillotine",
+    "uniqueTreasure1": "Green Fairy",
+    "uniqueTreasure2": "Succubus's Box",
+    "uniqueTreasure3": "Seductress Shoes"
+  },
+  "10": {
+    "class": "archer",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 500,
+        "manaSec": 60
+      }
+    },
+    "name": "Selene",
+    "title": "Wind-piercing Arrow",
+    "uniqueWeapon": "Green Winds, Notos",
+    "uniqueTreasure1": "Sharpshooter's Gloves",
+    "uniqueTreasure2": "Wind Spirit Seal Stone",
+    "uniqueTreasure3": "Silver Arrow"
+  },
+  "11": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 350,
+        "manaSec": 60
+      }
+    },
+    "name": "Maria",
+    "title": "Fallen Witch",
+    "uniqueWeapon": "Lea's Messenger, Cocytus",
+    "uniqueTreasure1": "Turbulent Dance",
+    "uniqueTreasure2": "Spirit's Sabaton",
+    "uniqueTreasure3": "Pendant of Darkness"
+  },
+  "12": {
+    "class": "mechanic",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 60
+      }
+    },
+    "name": "Miruru",
+    "title": "Cursed Pirate Empress",
+    "uniqueWeapon": "Ultimate Weapon, Leviathan",
+    "uniqueTreasure1": "Coin of the Deep",
+    "uniqueTreasure2": "Pirate King's Sextant",
+    "uniqueTreasure3": "Miruru Cannonball"
+  },
+  "13": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 325,
+        "manaSec": 60
+      }
+    },
+    "name": "Lorraine",
+    "title": "Grand Elidoran Scholar",
+    "uniqueWeapon": "World Tree's Will, Roburu",
+    "uniqueTreasure1": "Book of Life",
+    "uniqueTreasure2": "Deadly Belladonna",
+    "uniqueTreasure3": "Root of the World Tree"
+  },
+  "15": {
+    "class": "knight",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 330,
+        "manaSec": 60
+      }
+    },
+    "name": "Clause",
+    "title": "Knight of Iron Defense",
+    "uniqueWeapon": "The Guardian, Exian",
+    "uniqueTreasure1": "Cape of Justice",
+    "uniqueTreasure2": "Firm Determination",
+    "uniqueTreasure3": "Guardian Knight Insignia"
+  },
+  "16": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Rephy",
+    "title": "Spiritual Guide",
+    "uniqueWeapon": "God's Lamp, Kurulati",
+    "uniqueTreasure1": "Melody of Blue Star",
+    "uniqueTreasure2": "Seed of Birth",
+    "uniqueTreasure3": "Haven of Souls"
+  },
+  "17": {
+    "class": "archer",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 215,
+        "manaSec": 60
+      }
+    },
+    "name": "Dimael",
+    "title": "Shadow Hunter",
+    "uniqueWeapon": "Tears of the Moon, Nerius",
+    "uniqueTreasure1": "Vow of Black Moon",
+    "uniqueTreasure2": "Unbreakable Bracelet",
+    "uniqueTreasure3": "Eye of Shadows"
+  },
+  "18": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 260,
+        "manaSec": 60
+      }
+    },
+    "name": "Reina",
+    "title": "Lightning Flash",
+    "uniqueWeapon": "Lightning Flash, Livatis",
+    "uniqueTreasure1": "Wing of Lightning Flash",
+    "uniqueTreasure2": "Master's Ring",
+    "uniqueTreasure3": "Medal of Swiftness"
+  },
+  "19": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 425,
+        "manaSec": 60
+      }
+    },
+    "name": "Pavel",
+    "title": "Wizard of Ice Dragon",
+    "uniqueWeapon": "Dragon Hearts, Andarta Andraste",
+    "uniqueTreasure1": "Source of Snow",
+    "uniqueTreasure2": "Frozen Brooch",
+    "uniqueTreasure3": "Glacial Heart"
+  },
+  "20": {
+    "class": "knight",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 300,
+        "manaSec": 60
+      }
+    },
+    "name": "Demia",
+    "title": "Fortress of Steel",
+    "uniqueWeapon": "The Blue Light, Arpheus",
+    "uniqueTreasure1": "Chest of Ziltrion",
+    "uniqueTreasure2": "Shield of Resolution",
+    "uniqueTreasure3": "Aura of Protection"
+  },
+  "21": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 235,
+        "manaSec": 60
+      }
+    },
+    "name": "Naila",
+    "title": "Wind's Fighter",
+    "uniqueWeapon": "Cursed Claws, Baroro",
+    "uniqueTreasure1": "Soul of Gust",
+    "uniqueTreasure2": "Himmullis's Scarf",
+    "uniqueTreasure3": "Tempest Pride"
+  },
+  "22": {
+    "class": "mechanic",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 675,
+        "manaSec": 60
+      }
+    },
+    "name": "Rodina",
+    "title": "Blizard's Sniper",
+    "uniqueWeapon": "Rodina Custom Rifle Mod.0",
+    "uniqueTreasure1": "Shock-absorbing Special Guard",
+    "uniqueTreasure2": "Crystal Support",
+    "uniqueTreasure3": "Custom Bullet VII"
+  },
+  "23": {
+    "class": "knight",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 240,
+        "manaSec": 60
+      }
+    },
+    "name": "Morrah",
+    "title": "Devil's Flame",
+    "uniqueWeapon": "Flame of Victory, Carprain",
+    "uniqueTreasure1": "Hell's Eye",
+    "uniqueTreasure2": "Hatchling Leather Gloves",
+    "uniqueTreasure3": "Hellish Sealing Stone"
+  },
+  "24": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 400,
+        "manaSec": 60
+      }
+    },
+    "name": "Baudouin",
+    "title": "Holy Ruffian",
+    "uniqueWeapon": "God's Book, Genesis",
+    "uniqueTreasure1": "Old Holy Grail",
+    "uniqueTreasure2": "Last Chapter of the Bible",
+    "uniqueTreasure3": "Well-Worn Rosary"
+  },
+  "25": {
+    "class": "knight",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 440,
+        "manaSec": 60
+      }
+    },
+    "name": "Jane",
+    "title": "Alabaster Corpse",
+    "uniqueWeapon": "Unchanging Mind, Erekura",
+    "uniqueTreasure1": "Funeral Doll",
+    "uniqueTreasure2": "Death-imbued Cushion",
+    "uniqueTreasure3": "Flowers of a Forgotten Dukedom"
+  },
+  "26": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 525,
+        "manaSec": 60
+      }
+    },
+    "name": "Aisha",
+    "title": "The Violet Princess",
+    "uniqueWeapon": "Noble Fate, Mahitra",
+    "uniqueTreasure1": "Flower of Purple",
+    "uniqueTreasure2": "Noble Hand Mirror",
+    "uniqueTreasure3": "Ring of Infinite Mana"
+  },
+  "27": {
+    "class": "priest",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Leo",
+    "title": "Eternal Scribe",
+    "uniqueWeapon": "Phoenix Quill, Belisa",
+    "uniqueTreasure1": "Ancient Letter Encyclopedia - First Volume",
+    "uniqueTreasure2": "Ink of Vitality",
+    "uniqueTreasure3": "Scroll of Memories"
+  },
+  "28": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 180,
+        "manaSec": 60
+      }
+    },
+    "name": "Fluss",
+    "title": "Fluttering Blade",
+    "uniqueWeapon": "Twinswords of Fury, Veralta",
+    "uniqueTreasure1": "Eye of the Storm Belt",
+    "uniqueTreasure2": "Tempting Perfume",
+    "uniqueTreasure3": "Immortal Rose"
+  },
+  "29": {
+    "class": "archer",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 500,
+        "manaSec": 60
+      }
+    },
+    "name": "Luna",
+    "title": "Child of Moonlight",
+    "uniqueWeapon": "Flower of Eternity, Hyacinth",
+    "uniqueTreasure1": "Golden Bell of Luck",
+    "uniqueTreasure2": "Moonlight Carrot",
+    "uniqueTreasure3": "Never-Melting Snow Flower"
+  },
+  "30": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 425,
+        "manaSec": 60
+      }
+    },
+    "name": "Laias",
+    "title": "Holy Priestess of Water",
+    "uniqueWeapon": "Flowing Circle, Eltoirre",
+    "uniqueTreasure1": "Water Dragon Scale",
+    "uniqueTreasure2": "Oasis Crystal",
+    "uniqueTreasure3": "Papyrus of the Flow"
+  },
+  "31": {
+    "class": "archer",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Arch",
+    "title": "Arrow of Purity",
+    "uniqueWeapon": "Clear Blue Sky, Sherrkyle",
+    "uniqueTreasure1": "Holy Golden Arrow",
+    "uniqueTreasure2": "Magic Square of Pursuit",
+    "uniqueTreasure3": "Eye of Heaven"
+  },
+  "32": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 425,
+        "manaSec": 60
+      }
+    },
+    "name": "Lewisia",
+    "title": "The Royal Vermilion Blood",
+    "uniqueWeapon": "Scarlet Ruler, Dominicia",
+    "uniqueTreasure1": "Old Silver Cup",
+    "uniqueTreasure2": "Spell of Bloody Mist",
+    "uniqueTreasure3": "Blood of the Ancients"
+  },
+  "33": {
+    "class": "wizard",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 160,
+        "manaSec": 60
+      }
+    },
+    "name": "Nyx",
+    "title": "Dimension Cleaver",
+    "uniqueWeapon": "Dimensional Key, Magnus Fille",
+    "uniqueTreasure1": "Dimensional Magical Circle",
+    "uniqueTreasure2": "Sword of Flow Cutting",
+    "uniqueTreasure3": "Dimension Stone"
+  },
+  "34": {
+    "class": "mechanic",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 425,
+        "manaSec": 60
+      }
+    },
+    "name": "Annette",
+    "title": "Royal Technomagi",
+    "uniqueWeapon": "Crystallized Technomagic, Rascal",
+    "uniqueTreasure1": "Triplex Condensing Lens",
+    "uniqueTreasure2": "Script of Healing",
+    "uniqueTreasure3": "Code of Annihilation"
+  },
+  "35": {
+    "class": "mechanic",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 175,
+        "manaSec": 60
+      }
+    },
+    "name": "Mitra",
+    "title": "The Silver Battle Wolf",
+    "uniqueWeapon": "Roar of Madness, Velkinoth",
+    "uniqueTreasure1": "Potential Madness",
+    "uniqueTreasure2": "Wolf's Barrage Box",
+    "uniqueTreasure3": "Wolfhead Mercenary Insignia"
+  },
+  "36": {
+    "class": "knight",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 265,
+        "manaSec": 60
+      }
+    },
+    "name": "Ricardo",
+    "title": "Lua's Judgment",
+    "uniqueWeapon": "Light of Judgment, Theoria",
+    "uniqueTreasure1": "Stole of Templar",
+    "uniqueTreasure2": "Pride of Holy Warrior",
+    "uniqueTreasure3": "Templar Vow"
+  },
+  "37": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 285,
+        "manaSec": 60
+      }
+    },
+    "name": "Tanya",
+    "title": "The Silencing Blade",
+    "uniqueWeapon": "Demon of the Calm, Caethasis",
+    "uniqueTreasure1": "Copied Codex of Stealth",
+    "uniqueTreasure2": "Laughing Mask All-round Belt",
+    "uniqueTreasure3": "Dagger of Silence"
+  },
+  "38": {
+    "class": "assassin",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 185,
+        "manaSec": 60
+      }
+    },
+    "name": "Ezekiel",
+    "title": "The Cursed Blood",
+    "uniqueWeapon": "Jailer of Despair Barbatos",
+    "uniqueTreasure1": "Wild Beast's Leather Belt",
+    "uniqueTreasure2": "Wild Beast's Choker",
+    "uniqueTreasure3": "Sealing Binds"
+  },
+  "39": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 310,
+        "manaSec": 60
+      }
+    },
+    "name": "Cassandra",
+    "title": "Tempting Winds",
+    "uniqueWeapon": "Aurelian Whisper, Goldbreeze",
+    "uniqueTreasure1": "Feather Decoration of Crimson Bird",
+    "uniqueTreasure2": "Fancy Pendant",
+    "uniqueTreasure3": "Golden Fragrance"
+  },
+  "40": {
+    "class": "warrior",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 240,
+        "manaSec": 60
+      }
+    },
+    "name": "Theo",
+    "title": "Knight of Loyalty",
+    "uniqueWeapon": "Lightning Bolt, Legios",
+    "uniqueTreasure1": "Fur Decoration of Sable",
+    "uniqueTreasure2": "God of Lightning's Necklace",
+    "uniqueTreasure3": "Essence of Red Lightning"
+  },
+  "41": {
+    "class": "priest",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 350,
+        "manaSec": 60
+      }
+    },
+    "name": "Mediana",
+    "title": "The Dangerous Doctor",
+    "uniqueWeapon": "Merciful Threat, Phistonia",
+    "uniqueTreasure1": "Strangely Healthy Injection",
+    "uniqueTreasure2": "Special Potion of Double Reaction",
+    "uniqueTreasure3": "Mysterious Potion"
+  },
+  "42": {
+    "class": "mechanic",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 550,
+        "manaSec": 60
+      }
+    },
+    "name": "Oddy",
+    "title": "Clocksmith of Eternal Life",
+    "uniqueWeapon": "Moonshade Countdown, Tempodiana",
+    "uniqueTreasure1": "Exquisite Orbment",
+    "uniqueTreasure2": "Fragment Collection",
+    "uniqueTreasure3": "Threads of Time"
+  },
+  "43": {
+    "class": "warrior",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 325,
+        "manaSec": 60
+      }
+    },
+    "name": "Viska",
+    "title": "Demon Eater",
+    "uniqueWeapon": "Nightmare Fang, Kitrax",
+    "uniqueTreasure1": "Yummy Memory",
+    "uniqueTreasure2": "Rampaging Beast's Claw",
+    "uniqueTreasure3": "Soul of a Giant Demon"
+  },
+  "44": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 330,
+        "manaSec": 60
+      }
+    },
+    "name": "Priscilla",
+    "title": "Maid of Steel",
+    "uniqueWeapon": "Tumultuous Dance, Excilius",
+    "uniqueTreasure1": "Weight of Fierce Attack",
+    "uniqueTreasure2": "Fancy Tea Set",
+    "uniqueTreasure3": "Magical Stone of Gravity"
+  },
+  "45": {
+    "class": "archer",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Yanne",
+    "title": "Dragon Slayer",
+    "uniqueWeapon": "Dragonbane, Svelta",
+    "uniqueTreasure1": "Talisman of Concentration",
+    "uniqueTreasure2": "Giant Arrow of Sudden Death",
+    "uniqueTreasure3": "Dragon Steak"
+  },
+  "46": {
+    "class": "archer",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 60
+      }
+    },
+    "name": "Zafir",
+    "title": "Prince of Sandstorms",
+    "uniqueWeapon": "Glory of the God King, Zaries",
+    "uniqueTreasure1": "Sandstorm Arrow",
+    "uniqueTreasure2": "Sand of Mirage",
+    "uniqueTreasure3": "Soul of Oasis"
+  },
+  "49": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 60
+      }
+    },
+    "name": "Ophelia",
+    "title": "Pathfinder of Fate",
+    "uniqueWeapon": "Cards of Destiny Del Arcana",
+    "uniqueTreasure1": "Strange Card",
+    "uniqueTreasure2": "Elliciad's Heart",
+    "uniqueTreasure3": "Coin of Fortune"
+  },
+  "50": {
+    "class": "archer",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 400,
+        "manaSec": 60
+      }
+    },
+    "name": "Requina",
+    "title": "Merchant of Poison",
+    "uniqueWeapon": "The Flute of Silent Winds Rakshathar",
+    "uniqueTreasure1": "Tear of Venom",
+    "uniqueTreasure2": "Basilisk's Poisonous Fang",
+    "uniqueTreasure3": "Sparkling Potion"
+  },
+  "51": {
+    "class": "knight",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 210,
+        "manaSec": 60
+      }
+    },
+    "name": "Aselica",
+    "title": "Guardian of the Sun",
+    "uniqueWeapon": "Solar Halo, Ignisius",
+    "uniqueTreasure1": "Light of the Dawn",
+    "uniqueTreasure2": "Bracelet of the Sun",
+    "uniqueTreasure3": "Guardian's Trumpet"
+  },
+  "52": {
+    "class": "mechanic",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 60
+      }
+    },
+    "name": "Crow",
+    "title": "The Punishing Bullet",
+    "uniqueWeapon": "Hellhound, Akistra",
+    "uniqueTreasure1": "Teeth-mark Bullet",
+    "uniqueTreasure2": "Cold Barrage",
+    "uniqueTreasure3": "Pendant of Memories"
+  },
+  "53": {
+    "class": "archer",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 375,
+        "manaSec": 60
+      }
+    },
+    "name": "Shamilla",
+    "title": "The Vessel of Curses",
+    "uniqueWeapon": "Wings of Corruption, Apoliox",
+    "uniqueTreasure1": "Liberation of Curses",
+    "uniqueTreasure2": "Ancient Demon's Heart",
+    "uniqueTreasure3": "The Jar of Curses"
+  },
+  "54": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 325,
+        "manaSec": 60
+      }
+    },
+    "name": "Lavril",
+    "title": "Lovely Evil Spirit",
+    "uniqueWeapon": "Void Soul, Dunn Nemecia",
+    "uniqueTreasure1": "Tarot Card of the Moon",
+    "uniqueTreasure2": "Fairy's Scent",
+    "uniqueTreasure3": "Blessed Protection"
+  },
+  "55": {
+    "class": "warrior",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 275,
+        "manaSec": 60
+      }
+    },
+    "name": "Seria",
+    "title": "Shadow of the Abyss",
+    "uniqueWeapon": "Executioner of Domains, Elsion",
+    "uniqueTreasure1": "Whetstone of Demon",
+    "uniqueTreasure2": "Ring of Abyss",
+    "uniqueTreasure3": "Enlightening Candlelight"
+  },
+  "56": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 250,
+        "manaSec": 60
+      }
+    },
+    "name": "Erze",
+    "title": "Endless thirst",
+    "uniqueWeapon": "Essence of Greed, Perion",
+    "uniqueTreasure1": "Fang of Thirst",
+    "uniqueTreasure2": "Wine of Shivers",
+    "uniqueTreasure3": "Lipstick of Shame"
+  },
+  "57": {
+    "class": "wizard",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 120
+      }
+    },
+    "name": "Lilia",
+    "title": "The Daughter of Storm and Sea",
+    "uniqueWeapon": "Infinite Spring, Cielamaha",
+    "uniqueTreasure1": "Whisper of Sea",
+    "uniqueTreasure2": "Heart of Flow",
+    "uniqueTreasure3": "Bottomless Kettle of Elementals"
+  },
+  "58": {
+    "class": "assassin",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 220,
+        "manaSec": 60
+      }
+    },
+    "name": "Laudia",
+    "title": "Dancer of the Oasis",
+    "uniqueWeapon": "Whispering Sands, Arlaq",
+    "uniqueTreasure1": "Anklet of Oasis",
+    "uniqueTreasure2": "Halidom of Trovatia",
+    "uniqueTreasure3": "Veil of Charm"
+  },
+  "59": {
+    "class": "priest",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 450,
+        "manaSec": 60
+      }
+    },
+    "name": "Lucias",
+    "title": "Saint of Blessings",
+    "uniqueWeapon": "Blessing of Light, Benedicia",
+    "uniqueTreasure1": "Book of Blessings",
+    "uniqueTreasure2": "Dice of Remembrance",
+    "uniqueTreasure3": "Guidance of Morning Star"
+  },
+  "60": {
+    "class": "mechanic",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 475,
+        "manaSec": 60
+      }
+    },
+    "name": "Chrisha",
+    "title": "Inquisitor of Blood and Iron",
+    "uniqueWeapon": "Prism Nova, Arc Lumineir",
+    "uniqueTreasure1": "Sword of Nosenhill",
+    "uniqueTreasure2": "Certificate of Inquisitor",
+    "uniqueTreasure3": "Pride of Velchia"
+  },
+  "61": {
+    "class": "knight",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 255,
+        "manaSec": 60
+      }
+    },
+    "name": "Neraxis",
+    "title": "Obsidian Arrogance",
+    "uniqueWeapon": "Roaring Dragonmaw, Acravita",
+    "uniqueTreasure1": "Cartridge of Black Lightning",
+    "uniqueTreasure2": "Memories of the Blue God Dragon",
+    "uniqueTreasure3": "Rage Vortex"
+  },
+  "62": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 285,
+        "manaSec": 60
+      }
+    },
+    "name": "Scarlet",
+    "title": "Faith of Silver",
+    "uniqueWeapon": "Blade of Conviction, White Belona",
+    "uniqueTreasure1": "Gauntlet of Wave",
+    "uniqueTreasure2": "Wings of Justice",
+    "uniqueTreasure3": "Pride of Orvelia"
+  },
+  "63": {
+    "class": "knight",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 205,
+        "manaSec": 60
+      }
+    },
+    "name": "Sonia",
+    "title": "The Blue Hurricane",
+    "uniqueWeapon": "Eye of the Storm, Yanadis",
+    "uniqueTreasure1": "Jewel of Amplification",
+    "uniqueTreasure2": "Lightning Tent",
+    "uniqueTreasure3": "Heart of Baikal"
+  },
+  "64": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 475,
+        "manaSec": 60
+      }
+    },
+    "name": "Artemia",
+    "title": "Empress of Light",
+    "uniqueWeapon": "Brilliant Praise, Brauxio",
+    "uniqueTreasure1": "Dignity of Queen",
+    "uniqueTreasure2": "Queen's Pride",
+    "uniqueTreasure3": "Crown of Brilliance"
+  },
+  "65": {
+    "class": "assassin",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 155,
+        "manaSec": 60
+      }
+    },
+    "name": "Mirianne",
+    "title": "Servant of Blue",
+    "uniqueWeapon": "Endless Acceleration, Riventina",
+    "uniqueTreasure1": "Proof of Endeavor",
+    "uniqueTreasure2": "Gemini Ring of Instant Teleportation",
+    "uniqueTreasure3": "Magic Powder of Lightning"
+  },
+  "66": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 400,
+        "manaSec": 60
+      }
+    },
+    "name": "Shea",
+    "title": "Aria of Fantasy",
+    "uniqueWeapon": "Charming Melody , Schwanheite",
+    "uniqueTreasure1": "Flower of Life",
+    "uniqueTreasure2": "Windy Flower",
+    "uniqueTreasure3": "Fairy's Crown"
+  },
+  "67": {
+    "class": "mechanic",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 475,
+        "manaSec": 60
+      }
+    },
+    "name": "Kara",
+    "title": "Epitome of Ancient Technomagic",
+    "uniqueWeapon": "0-Form Perpetual Motion Cannon, Heaven Shatterer",
+    "uniqueTreasure1": "Optical Lens - MF002",
+    "uniqueTreasure2": "Recording Device KARA-00XX",
+    "uniqueTreasure3": "Ancient Power Source"
+  },
+  "68": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 310,
+        "manaSec": 60
+      }
+    },
+    "name": "Nia",
+    "title": "Darkness-swallowing Eyes",
+    "uniqueWeapon": "Rending Chaos, Zakadras",
+    "uniqueTreasure1": "Flower of Jungle",
+    "uniqueTreasure2": "Gift of Hunter",
+    "uniqueTreasure3": "Bone Mask of Spell"
+  },
+  "69": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 210,
+        "manaSec": 60
+      }
+    },
+    "name": "Esker",
+    "title": "The Illusion Gambler",
+    "uniqueWeapon": "Wanderer's Pleasure, Lu Etrona Dice",
+    "uniqueTreasure1": "Mumbo Jumbo Runic Cube",
+    "uniqueTreasure2": "Indispensable Chess Piece",
+    "uniqueTreasure3": "Old Fishing Rod"
+  },
+  "73": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 235,
+        "manaSec": 60
+      }
+    },
+    "name": "Chase",
+    "title": "Type. 0",
+    "uniqueWeapon": "Blood Lancer Monolith",
+    "uniqueTreasure1": "Guide of Sin",
+    "uniqueTreasure2": "Handkerchief of Loyalty",
+    "uniqueTreasure3": "Unrelenting Pauldron"
+  },
+  "90": {
+    "class": "priest",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 425,
+        "manaSec": 60
+      }
+    },
+    "name": "May",
+    "title": "The Girl Dreaming of Riches",
+    "uniqueWeapon": "The Box of Fragrance, Etelia",
+    "uniqueTreasure1": "Healthy Potion Set",
+    "uniqueTreasure2": "Sweet Piece of Cake",
+    "uniqueTreasure3": "Crystal Ball from Unknown Origin"
+  },
+  "91": {
+    "class": "assassin",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 210,
+        "manaSec": 60
+      }
+    },
+    "name": "Gladi",
+    "title": "Beast of the Arena",
+    "uniqueWeapon": "Beast Fist, Mastra",
+    "uniqueTreasure1": "Intolerable Feather",
+    "uniqueTreasure2": "Silvervine Box",
+    "uniqueTreasure3": "Champion's Laurel Wreath"
+  },
+  "92": {
+    "class": "wizard",
+    "type": "magical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 350,
+        "manaSec": 60
+      }
+    },
+    "name": "Veronica",
+    "title": "The Eye of Discernment",
+    "uniqueWeapon": "Infinite Charter, Accordio",
+    "uniqueTreasure1": "Guild Code of Conduct",
+    "uniqueTreasure2": "Pen Point of Firm Will",
+    "uniqueTreasure3": "Seal of Guild Manager"
+  },
+  "93": {
+    "class": "knight",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 250,
+        "manaSec": 60
+      }
+    },
+    "name": "Loman",
+    "title": "The Gatekeeper of Trust",
+    "uniqueWeapon": "Wave of Protection, Gaiamenes",
+    "uniqueTreasure1": "Basic Combat Techniques of Orvelian Knights",
+    "uniqueTreasure2": "Wooden Doll Miniature",
+    "uniqueTreasure3": "Sea of Invocation"
+  },
+  "94": {
+    "class": "priest",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 500,
+        "manaSec": 60
+      }
+    },
+    "name": "Juno",
+    "title": "The Chef of Heroes",
+    "uniqueWeapon": "Hundred-Flavor Banquet, Tempora Fyrr",
+    "uniqueTreasure1": "Colorful Ladle",
+    "uniqueTreasure2": "The Jar of Happiness",
+    "uniqueTreasure3": "Suspicious Seasoning Set"
+  },
+  "95": {
+    "class": "warrior",
+    "type": "physical",
+    "stats": {
+      "attributes": {
+        "manaAtk": 315,
+        "manaSec": 60
+      }
+    },
+    "name": "Nicky",
+    "title": "Chief Guard of Cruelty",
+    "uniqueWeapon": "Mace of Rehabilitation, Hartnon",
+    "uniqueTreasure1": "Special Boots of Stockade",
+    "uniqueTreasure2": "Pendant of War God",
+    "uniqueTreasure3": "Merciless Skull Knuckle"
+  }
+}

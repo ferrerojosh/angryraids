@@ -1,0 +1,84 @@
+{
+  "warrior": {
+    "uniqueAtk": 442,
+    "stats": {
+      "attributes": {
+        "critChance": 150,
+        "accuracy": 100,
+        "penetration": 150,
+        "ccResist": 150,
+        "pDodge": 100,
+        "mDodge": 100
+      }
+    }
+  },
+  "priest": {
+    "uniqueAtk": 510,
+    "stats": {
+      "attributes": {
+        "critChance": 100,
+        "accuracy": 100,
+        "mTough": 150,
+        "mBlock": 500,
+        "mBlockDef": 250
+      }
+    }
+  },
+  "wizard": {
+    "uniqueAtk": 510,
+    "stats": {
+      "attributes": {
+        "critChance": 100,
+        "accuracy": 100,
+        "penetration": 150,
+        "mDodge": 200,
+        "mBlock": 250
+      }
+    }
+  },
+  "assassin": {
+    "uniqueAtk": 486,
+    "stats": {
+      "attributes": {
+        "critChance": 200,
+        "critDamage": 300,
+        "accuracy": 100,
+        "pDodge": 200,
+        "mDodge": 200
+      }
+    }
+  },
+  "knight": {
+    "uniqueAtk": 390,
+    "stats": {
+      "attributes": {
+        "critChance": 50,
+        "pTough": 250,
+        "mTough": 250,
+        "pBlock": 100,
+        "mBlock": 100
+      }
+    }
+  },
+  "mechanic": {
+    "uniqueAtk": 499,
+    "stats": {
+      "attributes": {
+        "critChance": 150,
+        "critDamage": 500,
+        "accuracy": 200,
+        "penetration": 100
+      }
+    }
+  },
+  "archer": {
+    "uniqueAtk": 547,
+    "stats": {
+      "attributes": {
+        "critChance": 150,
+        "accuracy": 100,
+        "penetration": 250
+      }
+    }
+  }
+}

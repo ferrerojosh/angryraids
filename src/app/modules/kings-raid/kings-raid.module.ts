@@ -1,5 +1,5 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { HeroBuilder } from './services/hero-builder.service';
+import { HeroService } from './services/hero.service';
 import { StatFactory } from './services/stat-factory.service';
 import { UniqueWeaponService } from './services/unique-weapon.service';
 
@@ -15,7 +15,7 @@ export class KingsRaidModule {
       providers: [
         UniqueWeaponService,
         StatFactory,
-        HeroBuilder
+        HeroService
       ]
     };
   }

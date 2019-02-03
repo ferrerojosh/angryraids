@@ -1,3 +1,4 @@
+import { ClassInfo } from './class-info.model';
 import { Stats } from './stats.model';
 
 /**
@@ -7,6 +8,7 @@ import { Stats } from './stats.model';
 export interface Hero {
   id: number;
   name: string;
-  title: string;
+  subtitle: string;
+  classInfo: ClassInfo;
   stats: Stats;
 }

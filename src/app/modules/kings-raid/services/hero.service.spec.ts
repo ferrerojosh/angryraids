@@ -1,7 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { HeroClass } from '../models/hero-class.model';
-
-import * as heroData from './data/hero.data.json';
 import { HeroService } from './hero.service';
 import { StatFactory } from './stat-factory.service';
 
@@ -18,20 +15,6 @@ describe('HeroService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
-  });
-
-  it('should be able to build a hero', () => {
-    const hero = service.build({
-      id: 1,
-      name: 'Kasel',
-      title: 'Warrior of Light',
-      class: HeroClass.Warrior
-    });
-
-    for (const statAttrKey of Object.keys(hero.stats.attributes)) {
-      const value = hero.stats.attributes[statAttrKey].value;
-      console.log(`${ statAttrKey }: ${ value }`);
-    }
   });
 
   // Hi Mom! Remember, all data/images from Mask of Goblin as stated in README.md

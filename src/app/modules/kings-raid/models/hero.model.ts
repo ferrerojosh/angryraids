@@ -6,9 +6,13 @@ import { Stats } from './stats.model';
  * Represents a King's Raid hero.
  */
 export interface Hero {
-  id: number;
+  id: string;
   name: string;
   subtitle: string;
   classInfo: ClassInfo;
   stats: Stats;
+  uniqueWeapon: string;
+  uniqueTreasure1: string;
+  uniqueTreasure2: string;
+  uniqueTreasure3: string;
 }

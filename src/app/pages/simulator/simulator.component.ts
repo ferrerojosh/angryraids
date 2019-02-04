@@ -16,7 +16,7 @@ export class SimulatorComponent implements OnInit {
   heroList: Hero[];
 
   ngOnInit() {
-    this.heroList = this.heroService.retrieveAllHeroes();
+    // this.heroList = this.heroService.retrieveAllHeroes();
   }
 
 }

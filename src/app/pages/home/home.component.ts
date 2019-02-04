@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroService } from '../../modules/kings-raid/services/hero.service';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  heroList = [
-    'Aselica',
-    'Lilia',
-    'Laias',
-    'Aisha',
-    'Phillop',
-    'Selene'
-  ];
+  constructor(
+    private readonly heroService: HeroService
+  ) {}
 
-  constructor() {
-  }
+  heroList: string[];
 
   ngOnInit() {
+    this.heroList = this.heroService.retrieveAllHeroes()
+      .map(h => h.name);
   }
 
 }

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HeroService } from './services/hero.service';
 import { StatFactory } from './services/stat-factory.service';

@@ -14,6 +14,7 @@ import { AutoCompleteModule } from './modules/auto-complete/auto-complete.module
 import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
+import { HeroStatsComponent } from './components/hero-stats/hero-stats.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     HeaderComponent,
     HeroListComponent,
     HeroAvatarComponent,
+    HeroStatsComponent,
   ],
   imports: [
     BrowserModule,

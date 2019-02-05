@@ -1,8 +1,10 @@
 <ul>
   <li
-    *ngFor="let tab of tabs" [class.active]="tab.active" (click)="selectTab(tab)">
-    {{ tab.label }}
+    *ngFor="let tab of tabs" [class.is-active]="tab.active" (click)="selectTab(tab)">
+    <a>{{ tab.label }}</a>
   </li>
 </ul>
 <!-- Tabs component will go here -->
-<ng-content></ng-content>
+<section>
+  <ng-content></ng-content>
+</section>

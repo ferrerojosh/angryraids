@@ -1,13 +1,12 @@
-@import 'theme.styl'
+@import 'main.styl'
 
 // Apply the style on host so that the parent component can use nth-child/last-child selectors
 :host
   display: block
-  padding: .6rem 1.0rem
+  padding: .62rem 0.5rem
   cursor: pointer
   background-color: white
-  border-bottom: 1px solid color-border
 
 :host:hover, :host.active
-  background: lighten(color-primary, 90%)
+  background: lighten($link, 90%)
 

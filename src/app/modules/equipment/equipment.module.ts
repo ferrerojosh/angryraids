@@ -6,6 +6,9 @@ import { SelectorArmorComponent } from './containers/selector-armor/selector-arm
 import { SelectorTreasureComponent } from './containers/selector-treasure/selector-treasure.component';
 import { SelectorWeaponComponent } from './containers/selector-weapon/selector-weapon.component';
 import { SelectorOrbComponent } from './containers/selector-orb/selector-orb.component';
+import { ItemSelectorComponent } from './components/item-selector/item-selector.component';
+import { RuneSelectorComponent } from './components/rune-selector/rune-selector.component';
+import { StatInformationComponent } from './components/stat-information/stat-information.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { SelectorOrbComponent } from './containers/selector-orb/selector-orb.com
     SelectorArmorSecondaryComponent,
     SelectorAccessoryComponent,
     SelectorTreasureComponent,
-    SelectorOrbComponent
+    SelectorOrbComponent,
+    ItemSelectorComponent,
+    RuneSelectorComponent,
+    StatInformationComponent
   ],
   imports: [
     CommonModule

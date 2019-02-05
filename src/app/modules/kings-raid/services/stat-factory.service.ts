@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { KingsRaidModule } from '../kings-raid.module';
 import { StatType } from '../models/stat-type.model';
 import { Stat } from '../models/stat.model';
 import { Stats } from '../models/stats.model';
@@ -7,7 +8,9 @@ import { Stats } from '../models/stats.model';
  * @description
  * A factory that creates stats and applies soft cap values when needed.
  */
-@Injectable()
+@Injectable({
+  providedIn: KingsRaidModule
+})
 export class StatFactory {
 
   /**

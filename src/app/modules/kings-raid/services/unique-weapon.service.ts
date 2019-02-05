@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { KingsRaidModule } from '../kings-raid.module';
 
 /**
  * @description
  * Provides functions related to calculating unique weapon damage.
  */
-@Injectable()
+@Injectable({
+  providedIn: KingsRaidModule
+})
 export class UniqueWeaponService {
   starScaling = [1000, 1100, 1300, 1600, 2000, 2500];
   levelScaling = [

@@ -1,24 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { take } from 'rxjs/operators';
+import { KingsRaidModule } from '../kings-raid.module';
 import { ClassInfo } from '../models/class-info.model';
-import { HeroClass } from '../models/hero-class.model';
+import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
 import { Stat } from '../models/stat.model';
-import { Stats } from '../models/stats.model';
 import { StatFactory } from './stat-factory.service';
-
-interface HeroInfo {
-  name: string;
-  title: string;
-  type: string;
-  class: HeroClass;
-  stats: Stats;
-  uniqueWeapon: string;
-  uniqueTreasure1: string;
-  uniqueTreasure2: string;
-  uniqueTreasure3: string;
-}
 
 interface HeroInfoData {
   [id: string]: HeroInfo;
@@ -32,7 +18,9 @@ interface ClassInfoData {
  * @description
  * Service that builds a hero.
  */
-@Injectable()
+@Injectable({
+  providedIn: KingsRaidModule
+})
 export class HeroService {
 
   // require seems to be more reliable than ES6 imports when loading JSON files, so we'll use them

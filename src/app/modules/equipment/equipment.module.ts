@@ -5,7 +5,7 @@ import { SelectorArmorSecondaryComponent } from './containers/selector-armor-sec
 import { SelectorArmorComponent } from './containers/selector-armor/selector-armor.component';
 import { SelectorTreasureComponent } from './containers/selector-treasure/selector-treasure.component';
 import { SelectorWeaponComponent } from './containers/selector-weapon/selector-weapon.component';
-import { SelectorOrbComponent } from './components/selector-orb/selector-orb.component';
+import { SelectorOrbComponent } from './containers/selector-orb/selector-orb.component';
 
 @NgModule({
   declarations: [

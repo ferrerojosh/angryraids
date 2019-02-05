@@ -32,9 +32,9 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     AppRoutingModule,
     AutoCompleteModule,
     HttpClientModule,
+    KingsRaidModule,
     EquipmentModule,
     TabModule,
-    KingsRaidModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

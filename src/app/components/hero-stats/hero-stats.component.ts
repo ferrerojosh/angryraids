@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { Hero } from '../../modules/kings-raid/models/hero.model';
 
 @Component({
   selector: 'app-hero-stats',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroStatsComponent implements OnInit {
 
+  @Input()
+  heroes: Hero[];
   constructor() { }
 
   ngOnInit() {
   }
 
+  heroOnClick(){
+
+  }
 }

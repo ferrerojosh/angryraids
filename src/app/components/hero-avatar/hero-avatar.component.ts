@@ -1,5 +1,7 @@
 import { Highlightable } from '@angular/cdk/a11y';
 import { Component, Input } from '@angular/core';
+import { Hero } from '../../modules/kings-raid/models/hero.model';
+
 
 @Component({
   selector: 'app-hero-avatar',
@@ -20,7 +22,9 @@ export class HeroAvatarComponent implements Highlightable {
   getLabel(): string {
     return '';
   }
+getID(){
 
+}
   setActiveStyles(): void {
   }
 

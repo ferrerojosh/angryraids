@@ -9,7 +9,12 @@ if [[ -d ${cwd}/mog ]]; then
   git pull
   cd ..
 fi
-cd mog/src/components/hero/images
+# Create directory if it does not exist
+if [[ ! -d ${cwd}/src/assets/images/hero ]]; then
+  mkdir ${cwd}/src/assets/images/hero
+fi
+cp -r mog/src/components/hero/images/* ${cwd}/src/assets/images/hero/
+cd ${cwd}/src/assets/images/hero/
 find . -iname "hero.png" -exec rename hero.png image.png '{}' \;
 find . -iname "s1UT.png" -exec rename s1UT.png unique-treasure-1.png '{}' \;
 find . -iname "s2UT.png" -exec rename s2UT.png unique-treasure-2.png '{}' \;
@@ -21,10 +26,3 @@ find . -iname "s2.png" -exec rm '{}' \;
 find . -iname "s3.png" -exec rm '{}' \;
 find . -iname "s4.png" -exec rm '{}' \;
 rm -rf classes/
-# Copy assets
-if [[ ! -d ${cwd}/src/assets/images/hero ]]; then
-  mkdir ${cwd}/src/assets/images/hero
-fi
-cp -r * ${cwd}/src/assets/images/hero/
-# Delete mog folder
-rm -rf ${cwd}/mog

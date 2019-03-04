@@ -30,7 +30,8 @@ export class HeroSearchComponent {
   @Output()
   selectedHero = new EventEmitter<Hero>();
 
-  heroImage = (hero: Hero) => `/assets/images/hero/${hero.id}/image.webp`;
+  heroImageWebP = (hero: Hero) => `/assets/images/hero/${hero.id}/image.webp`;
+  heroImagePng = (hero: Hero) => `/assets/images/hero/${hero.id}/image.png`;
 
   heroNameFormatter = (hero: Hero) => hero.name;
 

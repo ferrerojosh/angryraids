@@ -14,9 +14,14 @@ export class HeroAvatarComponent {
   @HostBinding('class.no-gutters')
   isNoGutters = true;
 
-  get heroImage() {
+  get heroImageWebP() {
     return `/assets/images/hero/${this.hero.id}/image.webp`;
   }
+
+  get heroImagePng() {
+    return `/assets/images/hero/${this.hero.id}/image.png`;
+  }
+
   get heroInfo() {
     return `https://maskofgoblin.com/hero/${this.hero.id}`;
   }

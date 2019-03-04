@@ -1,5 +1,8 @@
 <div class="col-12 col-md-4 align-self-center">
-  <img class="img-fluid" [alt]="hero.name" [src]="heroImage">
+  <picture>
+    <source [srcset]="heroImageWebP" type="image/webp">
+    <img class="img-fluid" [alt]="hero.name" [src]="heroImagePng">
+  </picture>
 </div>
 <div class="col-12 col-md-8 hero-info align-self-center">
   <h1>{{ hero.name }}</h1>

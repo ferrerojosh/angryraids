@@ -15,7 +15,7 @@ export class HeroAvatarComponent {
   isNoGutters = true;
 
   get heroImage() {
-    return `/assets/images/hero/${this.hero.id}/image.png`;
+    return `/assets/images/hero/${this.hero.id}/image.webp`;
   }
   get heroInfo() {
     return `https://maskofgoblin.com/hero/${this.hero.id}`;

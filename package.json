@@ -10,7 +10,8 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
     "test:coverage": "jest --coverage",
-    "copy:assets": "./scripts/copy-assets.sh",
+    "asset:webp": "./scripts/asset-to-webp.sh",
+    "copy:assets": "./scripts/copy-assets.sh && ./scripts/asset-to-webp.sh",
     "copy:hero": "./scripts/copy-hero-data.sh"
   },
   "private": true,

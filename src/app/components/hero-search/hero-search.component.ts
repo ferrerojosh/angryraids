@@ -12,6 +12,9 @@ import { HeroService } from '../../modules/kings-raid/services/hero.service';
 })
 export class HeroSearchComponent {
   constructor(
+    // There is really no other choice but to put the service here, turning this one
+    // into a semi smart and dumb component. If I have any plan to have other set of heroes to
+    // search for, then this will be refactored in a way that it takes an input of heroes instead.
     private readonly heroService: HeroService) {
   }
 

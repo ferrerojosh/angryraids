@@ -1,23 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
-import { HeroService } from '../../modules/kings-raid/services/hero.service';
 
 @Component({
   selector: 'app-simulator',
   templateUrl: './simulator.component.html',
   styleUrls: ['./simulator.component.styl'],
 })
-export class SimulatorComponent implements OnInit {
-
-  heroList: Hero[];
+export class SimulatorComponent {
 
   constructor(
-    private readonly heroService: HeroService,
+    private readonly router: Router,
+    private readonly route: ActivatedRoute,
   ) {
   }
 
-  ngOnInit() {
-    this.heroList = this.heroService.retrieveAllHeroes();
+  async onHeroSelected(hero: Hero) {
+    await this.router.navigate(['/hero', hero.id]);
   }
-
 }

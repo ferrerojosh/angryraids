@@ -3,6 +3,8 @@
     "uniqueAtk": 442,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 150,
         "accuracy": 100,
         "penetration": 150,
@@ -16,6 +18,8 @@
     "uniqueAtk": 510,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 100,
         "accuracy": 100,
         "mTough": 150,
@@ -28,6 +32,8 @@
     "uniqueAtk": 510,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 100,
         "accuracy": 100,
         "penetration": 150,
@@ -40,6 +46,8 @@
     "uniqueAtk": 486,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 200,
         "critDamage": 300,
         "accuracy": 100,
@@ -52,6 +60,8 @@
     "uniqueAtk": 390,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 50,
         "pTough": 250,
         "mTough": 250,
@@ -64,6 +74,8 @@
     "uniqueAtk": 499,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 150,
         "critDamage": 500,
         "accuracy": 200,
@@ -75,6 +87,8 @@
     "uniqueAtk": 547,
     "stats": {
       "attributes": {
+        "atkSpd": 1000,
+        "critDmg": 1000,
         "critChance": 150,
         "accuracy": 100,
         "penetration": 250

@@ -1,0 +1,15 @@
+<section>
+  <app-hero-stat
+    *ngFor="let stat of stats | keyvalue"
+    [baseStat]="hero.stats[stat.key]"
+    [stat]="stat.value">
+  </app-hero-stat>
+</section>
+<section>
+  <app-hero-stat
+    *ngFor="let stat of attributes | keyvalue"
+    [option]="true"
+    [baseStat]="hero.stats.attributes[stat.key]"
+    [stat]="stat.value">
+  </app-hero-stat>
+</section>

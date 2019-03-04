@@ -1,5 +1,4 @@
 /**
- * @description
  * Enumerates all game classes.
  */
 export type HeroClass =

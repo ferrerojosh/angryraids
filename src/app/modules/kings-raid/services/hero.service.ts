@@ -1,22 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ClassInfo } from '../models/class-info.model';
-import { HeroClass } from '../models/hero-class.model';
+import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
-import { Stat } from '../models/stat.model';
-import { Stats } from '../models/stats.model';
+import { mergeStats } from '../models/stats.model';
 import { StatFactory } from './stat-factory.service';
-
-interface HeroInfo {
-  name: string;
-  title: string;
-  type: string;
-  class: HeroClass;
-  stats: Stats;
-  uniqueWeapon: string;
-  uniqueTreasure1: string;
-  uniqueTreasure2: string;
-  uniqueTreasure3: string;
-}
 
 interface HeroInfoData {
   [id: string]: HeroInfo;
@@ -27,37 +14,43 @@ interface ClassInfoData {
 }
 
 /**
- * @description
  * Service that builds a hero.
  */
 @Injectable()
 export class HeroService {
 
+  private static heroList: Hero[] = [];
   // require seems to be more reliable than ES6 imports when loading JSON files, so we'll use them
   // @ts-ignore
-  private heroInfoData: HeroInfoData = require('./data/hero.data.json');
+  private static heroInfoData: HeroInfoData = require('./data/hero.data.json');
   // @ts-ignore
-  private classInfo: ClassInfoData = require('./data/class-info.data.json');
+  private static classInfo: ClassInfoData = require('./data/class-info.data.json');
 
   constructor(
     private readonly statFactory: StatFactory,
   ) {
+    this.buildHeroList();
   }
 
-  retrieveAllHeroes(): Hero[] {
+  buildHeroList() {
     const heroes: Hero[] = [];
-    for (const id of Object.keys(this.heroInfoData)) {
-      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3 } = this.heroInfoData[id];
-      const heroClass = this.heroInfoData[id].class;
+    for (const id of Object.keys(HeroService.heroInfoData)) {
+      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3 } = HeroService.heroInfoData[id];
+      const heroClass = HeroService.heroInfoData[id].class;
+      const heroStats = HeroService.heroInfoData[id].stats;
 
       // Build stats, this should be used for the hero.
       const stats = this.statFactory.createEmptyStats();
       // Retrieve class information
-      const classInfo = this.classInfo[heroClass];
-      // Add default stats from class info
+      const classInfo = HeroService.classInfo[heroClass];
+      // Add default stats from class and hero info
       for (const statAttrKey of Object.keys(stats.attributes)) {
-        const amount = classInfo.stats.attributes[statAttrKey] as number;
-        (stats.attributes[statAttrKey] as Stat).incrementStat(amount);
+        const amount = classInfo.stats.attributes[statAttrKey];
+        const heroAmount = heroStats.attributes[statAttrKey];
+        // Add class stat
+        stats.attributes[statAttrKey].incrementStat(amount);
+        // Add hero stat
+        stats.attributes[statAttrKey].incrementStat(heroAmount);
       }
 
       heroes.push({
@@ -73,7 +66,15 @@ export class HeroService {
       });
     }
 
-    return heroes;
+    HeroService.heroList = heroes;
+  }
+
+  retrieveHero(id: string): Hero {
+    return HeroService.heroList.find(h => h.id === id);
+  }
+
+  retrieveAllHeroes(): Hero[] {
+    return HeroService.heroList;
   }
 
 }

@@ -1,36 +1,23 @@
-import { Highlightable } from '@angular/cdk/a11y';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
+import { Hero } from '../../modules/kings-raid/models/hero.model';
 
 @Component({
   selector: 'app-hero-avatar',
   templateUrl: './hero-avatar.component.html',
   styleUrls: ['./hero-avatar.component.styl'],
 })
-export class HeroAvatarComponent implements Highlightable {
-
+export class HeroAvatarComponent {
   @Input()
-  image: string;
+  hero: Hero;
+  @HostBinding('class.row')
+  isRow = true;
+  @HostBinding('class.no-gutters')
+  isNoGutters = true;
 
-  @Input()
-  width = '124';
-
-  @Input()
-  height = '124';
-
-  @Input()
-  name = 'hero-avatar';
-
-  @Input()
-  disabled: boolean;
-
-  getLabel(): string {
-    return '';
+  get heroImage() {
+    return `/assets/images/hero/${this.hero.id}/image.png`;
   }
-
-  setActiveStyles(): void {
+  get heroInfo() {
+    return `https://maskofgoblin.com/hero/${this.hero.id}`;
   }
-
-  setInactiveStyles(): void {
-  }
-
 }

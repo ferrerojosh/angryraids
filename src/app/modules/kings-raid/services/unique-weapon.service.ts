@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 /**
- * @description
  * Provides functions related to calculating unique weapon damage.
  */
 @Injectable()

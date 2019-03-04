@@ -1,1 +1,8 @@
-<img [width]="width" [height]="height" [alt]="name" [src]="image">
+<div class="col-12 col-md-4 align-self-center">
+  <img class="img-fluid" [alt]="hero.name" [src]="heroImage">
+</div>
+<div class="col-12 col-md-8 hero-info align-self-center">
+  <h1>{{ hero.name }}</h1>
+  <p>{{ hero.subtitle }}</p>
+  <a [href]="heroInfo" rel="noopener" target="_blank">Full Hero Information</a>
+</div>

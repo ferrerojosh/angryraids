@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AutoCompleteModule } from '../../modules/auto-complete/auto-complete.module';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeroSearchComponent } from '../../components/hero-search/hero-search.component';
+import { KingsRaidModule } from '../../modules/kings-raid/kings-raid.module';
 
 import { HomeComponent } from './home.component';
 
@@ -9,8 +12,15 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AutoCompleteModule],
-      declarations: [HomeComponent],
+      imports: [
+        NgbTypeaheadModule,
+        RouterTestingModule,
+        KingsRaidModule.registerServices(),
+      ],
+      declarations: [
+        HeroSearchComponent,
+        HomeComponent,
+      ],
     })
       .compileComponents();
   }));

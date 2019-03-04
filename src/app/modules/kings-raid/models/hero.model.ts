@@ -2,10 +2,9 @@ import { ClassInfo } from './class-info.model';
 import { Stats } from './stats.model';
 
 /**
- * @description
  * Represents a King's Raid hero.
  */
-export interface Hero {
+export class Hero {
   id: string;
   name: string;
   subtitle: string;
@@ -15,4 +14,8 @@ export interface Hero {
   uniqueTreasure1: string;
   uniqueTreasure2: string;
   uniqueTreasure3: string;
+
+  constructor(params: Partial<Hero> = {}) {
+    Object.assign(this, params);
+  }
 }

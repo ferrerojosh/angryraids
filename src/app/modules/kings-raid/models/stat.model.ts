@@ -6,9 +6,11 @@ import { StatLimit } from './stat-limit.model';
 export class Stat {
 
   private statValue = 0;
+  private statName = '';
   private readonly statLimit: StatLimit = null;
 
-  constructor(value = 0, statLimit?: StatLimit) {
+  constructor(name, value = 0, statLimit?: StatLimit) {
+    this.statName = name;
     this.statValue = value;
     this.statLimit = statLimit;
   }
@@ -18,6 +20,17 @@ export class Stat {
    */
   get rawValue(): number {
     return this.statValue;
+  }
+
+  /**
+   * Retrieves the name of the stat.
+   */
+  get name(): string {
+    return this.statName;
+  }
+
+  get percentValue(): number {
+    return this.value / 1000;
   }
 
   /**
@@ -59,7 +72,7 @@ export class Stat {
       actualValue = this.statValue;
     }
     // return to 1 significant decimal place
-    actualValue = Math.round(actualValue) / 10;
+    actualValue = Math.round(actualValue);
     return actualValue;
   }
 

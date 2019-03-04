@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
 import { merge, Observable, Subject } from 'rxjs';
 import { distinctUntilChanged, filter, map } from 'rxjs/operators';
@@ -23,6 +23,9 @@ export class HeroSearchComponent {
 
   focus$ = new Subject<string>();
   click$ = new Subject<string>();
+
+  @Input()
+  value = '';
 
   @Output()
   selectedHero = new EventEmitter<Hero>();

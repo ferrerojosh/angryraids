@@ -14,48 +14,10 @@ export class Stat {
   }
 
   /**
-   * Increment this stat based on value given.
-   * @param value value to increment
-   */
-  incrementStat(value: number) {
-    if (!isNaN(value)) {
-      this.statValue = this.statValue + value;
-    }
-  }
-
-  /**
-   * Sets the stat based on value given.
-   * @param value value to set
-   */
-  setStat(value: number) {
-    if (!isNaN(value)) {
-      this.statValue = value;
-    }
-  }
-
-  /**
    * Retrieves the raw value of the stat with no soft caps applied.
    */
   get rawValue(): number {
     return this.statValue;
-  }
-
-  /**
-   * Decrements the stat based on value given.
-   * @param value value to decrement
-   */
-  decrementStat(value: number) {
-    if (!isNaN(value)) {
-      this.statValue = this.statValue - value;
-    }
-  }
-
-  protected attenuate(x, k, a, b) {
-    return Math.floor((k * 1000000) / (a * x * x + b * x + 1000000));
-  }
-
-  protected attenuateInv(x, k, a, b) {
-    return k - Math.floor((k * 1000000) / (a * x * x + b * x + 1000000));
   }
 
   /**
@@ -76,7 +38,7 @@ export class Stat {
         this.statValue,
         this.statLimit.MaxK,
         this.statLimit.A1,
-        this.statLimit.B1
+        this.statLimit.B1,
       );
       // 1st upper soft cap
     } else if (this.statValue > this.statLimit.X2) {
@@ -87,7 +49,7 @@ export class Stat {
         this.statValue,
         this.statLimit.MinK,
         this.statLimit.A3,
-        this.statLimit.B3
+        this.statLimit.B3,
       );
       // 1st lower soft cap
     } else if (this.statValue < this.statLimit.X4) {
@@ -99,5 +61,43 @@ export class Stat {
     // return to 1 significant decimal place
     actualValue = Math.round(actualValue) / 10;
     return actualValue;
+  }
+
+  /**
+   * Increment this stat based on value given.
+   * @param value value to increment
+   */
+  incrementStat(value: number) {
+    if (!isNaN(value)) {
+      this.statValue = this.statValue + value;
+    }
+  }
+
+  /**
+   * Sets the stat based on value given.
+   * @param value value to set
+   */
+  setStat(value: number) {
+    if (!isNaN(value)) {
+      this.statValue = value;
+    }
+  }
+
+  /**
+   * Decrements the stat based on value given.
+   * @param value value to decrement
+   */
+  decrementStat(value: number) {
+    if (!isNaN(value)) {
+      this.statValue = this.statValue - value;
+    }
+  }
+
+  protected attenuate(x, k, a, b) {
+    return Math.floor((k * 1000000) / (a * x * x + b * x + 1000000));
+  }
+
+  protected attenuateInv(x, k, a, b) {
+    return k - Math.floor((k * 1000000) / (a * x * x + b * x + 1000000));
   }
 }

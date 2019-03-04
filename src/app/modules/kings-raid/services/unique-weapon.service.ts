@@ -98,7 +98,7 @@ export class UniqueWeaponService {
     92357,
     94428,
     96534,
-    98677
+    98677,
   ];
 
   /**

@@ -1,13 +1,180 @@
-// Global theme settings
-@import 'colors.styl'
+// Greyscale
+$white = #ffffff
+$gray-100 = #f8f9fa
+$gray-200 = #e9ecef
+$gray-300 = #dee2e6
+$gray-400 = #ced4da
+$gray-500 = #adb5bd
+$gray-600 = #868e96
+$gray-700 = #495057
+$gray-800 = #343a40
+$gray-900 = #212529
+$black = #000
 
-// Typography
-fonts = -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif
+// Theme Colors
+$primary = #bd2130
+$primaryHov = #dc3545
+$primaryBtnHov = #dc3545
+$secondary = $gray-600
+$secondaryHov = #6c757d
+$secondaryBtnHov = #727b84
+$success = #28a745
+$successHov = #1e7e34
+$successBtnHov = #218838
+$info = #17a2b8
+$infoHov = #117a8b
+$infoBtnHov = #138496
+$warning = #ffc107
+$warningHov = #d39e00
+$warningBtnHov = #e0a800
+$danger = #dc3545
+$dangerHov = #bd2130
+$dangerBtnHov = #c82333
+$light = $gray-100
+$lightHov = #dae0e5
+$lightBtnHov = #e2e6ea
+$dark = $gray-800
+$darkHov = #1d2124
+$darkBtnHov = #23272b
 
-// Colors
-color-primary = blood
-color-secondary = black
+$bodyColor = #000000
+$bodyBackground = $white
 
-// Body
-color-body = white
-color-border = silver
+// Column includes
+$col-include = true
+$col-sm-include = true
+$col-md-include = true
+$col-lg-include = true
+$col-xl-include = true
+
+// Flex includes
+$flex-include = true
+$flex-sm-include = true
+$flex-md-include = true
+$flex-lg-include = true
+$flex-xl-include = true
+
+// Grid breakpoints
+$grid-sm = 576px
+$grid-md = 768px
+$grid-lg = 992px
+$grid-xl = 1200px
+
+// Container includes
+$container-sm-include = true
+$container-md-include = true
+$container-lg-include = true
+$container-xl-include = true
+
+// Container max size
+$container-sm = 540px
+$container-md = 720px
+$container-lg = 960px
+$container-xl = 1140px
+
+$line-height-lg = 1.5
+$line-height-sm = 1.5
+
+$border-width = 1px
+$border-color = $gray-200
+
+$border-radius = .25rem
+$border-radius-lg = .3rem
+$border-radius-sm = .2rem
+
+// Fonts
+$font-size-base = 1rem
+$font-size-lg = 1.25rem
+$font-size-sm = .875rem
+
+$font-weight-light = 300
+$font-weight-normal = normal
+$font-weight-bold = bold
+
+$font-family-base = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+$font-family-monospace = "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+$h1-font-size = 2.5rem
+$h2-font-size = 2rem
+$h3-font-size = 1.75rem
+$h4-font-size = 1.5rem
+$h5-font-size = 1.25rem
+$h6-font-size = $font-size-base
+
+$headings-margin-bottom = .5rem
+$headings-font-family = inherit
+$headings-font-weight = 500
+$headings-line-height = 1.1
+$headings-color = inherit
+
+// Display
+$display1-size = 6rem
+$display2-size = 5.5rem
+$display3-size = 4.5rem
+$display4-size = 3.5rem
+
+$display1-weight = $font-weight-light
+$display2-weight = $font-weight-light
+$display3-weight = $font-weight-light
+$display4-weight = $font-weight-light
+
+$display-line-height = $headings-line-height
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$size-25 = 25%
+$size-50 = 50%
+$size-75 = 75%
+$size-100 = 100%
+
+$small-font-size = 80%
+
+$lead-font-size = $h5-font-size
+$lead-font-weight = $font-weight-light
+
+$hr-border-color = rgba($black, .1)
+$hr-border-width = $border-width
+
+$blockquote-font-size = ($font-size-base * 1.5)
+
+$text-muted = $gray-600
+
+// Helper sizes
+$helper-size-0 = $null
+$helper-size-1 = .25rem
+$helper-size-2 = .5rem
+$helper-size-3 = 1rem
+$helper-size-4 = 1.5rem
+$helper-size-5 = 3rem
+
+// Text transforms
+$textTransform = lowercase uppercase capitalize
+$text-transform-include = true
+
+// Directions
+$directions = left right center
+$floatDirections = left right none
+
+// Text direction sub includes
+$text-directions-base-include = true
+$text-directions-sm-include = true
+$text-directions-md-include = true
+$text-directions-lg-include = true
+$text-directions-xl-include = true
+
+// Text type sub includes
+$text-primary-include = true
+$text-secondary-include = true
+$text-success-include = true
+$text-info-include = true
+$text-warning-include = true
+$text-danger-include = true
+$text-light-include = true
+$text-dark-include = true
+
+// Float sub includes
+$float-base-include = true
+$float-sm-include = true
+$float-md-include = true
+$float-lg-include = true
+$float-xl-include = true
+

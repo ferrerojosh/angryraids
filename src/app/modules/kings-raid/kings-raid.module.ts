@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HeroService } from './services/hero.service';
 import { StatFactory } from './services/stat-factory.service';
@@ -10,14 +9,14 @@ import { UniqueWeaponService } from './services/unique-weapon.service';
  */
 @NgModule({})
 export class KingsRaidModule {
-  static forRoot(): ModuleWithProviders<KingsRaidModule> {
+  static registerServices(): ModuleWithProviders<KingsRaidModule> {
     return {
       ngModule: KingsRaidModule,
       providers: [
         UniqueWeaponService,
         StatFactory,
-        HeroService
-      ]
+        HeroService,
+      ],
     };
   }
 }

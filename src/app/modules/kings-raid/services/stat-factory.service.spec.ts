@@ -8,7 +8,7 @@ describe('StatFactory', () => {
   const test2 = 500;
 
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [StatFactory]
+    providers: [StatFactory],
   }));
 
   beforeEach(() => {

@@ -5,7 +5,7 @@ describe('UniqueWeaponService', () => {
   let service: UniqueWeaponService;
 
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [UniqueWeaponService]
+    providers: [UniqueWeaponService],
   }));
 
   beforeEach(() => {

@@ -9,10 +9,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ AutoCompleteModule ],
-      declarations: [ HomeComponent ]
+      imports: [AutoCompleteModule],
+      declarations: [HomeComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

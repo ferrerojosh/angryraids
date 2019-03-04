@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { take } from 'rxjs/operators';
 import { ClassInfo } from '../models/class-info.model';
 import { HeroClass } from '../models/hero-class.model';
 import { Hero } from '../models/hero.model';
@@ -42,8 +40,9 @@ export class HeroService {
   private classInfo: ClassInfoData = require('./data/class-info.data.json');
 
   constructor(
-    private readonly statFactory: StatFactory
-  ) {}
+    private readonly statFactory: StatFactory,
+  ) {
+  }
 
   retrieveAllHeroes(): Hero[] {
     const heroes: Hero[] = [];
@@ -70,7 +69,7 @@ export class HeroService {
         uniqueWeapon,
         uniqueTreasure1,
         uniqueTreasure2,
-        uniqueTreasure3
+        uniqueTreasure3,
       });
     }
 

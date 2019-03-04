@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-hero-avatar',
   templateUrl: './hero-avatar.component.html',
-  styleUrls: ['./hero-avatar.component.styl']
+  styleUrls: ['./hero-avatar.component.styl'],
 })
 export class HeroAvatarComponent implements Highlightable {
 

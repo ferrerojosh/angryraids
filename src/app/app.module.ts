@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,10 +11,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroAvatarComponent } from './components/hero-avatar/hero-avatar.component';
 import { HeroListComponent } from './components/hero-list/hero-list.component';
-import { AutoCompleteModule } from './modules/auto-complete/auto-complete.module';
 import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +26,19 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     HeaderComponent,
     HeroListComponent,
     HeroAvatarComponent,
+    HeroSearchComponent,
+    PanelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AutoCompleteModule,
     HttpClientModule,
-    KingsRaidModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    NgbTypeaheadModule,
+    KingsRaidModule.registerServices(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

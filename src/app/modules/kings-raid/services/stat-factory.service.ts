@@ -32,7 +32,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.Accuracy:
         return new Stat(value, {
@@ -49,7 +49,7 @@ export class StatFactory {
           B3: -938,
           X4: 1,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.CCAccuracy:
         return new Stat(value, {
@@ -66,7 +66,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.CriticalResist:
         return new Stat(value, {
@@ -83,7 +83,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.CCResist:
         return new Stat(value, {
@@ -100,7 +100,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.Dodge:
       case StatType.Block:
@@ -119,7 +119,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.Penetration:
       case StatType.Tough:
@@ -137,7 +137,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.AttackSpeed:
         return new Stat(value, {
@@ -154,7 +154,7 @@ export class StatFactory {
           B3: 0,
           X4: 500,
           A4: 1,
-          B4: -1500
+          B4: -1500,
         });
       case StatType.BlockDef:
         return new Stat(value, {
@@ -171,7 +171,7 @@ export class StatFactory {
           B3: -938,
           X4: -1,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       case StatType.ManaAttack:
         return new Stat(value, {
@@ -188,7 +188,7 @@ export class StatFactory {
           B3: 0,
           X4: 0,
           A4: 0,
-          B4: 0
+          B4: 0,
         });
       default:
         return new Stat(value);
@@ -232,7 +232,7 @@ export class StatFactory {
         debuffAccuracy: this.newStat(),
         heal: this.newStat(),
         recovery: this.newStat(),
-      }
+      },
     };
   }
 

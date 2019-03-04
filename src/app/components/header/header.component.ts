@@ -1,18 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.styl']
+  styleUrls: ['./header.component.styl'],
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   appVersion = environment.version;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

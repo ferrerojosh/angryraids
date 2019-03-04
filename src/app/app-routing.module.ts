@@ -6,17 +6,17 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'simulator',
-    component: SimulatorComponent
-  }
+    component: SimulatorComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {
 }

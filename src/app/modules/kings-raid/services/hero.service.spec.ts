@@ -6,7 +6,7 @@ describe('HeroService', () => {
   let service: HeroService;
 
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [HeroService, StatFactory]
+    providers: [HeroService, StatFactory],
   }));
 
   beforeEach(() => {

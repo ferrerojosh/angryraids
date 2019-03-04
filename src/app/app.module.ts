@@ -7,6 +7,7 @@ import { NgbAlertModule, NgbTabsetModule, NgbTypeaheadModule } from '@ng-bootstr
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EquipmentSelectorComponent } from './components/equipment-selector/equipment-selector.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroAvatarComponent } from './components/hero-avatar/hero-avatar.component';
@@ -28,6 +29,7 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     HeroSearchComponent,
     HeroStatsComponent,
     HeroStatComponent,
+    EquipmentSelectorComponent,
   ],
   imports: [
     BrowserModule,

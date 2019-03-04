@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "styl"
+          "style": "sass"
         }
       },
       "architect": {
@@ -34,7 +34,7 @@
               ]
             },
             "styles": [
-              "src/styles/main.styl"
+              "src/styles/main.sass"
             ],
             "scripts": [],
             "es5BrowserSupport": true

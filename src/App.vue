@@ -8,6 +8,11 @@
         <small>Release {{ version }}</small>
 
       </header>
+      <div class="message is-warning">
+        <div class="message-body">
+          Version 0.4.0 is on development! Click <a href="https://development--angryraids.netlify.com">here</a> to check it out.
+        </div>
+      </div>
       <router-view/>
     </main>
     <footer class="github-footer">

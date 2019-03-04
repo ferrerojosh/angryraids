@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { ClassInfo } from '../models/class-info.model';
 import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
-import { mergeStats } from '../models/stats.model';
 import { StatFactory } from './stat-factory.service';
 
 interface HeroInfoData {
@@ -35,7 +34,8 @@ export class HeroService {
   buildHeroList() {
     const heroes: Hero[] = [];
     for (const id of Object.keys(HeroService.heroInfoData)) {
-      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3 } = HeroService.heroInfoData[id];
+      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3, uniqueTreasure4 }
+        = HeroService.heroInfoData[id];
       const heroClass = HeroService.heroInfoData[id].class;
       const heroStats = HeroService.heroInfoData[id].stats;
 
@@ -63,6 +63,7 @@ export class HeroService {
         uniqueTreasure1,
         uniqueTreasure2,
         uniqueTreasure3,
+        uniqueTreasure4,
       });
     }
 

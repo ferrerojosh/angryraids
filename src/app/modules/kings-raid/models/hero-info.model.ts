@@ -14,4 +14,5 @@ export interface HeroInfo {
   uniqueTreasure1: string;
   uniqueTreasure2: string;
   uniqueTreasure3: string;
+  uniqueTreasure4: string;
 }

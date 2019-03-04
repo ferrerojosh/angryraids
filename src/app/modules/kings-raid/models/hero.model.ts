@@ -14,6 +14,7 @@ export class Hero {
   uniqueTreasure1: string;
   uniqueTreasure2: string;
   uniqueTreasure3: string;
+  uniqueTreasure4: string;
 
   constructor(params: Partial<Hero> = {}) {
     Object.assign(this, params);

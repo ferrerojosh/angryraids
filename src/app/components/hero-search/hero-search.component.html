@@ -1,2 +1,19 @@
-<label for="hero-search">Search for a hero:</label>
-<input id="hero-search" placeholder="Kasel, Laias, Frey" type="text" class="form-control" [ngbTypeahead]="search"/>
+<ng-template #resultTemplate let-r="result" let-t="term">
+  <img width="24" height="24" [src]="heroImage(r)" [alt]="r.name">
+  <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+</ng-template>
+<label for="hero-search">
+  Search for a hero:
+</label>
+<input
+  id="hero-search"
+  placeholder="Kasel, Laias, Frey"
+  type="text"
+  class="form-control"
+  [ngbTypeahead]="search"
+  [resultTemplate]="resultTemplate"
+  [inputFormatter]="heroNameFormatter"
+  (selectItem)="selectedHero.emit($event.item)"
+  (focus)="focus$.next($event.target.value)"
+  (click)="click$.next($event.target.value)"
+/>

@@ -12,6 +12,12 @@ export class HeroAvatarComponent implements Highlightable {
   image: string;
 
   @Input()
+  width = '124';
+
+  @Input()
+  height = '124';
+
+  @Input()
   name = 'hero-avatar';
 
   @Input()

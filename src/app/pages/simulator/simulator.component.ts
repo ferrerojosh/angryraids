@@ -1,4 +1,4 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -42,6 +42,9 @@ export class SimulatorComponent implements OnInit {
     );
     this.breakpointObserver.observe([
       BootstrapBreakpoints.LG,
+      Breakpoints.WebPortrait,
+      Breakpoints.Handset,
+      Breakpoints.Tablet,
     ]).subscribe(result => {
       if (result.matches) {
         this.orientation = 'vertical';
@@ -50,6 +53,7 @@ export class SimulatorComponent implements OnInit {
     });
     this.breakpointObserver.observe([
       BootstrapBreakpoints.XL,
+      Breakpoints.WebLandscape
     ]).subscribe(result => {
       if (result.matches) {
         this.orientation = 'horizontal';

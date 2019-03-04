@@ -10,12 +10,11 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroAvatarComponent } from './components/hero-avatar/hero-avatar.component';
-import { HeroListComponent } from './components/hero-list/hero-list.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { PanelComponent } from './components/panel/panel.component';
 import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
-import { HeroSearchComponent } from './components/hero-search/hero-search.component';
-import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { PanelComponent } from './components/panel/panel.component';
     HomeComponent,
     SimulatorComponent,
     HeaderComponent,
-    HeroListComponent,
     HeroAvatarComponent,
     HeroSearchComponent,
     PanelComponent,

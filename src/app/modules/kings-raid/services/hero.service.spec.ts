@@ -1,24 +1,10 @@
-import { TestBed } from '@angular/core/testing';
 import { HeroService } from './hero.service';
-import { StatFactory } from './stat-factory.service';
 
 describe('HeroService', () => {
-  let service: HeroService;
-
-  beforeEach(() => TestBed.configureTestingModule({
-    providers: [HeroService, StatFactory],
-  }));
-
-  beforeEach(() => {
-    service = TestBed.get(HeroService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
 
   // Hi Mom! Remember, all data/images from Mask of Goblin as stated in README.md
   // it('should have what we need from maskofgoblin', () => {
+  //   const heroData = require('./data/hero.data.json');
   //   const heroCopy = JSON.parse(JSON.stringify(heroData));
   //
   //   for (const k of Object.keys(heroCopy)) {
@@ -42,13 +28,14 @@ describe('HeroService', () => {
   //     heroCopy[k].uniqueTreasure1 = heroInfo.s1.ut.name;
   //     heroCopy[k].uniqueTreasure2 = heroInfo.s2.ut.name;
   //     heroCopy[k].uniqueTreasure3 = heroInfo.s3.ut.name;
+  //     heroCopy[k].uniqueTreasure4 = heroInfo.s4.ut.name;
   //
-  //     // heroCopy[k].stats = {
-  //     //   attributes: {
-  //     //     manaAtk: heroCopy[k].mpatk,
-  //     //     manaSec: heroCopy[k].mpsec,
-  //     //   }
-  //     // };
+  //     heroCopy[k].stats = {
+  //       attributes: {
+  //         manaAtk: heroCopy[k].mpatk,
+  //         manaSec: heroCopy[k].mpsec,
+  //       },
+  //     };
   //
   //     delete heroCopy[k].mpatk;
   //     delete heroCopy[k].mpsec;

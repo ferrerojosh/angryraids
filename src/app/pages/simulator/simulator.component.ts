@@ -1,10 +1,17 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
 import { HeroService } from '../../modules/kings-raid/services/hero.service';
+
+const BootstrapBreakpoints = {
+  SM: '(min-width: 576px) and (max-width: 767.98px)',
+  MD: '(min-width: 768px) and (max-width: 991.98px)',
+  LG: '(min-width: 992px) and (max-width: 1199.98px)',
+  XL: '(min-width: 1200px)',
+};
 
 @Component({
   selector: 'app-simulator',
@@ -17,9 +24,10 @@ export class SimulatorComponent implements OnInit {
     private readonly heroService: HeroService,
     private readonly router: Router,
     private readonly route: ActivatedRoute,
-    private readonly breakpointObserver: BreakpointObserver
+    private readonly breakpointObserver: BreakpointObserver,
   ) {
   }
+
   orientation = 'horizontal';
   tabType = 'tabs';
   heroName$: Observable<string>;
@@ -33,8 +41,7 @@ export class SimulatorComponent implements OnInit {
       map(h => h.name),
     );
     this.breakpointObserver.observe([
-      Breakpoints.HandsetPortrait,
-      Breakpoints.WebPortrait
+      BootstrapBreakpoints.LG,
     ]).subscribe(result => {
       if (result.matches) {
         this.orientation = 'vertical';
@@ -42,8 +49,7 @@ export class SimulatorComponent implements OnInit {
       }
     });
     this.breakpointObserver.observe([
-      Breakpoints.HandsetLandscape,
-      Breakpoints.WebLandscape
+      BootstrapBreakpoints.XL,
     ]).subscribe(result => {
       if (result.matches) {
         this.orientation = 'horizontal';

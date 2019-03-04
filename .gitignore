@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# Mask of Goblin script
+/mog
+
 # dependencies
 /node_modules
 

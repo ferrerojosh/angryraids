@@ -1,0 +1,22 @@
+<form [formGroup]="equipmentForm">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <select formControlName="tier" class="custom-select">
+        <option *ngFor="let tier of availableTiers" [value]="tier">Tier {{ tier }}</option>
+      </select>
+    </div>
+    <div class="input-group-prepend">
+      <select formControlName="rating" class="custom-select">
+        <option value="0" selected>None</option>
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+    </div>
+    <select formControlName="equipment" class="custom-select">
+      <option *ngFor="let eq of equipmentsByTier" [value]="eq.name">{{ eq.name }}</option>
+    </select>
+  </div>
+</form>

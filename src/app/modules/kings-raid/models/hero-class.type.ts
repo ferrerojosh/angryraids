@@ -7,4 +7,6 @@ export type HeroClass =
   | 'knight'
   | 'mechanic'
   | 'assassin'
-  | 'priest';
+  | 'priest'
+  | 'wizard'
+  | 'all';

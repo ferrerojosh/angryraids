@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgbAlertModule, NgbTabsetModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -17,6 +18,7 @@ import { HeroStatsComponent } from './components/hero-stats/hero-stats.component
 import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
+import { EquipmentComponent } from './components/equipment/equipment.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,14 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     HeroStatsComponent,
     HeroStatComponent,
     EquipmentSelectorComponent,
+    EquipmentComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     NgbTypeaheadModule,
     NgbTabsetModule,
     NgbAlertModule,

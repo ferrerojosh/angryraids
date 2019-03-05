@@ -12,27 +12,32 @@
     <ngb-tabset [type]="tabType" justify="fill" [orientation]="orientation">
       <ngb-tab title="Weapon">
         <ng-template ngbTabContent>
-          <app-equipment-selector></app-equipment-selector>
+          <app-equipment [equipments]="weapon$ | async"></app-equipment>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Armor">
         <ng-template ngbTabContent>
+          <app-equipment [equipments]="armor$ | async"></app-equipment>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Secondary Armor">
         <ng-template ngbTabContent>
+          <app-equipment [equipments]="secondaryArmor$ | async"></app-equipment>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Accessory">
         <ng-template ngbTabContent>
+          <app-equipment [equipments]="accessory$ | async"></app-equipment>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Orb">
         <ng-template ngbTabContent>
+          <app-equipment [equipments]="orb$ | async"></app-equipment>
         </ng-template>
       </ngb-tab>
       <ngb-tab title="Treasure">
         <ng-template ngbTabContent>
+          <app-equipment></app-equipment>
         </ng-template>
       </ngb-tab>
     </ngb-tabset>

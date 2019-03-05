@@ -6,7 +6,7 @@ export interface StatInfo {
   pDef?: number;
   mDef?: number;
   maxHp?: number;
-  attributes: {
+  attributes?: {
     critChance?: number;
     critDamage?: number;
     penetration?: number;

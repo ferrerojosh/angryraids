@@ -1,0 +1,196 @@
+{
+  "sets": [
+    {
+      "id": 1,
+      "prefix": "Swift Darkness",
+      "bonus": {
+        "2": {
+          "stats": {
+            "manaAtk": 200
+          }
+        },
+        "4": {
+          "stats": {
+            "manaAtk": 260
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "prefix": "Oppurtune Fire",
+      "bonus": {
+        "2": {
+          "stats": {
+            "critChance": 100
+          }
+        },
+        "4": {
+          "stats": {
+            "critChance": 130
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "prefix": "Gritty Frost",
+      "bonus": {
+        "2": {
+          "modifiers": {
+            "maxHp": 0.1
+          }
+        },
+        "4": {
+          "modifiers": {
+            "maxHp": 0.13
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "prefix": "Unrelenting Poison",
+      "bonus": {
+        "2": {
+          "stats": {
+            "pCritResist": 100,
+            "mCritResist": 100
+          }
+        },
+        "4": {
+          "stats": {
+            "pCritResist": 130,
+            "mCritResist": 130
+          }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "prefix": "Lava",
+      "bonus": {
+        "2": {
+          "stats": {
+            "critDamage": 200
+          }
+        },
+        "4": {
+          "stats": {
+            "critDamage": 260
+          }
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "name": "Common Treasure",
+      "stats": {
+        "maxHp": 226962
+      },
+      "tier": 8,
+      "rarity": "legendary",
+      "type": "treasure",
+      "classes": [
+        "all"
+      ]
+    },
+    {
+      "name": "Common Treasure",
+      "stats": {
+        "maxHp": 190116
+      },
+      "tier": 7,
+      "rarity": "legendary",
+      "type": "treasure",
+      "classes": [
+        "all"
+      ]
+    },
+    {
+      "name": "Parvita of Defence",
+      "stats": {
+        "atk": 283
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "knight"
+      ]
+    },
+    {
+      "name": "Tynoram of Charge",
+      "stats": {
+        "atk": 320
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "warrior"
+      ]
+    },
+    {
+      "name": "Xaphyx of Ambush",
+      "stats": {
+        "atk": 352
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "assassin"
+      ]
+    },
+    {
+      "name": "Marcena of Aim",
+      "stats": {
+        "atk": 397
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "archer"
+      ]
+    },
+    {
+      "name": "Voltenux of Penetration",
+      "stats": {
+        "atk": 362
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "mechanic"
+      ]
+    },
+    {
+      "name": "Giltair of Explosion",
+      "stats": {
+        "atk": 370
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "wizard"
+      ]
+    },
+    {
+      "name": "Suyrtema of Heal",
+      "stats": {
+        "atk": 370
+      },
+      "tier": 10,
+      "rarity": "unique",
+      "type": "weapon",
+      "classes": [
+        "priest"
+      ]
+    }
+  ]
+}

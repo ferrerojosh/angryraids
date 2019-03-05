@@ -19,7 +19,7 @@ for (const k of Object.keys(heroCopy)) {
   delete heroCopy[k].position;
 
   heroCopy[k].name = heroInfo.name;
-  heroCopy[k].title = heroInfo.subtitle;
+  heroCopy[k].title = heroInfo.title;
   heroCopy[k].uniqueWeapon = heroInfo.uw.name;
   heroCopy[k].uniqueTreasure1 = heroInfo.s1.ut.name;
   heroCopy[k].uniqueTreasure2 = heroInfo.s2.ut.name;

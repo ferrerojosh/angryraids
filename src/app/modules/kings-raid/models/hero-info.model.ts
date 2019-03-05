@@ -1,4 +1,5 @@
-import { HeroClass } from './hero-class.model';
+import { HeroClass } from './hero-class.type';
+import { HeroType } from './hero.type';
 import { StatInfo } from './stat-info.model';
 
 /**
@@ -7,7 +8,7 @@ import { StatInfo } from './stat-info.model';
 export interface HeroInfo {
   name: string;
   title: string;
-  type: string;
+  type: HeroType;
   class: HeroClass;
   stats: StatInfo;
   uniqueWeapon: string;

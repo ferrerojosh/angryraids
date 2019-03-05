@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { EquipmentInfo } from '../../modules/kings-raid/models/equipment-info.model';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
+import { EquipmentService } from '../../modules/kings-raid/services/equipment.service';
 import { HeroService } from '../../modules/kings-raid/services/hero.service';
 
 const BootstrapBreakpoints = {
@@ -25,6 +27,7 @@ export class SimulatorComponent implements OnInit {
     private readonly router: Router,
     private readonly route: ActivatedRoute,
     private readonly breakpointObserver: BreakpointObserver,
+    private readonly equipment: EquipmentService,
   ) {
   }
 
@@ -32,10 +35,30 @@ export class SimulatorComponent implements OnInit {
   tabType = 'tabs';
   heroName$: Observable<string>;
   hero$: Observable<Hero>;
+  armor$: Observable<EquipmentInfo[]>;
+  weapon$: Observable<EquipmentInfo[]>;
+  secondaryArmor$: Observable<EquipmentInfo[]>;
+  orb$: Observable<EquipmentInfo[]>;
+  accessory$: Observable<EquipmentInfo[]>;
 
   ngOnInit(): void {
     this.hero$ = this.route.paramMap.pipe(
       map((params: ParamMap) => this.heroService.retrieveHero(params.get('id'))),
+    );
+    this.armor$ = this.hero$.pipe(
+      map(h => this.equipment.retrieveByClassAndType('armor', h.classInfo.name))
+    );
+    this.weapon$ = this.hero$.pipe(
+      map(h => this.equipment.retrieveByClassAndType('weapon', h.classInfo.name))
+    );
+    this.secondaryArmor$ = this.hero$.pipe(
+      map(h => this.equipment.retrieveByClassAndType('secondary-armor', h.classInfo.name))
+    );
+    this.orb$ = this.hero$.pipe(
+      map(h => this.equipment.retrieveByClassAndType('orb', 'all'))
+    );
+    this.accessory$ = this.hero$.pipe(
+      map(h => this.equipment.retrieveByClassAndType('accessory', 'all'))
     );
     this.heroName$ = this.hero$.pipe(
       map(h => h.name),
@@ -53,7 +76,7 @@ export class SimulatorComponent implements OnInit {
     });
     this.breakpointObserver.observe([
       BootstrapBreakpoints.XL,
-      Breakpoints.WebLandscape
+      Breakpoints.WebLandscape,
     ]).subscribe(result => {
       if (result.matches) {
         this.orientation = 'horizontal';

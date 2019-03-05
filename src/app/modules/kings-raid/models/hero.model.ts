@@ -1,4 +1,4 @@
-import { ClassInfo } from './class-info.model';
+import { HeroClassInfo } from './hero-class-info.model';
 import { Stats } from './stats.model';
 
 /**
@@ -7,8 +7,8 @@ import { Stats } from './stats.model';
 export class Hero {
   id: string;
   name: string;
-  subtitle: string;
-  classInfo: ClassInfo;
+  title: string;
+  classInfo: HeroClassInfo;
   stats: Stats;
   uniqueWeapon: string;
   uniqueTreasure1: string;

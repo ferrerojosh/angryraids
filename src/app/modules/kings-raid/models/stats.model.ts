@@ -1,3 +1,4 @@
+import { StatInfo } from './stat-info.model';
 import { Stat } from './stat.model';
 
 /**
@@ -57,6 +58,22 @@ export const mergeStats = (target: Stats, src: Stats): Stats => {
   // Merge attributes
   for (const statAttrKey of Object.keys(target.attributes)) {
     target.attributes[statAttrKey].incrementStat(src.attributes[statAttrKey].rawValue);
+  }
+  return target;
+};
+
+export const mergeStatInfo = (target: Stats, src: StatInfo): Stats => {
+  // Merge stats
+  for (const statKey of Object.keys(target)) {
+    if (statKey !== 'attributes' && src.hasOwnProperty(statKey)) {
+      target[statKey].incrementStat(src[statKey]);
+    }
+  }
+  // Merge attributes
+  for (const statAttrKey of Object.keys(target.attributes)) {
+    if (src.attributes.hasOwnProperty(statAttrKey)) {
+      target.attributes[statAttrKey].incrementStat(src.attributes[statAttrKey]);
+    }
   }
   return target;
 };

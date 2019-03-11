@@ -4,6 +4,7 @@ import { first, mergeMap } from 'rxjs/operators';
 import { HeroClassInfo } from '../models/hero-class-info.model';
 import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
+import { mergeStatInfo, mergeStats } from '../models/stats.model';
 import { StatFactory } from './stat-factory.service';
 
 interface HeroInfoData {
@@ -43,20 +44,12 @@ export class HeroService {
       const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3, uniqueTreasure4 } = this.heroInfoData[id];
       const heroClass = this.heroInfoData[id].class;
       const heroStats = this.heroInfoData[id].stats;
-
+      const classInfo = this.heroClassInfoData[heroClass];
       // Build stats, this should be used for the hero.
       const stats = this.statFactory.createEmptyStats();
-      // Retrieve class information
-      const classInfo = this.heroClassInfoData[heroClass];
-      // Add default stats from class and hero info
-      for (const statAttrKey of Object.keys(stats.attributes)) {
-        const amount = classInfo.stats.attributes[statAttrKey];
-        const heroAmount = heroStats.attributes[statAttrKey];
-        // Add class stat
-        stats.attributes[statAttrKey].incrementStat(amount);
-        // Add hero stat
-        stats.attributes[statAttrKey].incrementStat(heroAmount);
-      }
+      // Add default stats from class
+      mergeStatInfo(stats, classInfo.stats);
+      mergeStatInfo(stats, heroStats);
 
       heroes.push({
         id,

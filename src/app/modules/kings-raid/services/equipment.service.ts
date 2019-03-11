@@ -5,7 +5,7 @@ import { EquipmentInfo } from '../models/equipment-info.model';
 import { EquipmentSet } from '../models/equipment-set.model';
 import { EquipmentType } from '../models/equipment.type';
 import { HeroClass } from '../models/hero-class.type';
-import { EquipmentBuilder } from './equipment-builder.service';
+import { EquipmentBuilder } from './equipment.builder';
 
 interface EquipmentData {
   sets: EquipmentSet[];

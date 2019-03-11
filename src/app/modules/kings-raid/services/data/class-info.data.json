@@ -3,6 +3,10 @@
     "name": "warrior",
     "uniqueAtk": 442,
     "stats": {
+      "atk": 20032,
+      "pDef": 6528,
+      "mDef": 7832,
+      "maxHp": 1291376,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 150,
@@ -18,6 +22,10 @@
     "name": "priest",
     "uniqueAtk": 510,
     "stats": {
+      "atk": 20688,
+      "pDef": 4352,
+      "mDef": 5440,
+      "maxHp": 984320,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 100,
@@ -32,6 +40,10 @@
     "name": "wizard",
     "uniqueAtk": 510,
     "stats": {
+      "atk": 26128,
+      "pDef": 3480,
+      "mDef": 5224,
+      "maxHp": 877832,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 100,
@@ -46,6 +58,10 @@
     "name": "assassin",
     "uniqueAtk": 486,
     "stats": {
+      "atk": 21992,
+      "pDef": 6968,
+      "mDef": 6096,
+      "maxHp": 1233888,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 200,
@@ -60,6 +76,10 @@
     "name": "knight",
     "uniqueAtk": 390,
     "stats": {
+      "atk": 17632,
+      "pDef": 7832,
+      "mDef": 6096,
+      "maxHp": 1520472,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 50,
@@ -74,6 +94,10 @@
     "name": "mechanic",
     "uniqueAtk": 499,
     "stats": {
+      "atk": 22648,
+      "pDef": 4784,
+      "mDef": 3912,
+      "maxHp": 1030920,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 150,
@@ -87,6 +111,10 @@
     "name": "archer",
     "uniqueAtk": 547,
     "stats": {
+      "atk": 24824,
+      "pDef": 4784,
+      "mDef": 3912,
+      "maxHp": 950344,
       "attributes": {
         "atkSpd": 1000,
         "critChance": 150,

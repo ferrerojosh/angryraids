@@ -1,5 +1,8 @@
 <div class="search-panel">
-  <app-hero-search (selectedHero)="onHeroSelected($event)"></app-hero-search>
+  <app-hero-search
+    [heroes]="heroes$ | async"
+    (selectedHero)="onHeroSelected($event)">
+  </app-hero-search>
 </div>
 <section>
   <p>To begin, please search a hero to build.</p>

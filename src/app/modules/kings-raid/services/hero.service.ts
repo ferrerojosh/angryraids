@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { first, mergeMap } from 'rxjs/operators';
 import { HeroClassInfo } from '../models/hero-class-info.model';
 import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
@@ -31,11 +33,14 @@ export class HeroService {
     this.buildHeroList();
   }
 
-  buildHeroList() {
+  /**
+   * Builds the necessary hero list on startup.
+   */
+  private buildHeroList() {
     const heroes: Hero[] = [];
-    for (const id of Object.keys(this.heroInfoData)) {
-      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3, uniqueTreasure4 }
-        = this.heroInfoData[id];
+    const heroInfoDataKeys = Object.keys(this.heroInfoData);
+    for (const id of heroInfoDataKeys) {
+      const { name, title, uniqueWeapon, uniqueTreasure1, uniqueTreasure2, uniqueTreasure3, uniqueTreasure4 } = this.heroInfoData[id];
       const heroClass = this.heroInfoData[id].class;
       const heroStats = this.heroInfoData[id].stats;
 
@@ -70,12 +75,22 @@ export class HeroService {
     this.heroList = heroes;
   }
 
-  retrieveHero(id: string): Hero {
-    return this.heroList.find(h => h.id === id);
+  /**
+   * Return the {@link Hero} that matches the id
+   * @param id hero id to match
+   */
+  find(id: string): Observable<Hero> {
+    return this.findAll().pipe(
+      mergeMap(h => h),
+      first(h => h.id === id),
+    );
   }
 
-  retrieveAllHeroes(): Hero[] {
-    return this.heroList;
+  /**
+   * Return all available {@link Hero} in the local data.
+   */
+  findAll(): Observable<Hero[]> {
+    return of(this.heroList);
   }
 
 }

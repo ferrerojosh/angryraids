@@ -1,13 +1,13 @@
 <section>
   <app-hero-stat
-    *ngFor="let stat of stats | keyvalue"
+    *ngFor="let stat of stats | keyvalue; trackBy: trackByFn"
     [baseStat]="hero.stats[stat.key]"
     [stat]="stat.value">
   </app-hero-stat>
 </section>
 <section>
   <app-hero-stat
-    *ngFor="let stat of attributes | keyvalue"
+    *ngFor="let stat of attributes | keyvalue; trackBy: trackByFn"
     [option]="true"
     [baseStat]="hero.stats.attributes[stat.key]"
     [stat]="stat.value">

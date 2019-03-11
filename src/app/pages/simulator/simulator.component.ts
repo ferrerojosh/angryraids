@@ -2,19 +2,30 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { EquipmentInfo } from '../../modules/kings-raid/models/equipment-info.model';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
 import { EquipmentService } from '../../modules/kings-raid/services/equipment.service';
 import { HeroService } from '../../modules/kings-raid/services/hero.service';
 
+/**
+ * Media queries for Bootstrap 4 breakpoints.
+ * @see https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints
+ */
 const BootstrapBreakpoints = {
+  // Small devices (landscape phones, 576px and up)
   SM: '(min-width: 576px) and (max-width: 767.98px)',
+  // Medium devices (tablets, 768px and up)
   MD: '(min-width: 768px) and (max-width: 991.98px)',
+  // Large devices (desktops, 992px and up)
   LG: '(min-width: 992px) and (max-width: 1199.98px)',
+  // Extra large devices (large desktops, 1200px and up)
   XL: '(min-width: 1200px)',
 };
 
+/**
+ * The component that handles the entire simulation of equipments.
+ */
 @Component({
   selector: 'app-simulator',
   templateUrl: './simulator.component.html',
@@ -31,10 +42,14 @@ export class SimulatorComponent implements OnInit {
   ) {
   }
 
+  // To support mobile devices, we should detect the orientation
+  // and change the mode of the tabs
   orientation = 'horizontal';
   tabType = 'tabs';
+  // Observable data for our components to listen on
   heroName$: Observable<string>;
   hero$: Observable<Hero>;
+  heroes$: Observable<Hero[]>;
   armor$: Observable<EquipmentInfo[]>;
   weapon$: Observable<EquipmentInfo[]>;
   secondaryArmor$: Observable<EquipmentInfo[]>;
@@ -42,27 +57,31 @@ export class SimulatorComponent implements OnInit {
   accessory$: Observable<EquipmentInfo[]>;
 
   ngOnInit(): void {
+    this.heroes$ = this.heroService.findAll();
     this.hero$ = this.route.paramMap.pipe(
-      map((params: ParamMap) => this.heroService.retrieveHero(params.get('id'))),
+      map((params: ParamMap) => params.get('id')),
+      switchMap(id => this.heroService.find(id)),
     );
     this.armor$ = this.hero$.pipe(
-      map(h => this.equipment.retrieveByClassAndType('armor', h.classInfo.name))
+      switchMap(h => this.equipment.findByTypeAndClass('armor', h.classInfo.name))
     );
     this.weapon$ = this.hero$.pipe(
-      map(h => this.equipment.retrieveByClassAndType('weapon', h.classInfo.name))
+      switchMap(h => this.equipment.findByTypeAndClass('weapon', h.classInfo.name))
     );
     this.secondaryArmor$ = this.hero$.pipe(
-      map(h => this.equipment.retrieveByClassAndType('secondary-armor', h.classInfo.name))
+      switchMap(h => this.equipment.findByTypeAndClass('secondary-armor', h.classInfo.name))
     );
     this.orb$ = this.hero$.pipe(
-      map(() => this.equipment.retrieveByClassAndType('orb', 'all'))
+      switchMap(() => this.equipment.findByTypeAndClass('orb', 'all'))
     );
     this.accessory$ = this.hero$.pipe(
-      map(() => this.equipment.retrieveByClassAndType('accessory', 'all'))
+      switchMap(() => this.equipment.findByTypeAndClass('accessory', 'all'))
     );
     this.heroName$ = this.hero$.pipe(
-      map(h => h.name),
+      switchMap(h => h.name),
     );
+    // Change orientations when everything matches the required breakpoints
+    // for both vertical (mobile + tablet) and horizontal (desktop) orientations.
     this.breakpointObserver.observe([
       BootstrapBreakpoints.LG,
       Breakpoints.WebPortrait,
@@ -86,6 +105,7 @@ export class SimulatorComponent implements OnInit {
   }
 
   async onHeroSelected(hero: Hero) {
-    await this.router.navigate(['/hero', hero.id]);
+    // We don't record this in the history, instead, replace the URL since we're not facebook
+    await this.router.navigate(['/hero', hero.id], { replaceUrl: true });
   }
 }

@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { filter, flatMap, mergeMap, switchMap, toArray } from 'rxjs/operators';
 import { EquipmentInfo } from '../models/equipment-info.model';
 import { EquipmentSet } from '../models/equipment-set.model';
 import { EquipmentType } from '../models/equipment.type';
@@ -26,11 +28,20 @@ export class EquipmentService {
     this.buildSets();
   }
 
-  retrieveByClassAndType(type: EquipmentType, heroClass: HeroClass) {
-    return this.equipments.filter(e => e.type === type && e.classes.includes(heroClass));
+  findAll(): Observable<EquipmentInfo[]> {
+    return of(this.equipments);
   }
 
-  buildSets() {
+  findByTypeAndClass(type: EquipmentType, heroClass: HeroClass): Observable<EquipmentInfo[]> {
+    return this.findAll().pipe(
+      mergeMap(e => e),
+      filter(e => e.type === type),
+      filter(e => e.classes.includes(heroClass)),
+      toArray()
+    );
+  }
+
+  private buildSets() {
     const equipmentSets = this.equipmentData.sets;
 
     // Build through all available set data

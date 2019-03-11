@@ -1,5 +1,7 @@
+import { KeyValue } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
+import { Stat } from '../../modules/kings-raid/models/stat.model';
 import { mergeStats, Stats } from '../../modules/kings-raid/models/stats.model';
 import { StatFactory } from '../../modules/kings-raid/services/stat-factory.service';
 
@@ -42,6 +44,10 @@ export class HeroStatsComponent implements OnChanges {
 
     // Merge changes one by one
     mergeStats(this.rawStats, newHero.stats);
+  }
+
+  trackByFn(index, item: KeyValue<string, Stat>) {
+    return item.value.name;
   }
 
 }

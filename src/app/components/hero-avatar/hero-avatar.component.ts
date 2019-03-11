@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
 
+/**
+ * Simple component that display's a {@link Hero} avatar image
+ * in both WebP and PNG formats whatever the browser can bring into the table.
+ */
 @Component({
   selector: 'app-hero-avatar',
   templateUrl: './hero-avatar.component.html',

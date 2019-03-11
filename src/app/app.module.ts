@@ -8,7 +8,7 @@ import { NgbAlertModule, NgbTabsetModule, NgbTypeaheadModule } from '@ng-bootstr
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EquipmentSelectorComponent } from './components/equipment-selector/equipment-selector.component';
+import { EquipmentComponent } from './components/equipment/equipment.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroAvatarComponent } from './components/hero-avatar/hero-avatar.component';
@@ -18,7 +18,6 @@ import { HeroStatsComponent } from './components/hero-stats/hero-stats.component
 import { KingsRaidModule } from './modules/kings-raid/kings-raid.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
-import { EquipmentComponent } from './components/equipment/equipment.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +30,7 @@ import { EquipmentComponent } from './components/equipment/equipment.component';
     HeroSearchComponent,
     HeroStatsComponent,
     HeroStatComponent,
-    EquipmentSelectorComponent,
     EquipmentComponent,
-
   ],
   imports: [
     BrowserModule,

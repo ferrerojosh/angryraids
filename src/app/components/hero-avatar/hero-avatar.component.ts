@@ -1,10 +1,11 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
 
 @Component({
   selector: 'app-hero-avatar',
   templateUrl: './hero-avatar.component.html',
   styleUrls: ['./hero-avatar.component.styl'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroAvatarComponent {
   @Input()

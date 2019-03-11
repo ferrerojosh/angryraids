@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { Stat } from '../../modules/kings-raid/models/stat.model';
 
 /**
@@ -8,6 +8,7 @@ import { Stat } from '../../modules/kings-raid/models/stat.model';
   selector: 'app-hero-stat',
   templateUrl: './hero-stat.component.html',
   styleUrls: ['./hero-stat.component.styl'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroStatComponent {
   @Input()

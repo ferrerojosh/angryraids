@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
 import { mergeStats, Stats } from '../../modules/kings-raid/models/stats.model';
 import { StatFactory } from '../../modules/kings-raid/services/stat-factory.service';
@@ -7,6 +7,7 @@ import { StatFactory } from '../../modules/kings-raid/services/stat-factory.serv
   selector: 'app-hero-stats',
   templateUrl: './hero-stats.component.html',
   styleUrls: ['./hero-stats.component.styl'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroStatsComponent implements OnChanges {
 

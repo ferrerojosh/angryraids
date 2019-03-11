@@ -55,10 +55,10 @@ export class SimulatorComponent implements OnInit {
       map(h => this.equipment.retrieveByClassAndType('secondary-armor', h.classInfo.name))
     );
     this.orb$ = this.hero$.pipe(
-      map(h => this.equipment.retrieveByClassAndType('orb', 'all'))
+      map(() => this.equipment.retrieveByClassAndType('orb', 'all'))
     );
     this.accessory$ = this.hero$.pipe(
-      map(h => this.equipment.retrieveByClassAndType('accessory', 'all'))
+      map(() => this.equipment.retrieveByClassAndType('accessory', 'all'))
     );
     this.heroName$ = this.hero$.pipe(
       map(h => h.name),

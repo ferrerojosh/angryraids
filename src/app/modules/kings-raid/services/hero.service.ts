@@ -4,7 +4,7 @@ import { first, mergeMap } from 'rxjs/operators';
 import { HeroClassInfo } from '../models/hero-class-info.model';
 import { HeroInfo } from '../models/hero-info.model';
 import { Hero } from '../models/hero.model';
-import { mergeStatInfo, mergeStats } from '../models/stats.model';
+import { mergeStatInfo } from '../models/stats.model';
 import { StatFactory } from './stat-factory.service';
 
 interface HeroInfoData {

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EquipmentInfo } from '../models/equipment-info.model';
+import { HeroClassInfo } from '../models/hero-class-info.model';
 
 interface BuildParams {
   prefix: string;
@@ -29,6 +30,19 @@ export class EquipmentBuilder {
   private ringTierBase = [0, 0, 0, 24404, 47039, 87848, 127282, 181282, 226962];
   private orbTierBase = [0, 0, 0, 0, 0, 86454, 138285, 190116, 226962];
   private treasureTierBase = [0, 0, 0, 0, 0, 0, 0, 190116, 226962];
+
+  buildUniqueWeapon(weaponName: string, classInfo: HeroClassInfo): EquipmentInfo {
+    return {
+      name: weaponName,
+      stats: {
+        atk: classInfo.uniqueAtk,
+      },
+      tier: 10,
+      rarity: 'legendary',
+      type: 'orb',
+      classes: [classInfo.name],
+    };
+  }
 
   buildSetItems(params: BuildParams): EquipmentInfo[] {
     const setItems: EquipmentInfo[] = [];

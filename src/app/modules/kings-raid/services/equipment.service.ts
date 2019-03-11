@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { filter, flatMap, mergeMap, switchMap, toArray } from 'rxjs/operators';
+import { filter, mergeMap, toArray } from 'rxjs/operators';
 import { EquipmentInfo } from '../models/equipment-info.model';
 import { EquipmentSet } from '../models/equipment-set.model';
 import { EquipmentType } from '../models/equipment.type';
@@ -37,7 +37,7 @@ export class EquipmentService {
       mergeMap(e => e),
       filter(e => e.type === type),
       filter(e => e.classes.includes(heroClass)),
-      toArray()
+      toArray(),
     );
   }
 

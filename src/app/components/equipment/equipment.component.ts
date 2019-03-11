@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { merge, Observable, Subscription } from 'rxjs';
+import { BehaviorSubject, merge, Observable, Subscription } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import { EquipmentInfo } from '../../modules/kings-raid/models/equipment-info.model';
-import { EquipmentHelper } from '../../modules/kings-raid/services/equipment.helper';
 
 @Component({
   selector: 'app-equipment',
@@ -13,10 +12,8 @@ import { EquipmentHelper } from '../../modules/kings-raid/services/equipment.hel
 })
 export class EquipmentComponent implements OnInit, OnDestroy {
 
-  @Input()
-  equipments: EquipmentInfo[];
+  private equipments$ = new BehaviorSubject<EquipmentInfo[]>([]);
 
-  helper: EquipmentHelper;
   tier = new FormControl();
   rating = new FormControl(0);
   equipment = new FormControl();
@@ -26,20 +23,30 @@ export class EquipmentComponent implements OnInit, OnDestroy {
   // Subscriptions
   availableTierSubscription: Subscription;
 
+  @Input()
+  set equipments(value: EquipmentInfo[]) {
+    this.equipments$.next(value);
+  }
+
   ngOnInit() {
-    this.helper = new EquipmentHelper(this.equipments);
-    this.availableTiers$ = this.helper.listAvailableTiers().pipe(
-      map(t => t.reverse())
+    this.availableTiers$ = this.equipments$.pipe(
+      map(e => e.map(i => i.tier)),
+      map(x => x.filter((v, i, a) => a.indexOf(v) === i)),
+      map(t => t.reverse()),
     );
     // Emits when available tiers are loaded, typically the first one to emit
     const defaultEquipmentByTier = this.availableTiers$.pipe(
       map(t => t[0]),
-      switchMap(t => this.helper.listByTier(t)),
+      switchMap(t => this.equipments$.pipe(
+        map(x => x.filter(e => e.tier === t)),
+      )),
       tap(x => this.equipment.setValue(x[0])),
     );
     // Emits when tier values are changed, typically emits when user changes tier value
     const changedEquipmentByTier = this.tier.valueChanges.pipe(
-      switchMap(t => this.helper.listByTier(t)),
+      switchMap(t => this.equipments$.pipe(
+        map(x => x.filter(e => e.tier === t)),
+      )),
       tap(x => this.equipment.setValue(x[0])),
     );
     // Merge both default and change emissions into one big happy family
@@ -48,13 +55,11 @@ export class EquipmentComponent implements OnInit, OnDestroy {
     this.availableTierSubscription = this.availableTiers$.subscribe(tiers => {
       this.tier.setValue(tiers[0]);
     });
-    this.equipment.valueChanges.subscribe(e => console.log(e));
   }
 
   ngOnDestroy() {
     // Cleanup
     this.availableTierSubscription.unsubscribe();
   }
-
 
 }

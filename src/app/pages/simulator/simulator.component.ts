@@ -1,10 +1,11 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, combineLatest, concat, Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { EquipmentInfo } from '../../modules/kings-raid/models/equipment-info.model';
 import { Hero } from '../../modules/kings-raid/models/hero.model';
+import { EquipmentBuilder } from '../../modules/kings-raid/services/equipment.builder';
 import { EquipmentService } from '../../modules/kings-raid/services/equipment.service';
 import { HeroService } from '../../modules/kings-raid/services/hero.service';
 
@@ -35,6 +36,7 @@ export class SimulatorComponent implements OnInit {
 
   constructor(
     private readonly heroService: HeroService,
+    private readonly equipmentBuilder: EquipmentBuilder,
     private readonly router: Router,
     private readonly route: ActivatedRoute,
     private readonly breakpointObserver: BreakpointObserver,
@@ -56,26 +58,36 @@ export class SimulatorComponent implements OnInit {
   orb$: Observable<EquipmentInfo[]>;
   accessory$: Observable<EquipmentInfo[]>;
 
+  changedHero$ = new BehaviorSubject<string>('');
+
   ngOnInit(): void {
     this.heroes$ = this.heroService.findAll();
-    this.hero$ = this.route.paramMap.pipe(
+    const heroRoute$ = this.route.paramMap.pipe(
       map((params: ParamMap) => params.get('id')),
+    );
+    this.hero$ = concat(heroRoute$, this.changedHero$).pipe(
       switchMap(id => this.heroService.find(id)),
     );
     this.armor$ = this.hero$.pipe(
-      switchMap(h => this.equipment.findByTypeAndClass('armor', h.classInfo.name))
+      switchMap(h => this.equipment.findByTypeAndClass('armor', h.classInfo.name)),
     );
-    this.weapon$ = this.hero$.pipe(
-      switchMap(h => this.equipment.findByTypeAndClass('weapon', h.classInfo.name))
+    const uniqueWeapon$ = this.hero$.pipe(
+      map(h => this.equipmentBuilder.buildUniqueWeapon(h.uniqueWeapon, h.classInfo)),
+    );
+    const weapons$ = this.hero$.pipe(
+      switchMap(h => this.equipment.findByTypeAndClass('weapon', h.classInfo.name)),
+    );
+    this.weapon$ = combineLatest(uniqueWeapon$, weapons$).pipe(
+      map(([uw, w]) => [...w, uw]),
     );
     this.secondaryArmor$ = this.hero$.pipe(
-      switchMap(h => this.equipment.findByTypeAndClass('secondary-armor', h.classInfo.name))
+      switchMap(h => this.equipment.findByTypeAndClass('secondary-armor', h.classInfo.name)),
     );
     this.orb$ = this.hero$.pipe(
-      switchMap(() => this.equipment.findByTypeAndClass('orb', 'all'))
+      switchMap(() => this.equipment.findByTypeAndClass('orb', 'all')),
     );
     this.accessory$ = this.hero$.pipe(
-      switchMap(() => this.equipment.findByTypeAndClass('accessory', 'all'))
+      switchMap(() => this.equipment.findByTypeAndClass('accessory', 'all')),
     );
     this.heroName$ = this.hero$.pipe(
       switchMap(h => h.name),
@@ -105,6 +117,8 @@ export class SimulatorComponent implements OnInit {
   }
 
   async onHeroSelected(hero: Hero) {
+    // Fire our observers!
+    this.changedHero$.next(hero.id);
     // We don't record this in the history, instead, replace the URL since we're not facebook
     await this.router.navigate(['/hero', hero.id], { replaceUrl: true });
   }

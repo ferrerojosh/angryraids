@@ -6,12 +6,12 @@ const gitHash = () => {
     return rev;
   } else {
     const path = `${__dirname}/../../.git/${rev.substring(5)}`;
-    return fs.readFileSync(path.trim()).toString().substr(0, 7);
+    return fs.readFileSync(path.trim()).toString();
   }
 };
 
 const gitInfo = {
-  hash: gitHash()
+  hash: gitHash().substr(0, 7)
 };
 
 fs.writeFileSync(`${__dirname}/../../src/environments/git-info.json`, JSON.stringify(gitInfo));

@@ -1,5 +1,9 @@
 <app-header></app-header>
 <main class="container">
+  <ngb-alert *ngIf="updated" type="info" [dismissible]="false">
+    A newer version is now available.
+    Refresh the page now or click <button type="button" class="btn btn-link" (click)="doUpdate()">here</button> to load the updated version.
+  </ngb-alert>
   <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>

@@ -8,6 +8,9 @@
 # Mask of Goblin script
 /mog
 
+# Git version json
+git-info.json
+
 # dependencies
 /node_modules
 

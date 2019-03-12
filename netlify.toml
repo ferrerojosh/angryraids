@@ -7,11 +7,11 @@
 
 [build]
   base    = "/"
-  command = "ng build --prod"
+  command = "npm run build"
   publish = "dist/angryraids"
 
 # Branch deploy context: All deploys that are not in
 # an active Deploy Preview will inherit these settings.
 [context.development]
-  command = "ng build --prod"
+  command = "npm run build:dev"
   publish = "dist/angryraids"

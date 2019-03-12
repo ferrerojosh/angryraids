@@ -29,6 +29,7 @@ export class EquipmentComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    // Map to each tier, then filter distinct then reverse the array
     this.availableTiers$ = this.equipments$.pipe(
       map(e => e.map(i => i.tier)),
       map(x => x.filter((v, i, a) => a.indexOf(v) === i)),

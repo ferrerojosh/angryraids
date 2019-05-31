@@ -1,0 +1,48 @@
+<div class="search-panel">
+  <app-hero-search
+    [heroes]="heroes$ | async"
+    (selectedHero)="onHeroSelected($event)">
+  </app-hero-search>
+</div>
+<div class="row no-gutters">
+  <div class="card hero-panel col-12 col-xl-5">
+    <div class="card-body">
+      <app-hero-avatar [hero]="hero$ | async"></app-hero-avatar>
+      <app-hero-stats [hero]="hero$ | async"></app-hero-stats>
+    </div>
+  </div>
+  <div class="card equipment-panel col-12 col-xl-7">
+    <ngb-tabset [destroyOnHide]="false" [type]="tabType" justify="fill" [orientation]="orientation">
+      <ngb-tab title="Weapon">
+        <ng-template ngbTabContent>
+          <app-equipment [equipments]="weapon$ | async"></app-equipment>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Armor">
+        <ng-template ngbTabContent>
+          <app-equipment [equipments]="armor$ | async"></app-equipment>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Secondary Armor">
+        <ng-template ngbTabContent>
+          <app-equipment [equipments]="secondaryArmor$ | async"></app-equipment>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Accessory">
+        <ng-template ngbTabContent>
+          <app-equipment [equipments]="accessory$ | async"></app-equipment>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Orb">
+        <ng-template ngbTabContent>
+          <app-equipment [equipments]="orb$ | async"></app-equipment>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Treasure">
+        <ng-template ngbTabContent>
+          <!--<app-equipment></app-equipment>-->
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+</div>

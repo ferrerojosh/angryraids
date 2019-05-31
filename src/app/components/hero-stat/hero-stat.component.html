@@ -1,0 +1,9 @@
+<div class="col-6">
+  {{ stat.name }}
+</div>
+<div [class.col-4]="option" [class.col-6]="!option" class="text-align-right">
+  <span class="result">{{ stat.rawValue }}</span> ({{ baseStat.rawValue }} + <span class="added">{{ addedStat }}</span>)
+</div>
+<div *ngIf="option" class="col-2 text-align-right">
+  {{ stat.percentValue | percent:'0.1' }}
+</div>

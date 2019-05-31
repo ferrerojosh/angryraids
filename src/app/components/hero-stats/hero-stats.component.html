@@ -1,0 +1,14 @@
+<section>
+  <app-hero-stat [stat]="stats.maxHp" [baseStat]="hero.stats.maxHp"></app-hero-stat>
+  <app-hero-stat [stat]="stats.atk" [baseStat]="hero.stats.atk"></app-hero-stat>
+  <app-hero-stat [stat]="stats.pDef" [baseStat]="hero.stats.pDef"></app-hero-stat>
+  <app-hero-stat [stat]="stats.mDef" [baseStat]="hero.stats.mDef"></app-hero-stat>
+</section>
+<section>
+  <app-hero-stat
+    *ngFor="let stat of attributes | keyvalue; trackBy: trackByFn"
+    [option]="true"
+    [baseStat]="hero.stats.attributes[stat.key]"
+    [stat]="stat.value">
+  </app-hero-stat>
+</section>

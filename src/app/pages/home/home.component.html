@@ -1,0 +1,33 @@
+<div class="search-panel">
+  <app-hero-search
+    [heroes]="heroes$ | async"
+    (selectedHero)="onHeroSelected($event)">
+  </app-hero-search>
+</div>
+<section>
+  <p>To begin, please search a hero to build.</p>
+  <hr>
+  <h4>What is AngryRaids?</h4>
+  <p>AngryRaids is an equipment simulator for King's Raid.</p>
+  <h4>Why do we need this?</h4>
+  <p>This is for people who are gung-ho about their builds and wanting to see how it will turn out before farming them.</p>
+  <h4>Isn't excel good enough for this?</h4>
+  <p>Yes, but there are people who can't use excel in a good way.</p>
+  <h4>Why isn't there enough information about each hero?</h4>
+  <p>
+    This thing solves equipment simulation, for the lack of hero information,
+    there is <a href="https://maskofgoblin.com/" rel="noopener" target="_blank">MaskOfGoblin</a> for that.
+  </p>
+  <h4>I'm somewhat good in software development, how can I contribute?</h4>
+  <p>
+    Feel free to open a pull request on
+    <a href="https://github.com/ferrerojosh/angryraids" rel="noopener" target="_blank">GitHub</a>.
+  </p>
+  <h4>How can I contact you?</h4>
+  <p>
+    I'm always available on
+    <a href="https://discordapp.com/invite/mMm4Xbg/" rel="noopener" target="_blank">Reddit's King's Raid Discord</a>
+    server.
+  </p>
+</section>
+

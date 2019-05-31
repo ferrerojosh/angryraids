@@ -1,0 +1,23 @@
+<ng-template #resultTemplate let-r="result" let-t="term">
+  <picture>
+    <source [srcset]="heroImageWebP(r)" type="image/webp">
+    <img width="24" height="24" [src]="heroImagePng(r)" [alt]="r.name">
+  </picture>
+  <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+</ng-template>
+<label for="hero-search">
+  Search for a hero:
+</label>
+<input
+  id="hero-search"
+  placeholder="Kasel, Laias, Frey"
+  type="text"
+  class="form-control"
+  [value]="value"
+  [ngbTypeahead]="search"
+  [resultTemplate]="resultTemplate"
+  [inputFormatter]="heroNameFormatter"
+  (selectItem)="selectedHero.emit($event.item)"
+  (focus)="focus$.next($event.target.value)"
+  (click)="click$.next($event.target.value)"
+/>
